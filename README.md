@@ -49,3 +49,7 @@ Soy amante del fútbol y cada parte de este juego es una reliquia invaluable, po
 - Alejandro Iñiguez:
 
 Tengo 27 años, soy tecnic electronico empleado en el rubro de juegos de azar y actualmente estudiente de programacion web. Hincha de river plate y fantico del deporte en sí.
+
+- Juan Gramajo 
+
+Tengo 24 años, soy becario de una empresa internacional llamada accenture como programador. Ya tengo varios proyectos no solo en este lenguaje, sino tambien en Phyton y Visual Basic. Tambien soy profesor de Tae Kwon Do (2do Dan). Realizamos este proyecto por nuestro fanatismo al deporte. Yo soy fanatico del basquet y seguidor de la toda mi vida de los Lakers. Fanatico tambien del futbol e hincha de equipos chicos como Sacachispas pero siempre seguidor de River Plate. 
