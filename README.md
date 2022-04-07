@@ -44,7 +44,7 @@ Esa magia nos inspira en crear una pagina que no solo logre dar a conocer un suc
 - Emiliano dos reis:
 
 Tengo 37 años, soy estudiante de programación y de la tecnicatura de periodismo digital. Soy creador de la página https://contador0descensos.000webhostapp.com/
-Soy amante del fútbol y cada parte de este juego es una reliquia invaluable, por lo cual buscamos que cada persona pueda sea parte de esa historia.
+Soy amante del fútbol y cada parte de este juego es una reliquia invaluable, por lo cual buscamos que cada persona pueda ser parte de esa historia.
 
 - Alejandro Iñiguez:
 
@@ -57,3 +57,7 @@ Tengo 24 años, soy becario de una empresa internacional llamada accenture como 
 - Beimar Delgado 
 
 Tengo 28 años, soy estudiante de primer año en Analisis de Sistemas en el Instituto IFTS Nº12, y estudiante de Programación Web Full Stack.
+
+## Link de acceos a Trello:
+
+https://trello.com/b/YIrTZhZg/grupo6museumsports
