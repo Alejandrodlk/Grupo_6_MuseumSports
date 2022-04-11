@@ -1,0 +1,29 @@
+.tittle{
+    color:black;
+    background-color: gray;
+    text-align: center;
+    font-size: 24px;
+}
+
+.list{
+
+    display:block;
+    padding: 25px;
+    margin-top: 15px;
+    line-height: 50px;
+    color:white
+}
+
+.access a{
+
+    display:block;
+    color:black;
+    padding: 25px;
+    text-align: center;
+    background-color: gray;
+    margin-bottom: 25px;
+
+ 
+
+
+}
