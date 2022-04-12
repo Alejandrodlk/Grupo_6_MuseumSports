@@ -3,6 +3,12 @@ header.header-container{
     padding: 10px;
 }
 
+header .cont-logo-bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 header .logo-container {
     display: flex;
     align-items: center;
@@ -24,3 +30,12 @@ header .logo-container .logo-text {
     font-size: 17.5px;
     font-weight: 900;
 }
+
+header .cont-logo-bars .fa-bars, .fa-xmark {
+    font-size: var(--tamaño-iconos);
+    padding: 5px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    width: 27px;
+    text-align: center;
+}
+
