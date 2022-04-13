@@ -1,6 +1,6 @@
-header.header-container{
-    
+header.header-container{ 
     padding: 10px;
+    position: relative;
 }
 
 header .cont-logo-bars {
@@ -37,5 +37,25 @@ header .cont-logo-bars .fa-bars, .fa-xmark {
     box-shadow: 0 0 10px rgb(0, 0, 0);
     width: 27px;
     text-align: center;
+}
+
+header nav .nav-bars-container {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    top: 80px;
+    left: 0;
+}
+
+header nav .nav-bars-container .nav-sub-main {
+    display: none;
+}
+
+.is-active {
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 75%);
 }
 
