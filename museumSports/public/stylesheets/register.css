@@ -1,0 +1,91 @@
+.tittle{
+    color:black;
+    background-color: gray;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.list{
+
+    margin-left: 5px;
+    
+    width: 30px;
+
+}
+
+
+.cajas{
+
+   
+    margin-left: 25px;
+    margin-bottom: 15px;
+    
+}
+
+input{
+    height: 30px;
+}
+
+.access a{
+
+    display:block;
+    padding: 25px;
+    text-align: center;
+    background-color: gray;
+  
+
+}
+
+
+    
+   
+    
+
+.B2{
+    width:150px;
+    margin-left: 90px;
+    padding: 15px;
+     background-color:gray;
+     text-align: center;
+     margin-top: 15px;
+ }
+
+ hr{
+     margin-top: 50px;
+     height: 50px;
+     background-color: gray;
+ }
+
+ @media screen and (min-width: 361px){
+    
+
+
+
+    .botones{
+
+        display:block;
+        text-align: center;
+        margin-left:-20px
+    }
+
+    hr{
+        margin-top: 50px;
+        height: 150px;
+        background-color: gray;
+    }
+}
+
+
+@media screen and (min-width: 769px){
+
+
+    .botones{
+
+        display: block;
+        text-align: center;
+        margin-left:-20px
+    }
+
+    
+}
