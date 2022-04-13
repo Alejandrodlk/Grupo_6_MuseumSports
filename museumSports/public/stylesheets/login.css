@@ -20,10 +20,12 @@
     color:black;
     padding: 25px;
     text-align: center;
-    background-color: gray;
     margin-bottom: 25px;
+    background-color: gray;
 
- 
+}
 
+.table{
 
+    background-color: black;
 }
