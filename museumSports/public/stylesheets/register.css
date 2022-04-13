@@ -61,6 +61,10 @@ input{
     
 
 
+    .cajas input{
+
+        width: 225px;
+    }
 
     .botones{
 
@@ -87,5 +91,14 @@ input{
         margin-left:-20px
     }
 
-    
+    .list{
+
+    margin-left: 100px;
+}
+
+.cajas input{
+
+    width: 350px;
+}
+
 }
