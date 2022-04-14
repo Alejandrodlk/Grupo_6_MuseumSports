@@ -19,3 +19,7 @@ a {
 li {
     list-style: none;
 }
+
+i {
+    font-size: var(--tamaño-iconos);
+}

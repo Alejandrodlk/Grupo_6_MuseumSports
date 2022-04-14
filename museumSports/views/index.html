@@ -24,21 +24,23 @@
                     </div>
                 </div>
             </a>
-            <a class="main-burguer" href=""><i class="fa-solid fa-bars"></i></a>
-            <a href=""><i class="fa-solid fa-xmark"></i></a>
+            <div id="main-bars">
+                <a class="main-burguer" href="#main-bars"><i class="fa-solid fa-bars"></i></a>
+                <a class="main-burguerClose" href="#"><i class="fa-solid fa-xmark"></i></a>
+            </div>
         </div>
-        <nav>
-            <ul class="nav-bars-container">
-                <div>
-                    <input type="text" placeholder="Buscar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <li>
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                    <a href=""><i class="fa-solid fa-user"></i></a>
-                </li>
+        <nav class="nav-bars-container active">
+            <div class="iconUser_iconCard">
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href=""><i class="fa-solid fa-user"></i></a>
+            </div>
+            <div class="nav_search">
+                <input type="text" placeholder="Buscar">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <ul class="main-bars">
                 <li><a href="">Inicio</a></li>
-                <li><a href="">Productos</a>
+                <li><a href="#">Productos</a>
                     <ul class="nav-sub-main">
                         <li><a href="">menu</a></li>
                         <li><a href="">menu</a></li>
@@ -48,6 +50,7 @@
                     </ul>
                 </li>
                 <li><a href="">Acerca de</a></li>
+                <li><a href="">Contactenos</a></li>
             </ul>
         </nav>
     </header>
