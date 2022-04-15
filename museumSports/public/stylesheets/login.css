@@ -161,11 +161,10 @@ p input{
 }
 
 .container1 {
-   
     padding: 15px;
     color:#02A28A;
     
-  }
+}
 
 .button{   
     margin-top: 80px;
@@ -173,9 +172,6 @@ p input{
     padding: 0 15px;
     display:flex;
     flex-direction: column;
- 
-   
-  
 }
 
 .button input{
@@ -184,23 +180,18 @@ p input{
     border-radius: 6%;
     border-color: #02A28A;
     margin-top: 15px;
-  
     width: 150px;
 }
 
-
 .barra{
-
     width: 75%;
     display:flex;
-    flex-direction: column;
-    
+    flex-direction: column; 
 }
 .barra2{
     width: 75%;
     display:flex;
     flex-direction: column;
-
 }
 
 
