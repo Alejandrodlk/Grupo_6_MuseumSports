@@ -150,20 +150,14 @@ header nav.nav-bars-container.active {
 }
 
 .list{
-
     margin-left: 5px;
     color: #02A28A;
     width: 30px;
-
 }
 
-
 .cajas{
-
-   
     margin-left: 25px;
-    margin-bottom: 15px;
-    
+    margin-bottom: 15px;   
 }
 
 input{
@@ -171,76 +165,60 @@ input{
 }
 
 .access a{
-
     display:block;
     padding: 25px;
     text-align: center;
     background-color: #02A28A;
-  
-
 }
-
-
-    
-   
-    
 
 .B2{
     width:150px;
     margin-left: 90px;
     padding: 15px;
-     background-color:#02A28A;
-     text-align: center;
-     margin-top: 15px;
- }
-
- hr{
-     margin-top: 50px;
-     height: 50px;
-     background-color: #02A28A;
- }
-
- @media screen and (min-width: 361px){
-    
-
-
-    .cajas input{
-
-        width: 225px;
-    }
-
-    .botones{
-
-        display:block;
-        text-align: center;
-        margin-left:-20px
-    }
-
-    hr{
-        margin-top: 50px;
-        height: 150px;
-        background-color: #02A28A;
-    }
+    background-color:#02A28A;
+    text-align: center;
+    margin-top: 15px;
 }
 
+hr{
+    margin-top: 50px;
+    height: 50px;
+    background-color: #02A28A;
+}
+
+@media screen and (min-width: 361px){
+    
+.cajas input{
+    width: 225px;
+}
+
+.botones{
+    display:block;
+    text-align: center;
+    margin-left:-20px
+}
+
+hr{
+    margin-top: 50px;
+    height: 150px;
+    background-color: #02A28A;
+}
+
+}
 
 @media screen and (min-width: 769px){
 
+.botones{
+    display: block;
+    text-align: center;
+    margin-left:-20px
+}
 
-    .botones{
-
-        display: block;
-        text-align: center;
-        margin-left:-20px
-    }
-
-    .list{
-
+.list{
     margin-left: 100px;
 }
 
 .cajas input{
-
     width: 350px;
 }
 
