@@ -5,9 +5,12 @@
     
 }
 
+
 body {
 
-background-image: url("/images/césped-fondo.jpg");
+background-color: white;
+font-family: 'Roboto', sans-serif;
+color: green
 }
 
 a {
@@ -18,3 +21,9 @@ a {
 li {
     list-style: none;
 }
+
+
+
+
+
+
