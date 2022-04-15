@@ -5,10 +5,12 @@
     
 }
 
+
 body {
 
-    /* background-image: url("/images/césped-fondo.jpg"); */
-    font-family: 'Roboto', sans-serif;
+background-color: white;
+font-family: 'Roboto', sans-serif;
+color: green
 }
 
 a {
