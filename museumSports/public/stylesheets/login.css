@@ -144,8 +144,9 @@ header nav.nav-bars-container.active {
 
 
 .tittle{
+    margin-top: 15px;
     color:black;
-    background-color: gray;
+    background-color: #02A28A;
     text-align: center;
     font-size: 24px;
 }
@@ -156,7 +157,7 @@ header nav.nav-bars-container.active {
     padding: 25px;
     margin-top: 15px;
     line-height: 70px;
-    color:white;
+    color:#02A28A;
     text-align: center;
 }
 input{
@@ -168,7 +169,7 @@ input{
     display:block;
     padding: 25px;
     text-align: center;
-    background-color: gray;
+    background-color: #02A28A;
   
 
 }
@@ -180,7 +181,7 @@ input{
     width:150px;
     margin-left: 90px;
    padding: 15px;
-    background-color:gray;
+    background-color:#02A28A;
     margin-bottom: 50px;
     text-align: center;
     
@@ -191,14 +192,14 @@ input{
     width:150px;
     margin-left: 90px;
     padding: 15px;
-     background-color:gray;
+     background-color:#02A28A;
      text-align: center;
  }
 
  hr{
      margin-top: 50px;
      height: 50px;
-     background-color: gray;
+     background-color: #02A28A;
  }
 
  @media screen and (min-width: 361px){
@@ -216,7 +217,7 @@ input{
     hr{
         margin-top: 50px;
         height: 150px;
-        background-color: gray;
+        background-color: #02A28A;
     }
 }
 
