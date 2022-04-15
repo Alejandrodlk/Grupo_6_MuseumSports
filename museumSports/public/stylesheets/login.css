@@ -141,8 +141,6 @@ header nav.nav-bars-container.active {
     display: flex;
 }
 
-
-
 .tittle{
     margin-top: 15px;
     color:black;
@@ -170,30 +168,27 @@ input{
     padding: 25px;
     text-align: center;
     background-color: #02A28A;
-  
 
 }
 
 .B1{
-    
-    
+
     margin-top: 50px;
     width:150px;
     margin-left: 90px;
-   padding: 15px;
+    padding: 15px;
     background-color:#02A28A;
     margin-bottom: 50px;
     text-align: center;
-    
-   
-    
+
 }
+
 .B2{
     width:150px;
     margin-left: 90px;
     padding: 15px;
-     background-color:#02A28A;
-     text-align: center;
+    background-color:#02A28A;
+    text-align: center;
  }
 
  hr{
@@ -204,32 +199,31 @@ input{
 
  @media screen and (min-width: 361px){
     
+.botones{
 
+    display:block;
+    text-align: center;
+    margin-left:-20px;
 
-
-    .botones{
-
-        display:block;
-        text-align: center;
-        margin-left:-20px
     }
 
-    hr{
-        margin-top: 50px;
-        height: 150px;
-        background-color: #02A28A;
+hr{
+
+    margin-top: 50px;
+    height: 150px;
+    background-color: #02A28A;
+
     }
 }
 
-
 @media screen and (min-width: 769px){
 
+.botones{
 
-    .botones{
+    display: block;
+    text-align: center;
+    margin-left:-20px;
 
-        display: block;
-        text-align: center;
-        margin-left:-20px
     }
 
 }
