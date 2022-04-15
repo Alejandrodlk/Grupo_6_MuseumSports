@@ -143,7 +143,7 @@ header nav.nav-bars-container.active {
 
 .tittle{
     margin-top: 15px;
-    color:black;
+    color:white;
     background-color: #02A28A;
     text-align: center;
     font-size: 24px;
@@ -151,24 +151,56 @@ header nav.nav-bars-container.active {
 }
 
 p input{
-    width: 175px;
+    width: 100%;
     margin-bottom: 25px;
     text-align: center;
-    margin-block-start: 15px;
+    border-color: #02A28A;
+    border-radius: 6%;
     padding: 5px;
+    background-color: #02A28A;
 }
 
 .container1 {
-    width: 150px;
+   
     padding: 15px;
+    color:#02A28A;
+    
   }
 
 .button{   
     margin-top: 80px;
-    text-align: center;
     margin-bottom: 25px;
+    padding: 0 15px;
+    display:flex;
+    flex-direction: column;
+ 
+   
+  
 }
 
-p{
-    margin-left: 15px;
+.button input{
+    padding: 10px 0;
+ 
+    border-radius: 6%;
+    border-color: #02A28A;
+    margin-top: 15px;
+  
+    width: 150px;
 }
+
+
+.barra{
+
+    width: 75%;
+    display:flex;
+    flex-direction: column;
+    
+}
+.barra2{
+    width: 75%;
+    display:flex;
+    flex-direction: column;
+
+}
+
+
