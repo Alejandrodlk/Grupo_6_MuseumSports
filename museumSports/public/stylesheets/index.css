@@ -62,6 +62,20 @@ main h4 {
     font-size: 16px;
 }
 
+.index__iconos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.icono{
+    font-size: 50px;
+    padding: 30px;
+    border: solid 1px black;
+}
+
 /* tablet */
 @media (min-width: 500px) {
 
