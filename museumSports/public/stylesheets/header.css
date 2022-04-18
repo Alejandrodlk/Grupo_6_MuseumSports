@@ -11,7 +11,6 @@ header .cont-logo-bars {
     padding: 10px;
     width: 100%;
     background-color: var(--color-header-botones);
-    /* margin-bottom: 20px; */
 }
 
 header .logo-container {
@@ -72,10 +71,6 @@ header .cont-logo-bars .main-burguerClose {
     border-radius: 3px;
 }
 
-header .cont-logo-bars .main-burguerClose {
-    display: none;
-}
-
 #main-bars:target .main-burguer {
     display: none;
 }
@@ -84,6 +79,9 @@ header .cont-logo-bars .main-burguerClose {
     display: flex;
 }
 
+header .cont-logo-bars .main-burguerClose {
+    display: none;
+}
 
 header nav.nav-bars-container {
     padding-top: 30px;
@@ -94,6 +92,12 @@ header nav.nav-bars-container {
     background-color: gainsboro;
     transition: all 0.5s ease-in-out; 
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    position: absolute;
+    top: 62px;
+}
+
+header nav.nav-bars-container.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 header nav div.nav_search {
@@ -130,9 +134,6 @@ header nav.nav-bars-container .nav-main-bars {
     height: calc(100vh - 200px);
 }
 
-header nav.nav-bars-container .nav-sub-main {
-    display: none;
-}
 
 header nav ul.nav-main-bars li {
     width: 100%;
@@ -142,14 +143,14 @@ header nav ul.nav-main-bars li a {
     color: var(--color-header-botones);
     text-transform: uppercase;
     padding: 10px;
-    width: 100%;
     display: block;
     text-align: center;
 }
 
-header nav.nav-bars-container.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+header nav.nav-bars-container .sub-main {
+    display: none;
 }
+
 
 /*  -------MEDIA QUERIES TABLE--------*/
 
@@ -162,11 +163,15 @@ header nav.nav-bars-container.active {
     header .cont-logo-bars {
         justify-content: space-between;
         padding: 0;
-        /* margin-bottom: 20px; */
+        position: relative;
     }
     
     header .cont-logo-bars .icon-cont {
         width: 30%;
+    }
+
+    header .cont-logo-bars .icon-cont a:hover {
+        background-color: #027967;
     }
     
     header div.iconUser_iconCard {
@@ -185,6 +190,8 @@ header nav.nav-bars-container.active {
         transition: none; 
         clip-path: none;
         gap: 20px;
+        position: relative;
+        top: 0;
     }
     
     header nav div.nav_search {
@@ -192,19 +199,20 @@ header nav.nav-bars-container.active {
         border-radius: 5px;
         width: 40%;
     }
+
+    header nav div.nav_search i:hover {
+        color: #027967;
+    }
     
     header nav.nav-bars-container .nav-main-bars {
         flex-direction: row;
         height: 0;
-        width: 100%;
     }
     
-    header nav.nav-bars-container .nav-sub-main {
-        display: none;
-        position: absolute;
-        min-width: 150px;
-        padding-top: 10px;
+    header nav.nav-bars-container .nav-main-bars > li {
+        position: relative;
     }
+
     
     header nav ul.nav-main-bars li a {
         color: white;
@@ -213,16 +221,23 @@ header nav.nav-bars-container.active {
     }
     
     header nav ul.nav-main-bars li a:hover {
-        background-color: rgb(190, 190, 190);
-        color: var(--color-header-botones);
-        font-weight: 700;
+        background-color: #027967;
     } 
-
-    header nav ul.nav-main-bars li:hover > ul {
-        display: block;
+    
+    header nav.nav-bars-container .sub-main {
+        width: 120%;
+        padding-top: 10px;
+        position: absolute;
         background-color: var(--color-header-botones);
     }
+
+    header nav.nav-bars-container li:hover .sub-main {
+        display: block;
+    }
     
+     header nav.nav-bars-container.active {
+        clip-path: none;
+    }
 }
 
 /*  -------MEDIA QUERIES DESKTOP--------*/
@@ -239,10 +254,6 @@ header nav.nav-bars-container.active {
         position: absolute;
         left: 15%;
         top: 17px;
-    }
-    
-    header nav.nav-bars-container .nav-sub-main {
-        min-width: 190px; 
     }
     
 }
