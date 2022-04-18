@@ -6,10 +6,8 @@
 }
 
 body {
-
-background-color: white;
-font-family: 'Roboto', sans-serif;
-color: green
+/* background-image: url("/images/césped-fondo.jpg"); */
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -21,8 +19,6 @@ li {
     list-style: none;
 }
 
-
-
-
-
-
+i {
+    font-size: var(--tamaño-iconos);
+}
