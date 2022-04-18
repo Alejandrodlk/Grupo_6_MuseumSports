@@ -169,10 +169,13 @@ p input{
 
 .button{   
     margin-top: 80px;
-    margin-bottom: 25px;
+   
     padding: 0 15px;
     display:flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .button input{
@@ -181,7 +184,10 @@ p input{
     border-radius: 6%;
     border-color: #02A28A;
     margin-top: 15px;
-    width: 150px;
+   
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .barra{
