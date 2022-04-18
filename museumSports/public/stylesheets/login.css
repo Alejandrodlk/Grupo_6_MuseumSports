@@ -164,6 +164,7 @@ p input{
     padding: 15px;
     color:#02A28A;
     
+    
 }
 
 .button{   
@@ -184,14 +185,18 @@ p input{
 }
 
 .barra{
-    width: 75%;
+    width: 100%;
     display:flex;
     flex-direction: column; 
+    max-width: 400px;
+    margin: 0 auto;
 }
 .barra2{
-    width: 75%;
+    width: 100%;
     display:flex;
     flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 
