@@ -2,6 +2,8 @@ header.header-container{
     display: flex;
     flex-direction: column;
     width: 100%;
+ /*    position: fixed; */
+    z-index: 1000;
 }
 
 header .cont-logo-bars {
@@ -94,6 +96,7 @@ header nav.nav-bars-container {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     position: absolute;
     top: 62px;
+    z-index: 1000;
 }
 
 header nav.nav-bars-container.active {
