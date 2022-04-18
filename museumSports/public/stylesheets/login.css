@@ -158,6 +158,7 @@ p input{
     border-radius: 6%;
     padding: 5px;
     background-color: #02A28A;
+    
 }
 
 .container1 {
@@ -180,6 +181,7 @@ p input{
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
+    
 }
 
 .button input:hover{
@@ -196,6 +198,7 @@ p input{
     flex-direction: column; 
     max-width: 400px;
     margin: 0 auto;
+   
 }
 
 .barra2{
