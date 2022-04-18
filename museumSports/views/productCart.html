@@ -6,60 +6,143 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product cart</title>
+    <link rel="stylesheet" href="/stylesheets/productCart.css">
+    <script src="https://kit.fontawesome.com/464b5abef1.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <main>
-        <h1>Productos en carrito</h1>
-        <section>
-            <article>
-                <img src="" alt="">
-                <div>
-                    <h3>Descripcion</h3>
-                    <p>Medios de pago</p>
-                    <span>Cuotas</span>
-                </div>
-                <label for="text">$</label>
-            </article>
-            <article>
-                <img src="" alt="">
-                <div>
-                    <h3>Descripcion</h3>
-                    <p>Medios de pago</p>
-                    <span>Cuotas</span>
-                </div>
-                <label for="text">$</label>
-            </article>
-            <article>
-                <img src="" alt="">
-                <div>
-                    <h3>Descripcion</h3>
-                    <p>Medios de pago</p>
-                    <span>Cuotas</span>
-                </div>
-                <label for="text">$</label>
-            </article>
-        </section>
-        <section>
-            <form action="">
-                <label for="coutas">Coutas</label>
-                <select name="cuotas" id="cuotas">
-                    <option value="value6">6</option>
-                    <option value="value3">3</option>
-                    <option value="value1">1</option>
-                </select>
-                <label for="text">Total</label>
-                <label for="">$</label>
-            </form>
-        </section>
-        <section>
-            <button type="reset">Limpiar lista</button>
-            <a href="">Cancelar</a>
-            <a href="">Comprar</a>
-        </section>
-
-    </main>
-
+    <section class="product_container_in_cart">
+        <h1>Carrito</h1>
+        <article class="product_in_cart">
+            <img src="/images/bg-home.jpg" alt="">
+            <div class="product_details">
+                <section class="product_description">
+                    <h3>Nombre del producto</h3>
+                    <p>Color: <span>Color Seleccionado</span><a href="#">Modificar</a></p>
+                </section>
+                <section>
+                    <div class="select_quantity">
+                        <a href="#"><i class="fa-solid fa-minus"></i></a>
+                        <input type="text" name="quantity" id="" value="1">
+                        <a href="#"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                    <p>10 disponibles</p>
+                </section>
+                <h4>Price</h4>
+            </div>
+            <div class="product_actions">
+                <a href="#">Comprar solo este producto</a>
+                <a href="#">Guardar para después</a>
+                <a href="#">Eliminar</a>
+            </div>
+        </article>
+        <article class="product_in_cart">
+            <img src="/images/bg-home.jpg" alt="">
+            <div class="product_details">
+                <section>
+                    <h3 class="product_description">Nombre del producto</h3>
+                    <p>Color: <span>Color Seleccionado</span><a href="#">Modificar</a></p>
+                </section>
+                <section>
+                    <div class="select_quantity">
+                        <a href="#"><i class="fa-solid fa-minus"></i></a>
+                        <input type="text" name="quantity" id="" value="1">
+                        <a href="#"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                    <p>10 disponibles</p>
+                </section>
+                <h4>Price</h4>
+            </div>
+            <div class="product_actions">
+                <a href="#">Comprar solo este producto</a>
+                <a href="#">Guardar para después</a>
+                <a href="#">Eliminar</a>
+            </div>
+        </article>
+        <article class="product_in_cart">
+            <img src="/images/bg-home.jpg" alt="">
+            <div class="product_details">
+                <section>
+                    <h3 class="product_description">Nombre del producto</h3>
+                    <p>Color: <span>Color Seleccionado</span><a href="#">Modificar</a></p>
+                </section>
+                <section>
+                    <div class="select_quantity">
+                        <a href="#"><i class="fa-solid fa-minus"></i></a>
+                        <input type="text" name="quantity" id="" value="1">
+                        <a href="#"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                    <p>10 disponibles</p>
+                </section>
+                <h4>Price</h4>
+            </div>
+            <div class="product_actions">
+                <a href="#">Comprar solo este producto</a>
+                <a href="#">Guardar para después</a>
+                <a href="#">Eliminar</a>
+            </div>
+        </article>
+        <div class="container_purchase_price">
+            <div class="shipping">
+                <p>Costo por envío</p>
+                <h5>Precio del envío</h5>
+            </div>
+            <div class="total_to_pay">
+                <h3>Total con envío</h3>
+                <h4>Precio Total</h4>
+            </div>
+            <a class="buy_button" href="#">Realizar compra</a>
+        </div>
+    </section>
+    <section>
+        <h2>Paroductos que te interesaron</h2>
+        <div class="viewed_product_container">
+            <div class="viewed_product">
+                <article class="item_container">
+                    <a class="article">
+                        <img src="/images/bg-home.jpg" alt="">
+                        <div class="view_prod_description">
+                            <h4>Price</h4>
+                            <p>Descripcion</p>
+                            <button class="button_article">Ver producto</button>
+                        </div>
+                    </a>
+                </article>
+                <article class="item_container">
+                    <a class="article">
+                        <img src="/images/bg-home.jpg" alt="">
+                        <div class="view_prod_description">
+                            <h4>Price</h4>
+                            <p>Descripcion</p>
+                            <button class="button_article">Ver producto</button>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="viewed_product">
+                <article class="item_container">
+                    <a class="article">
+                        <img src="/images/bg-home.jpg" alt="">
+                        <div class="view_prod_description">
+                            <h4>Price</h4>
+                            <p>Descripcion</p>
+                            <button class="button_article">Ver producto</button>
+                        </div>
+                    </a>
+                </article>
+                <article class="item_container">
+                    <a class="article">
+                        <img src="/images/bg-home.jpg" alt="">
+                        <div class="view_prod_description">
+                            <h4>Price</h4>
+                            <p>Descripcion</p>
+                            <button class="button_article">Ver producto</button>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
