@@ -6,89 +6,168 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle de Producto</title>
+    <script src="https://kit.fontawesome.com/464b5abef1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-    <h1>Detalle del producto</h1>
     <main>
+        <h1>Detalles del producto</h1>
         <section>
-            <article>
-                <section>
-                    <img src="" alt="">
-                    <div>
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                    </div>
-                </section>
-                <section>
-                    <h3>Titulo de Producto</h3>
-                    <hr>
-                    <h4>Precio</h4>
-                    <span>Coutas</span>
-                    <p>Medios de pago</p>
-                    <a href="">Agregar al carrito</a>
-                </section>
-                <section>
-                    <div>
-                        <a href="">Descripcion</a>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A aperiam mollitia officiis quas
-                            quod neque veritatis excepturi laudantium nihil obcaecati cupiditate error omnis aliquam
-                            dolor culpa eius impedit totam doloribus numquam perferendis recusandae incidunt distinctio,
-                            debitis voluptate. Delectus architecto animi, numquam commodi sunt dolor excepturi eum,
-                            laudantium molestiae magnam neque.</p>
-                    </div>
-                    <div>
+            <article class="product_container">
+                <div class="product_item">
+                    <section class="image_container">
+                        <div class="main_image">
+                            <img src="/images/futbol-img1-1.jpg" alt="">
+                        </div>
+                        <div class="secondary_image_container">
+                            <div class="secondary_image">
+                                <img src="/images/futbol-img1.jpg" alt="">
+                            </div>
+                            <div class="secondary_image">
+                                <img src="/images/futbol-img1-3.jpg" alt="">
+                            </div>
+                            <div class="secondary_image">
+                                <img src="/images/futbol-img1.jpg" alt="">
+                            </div>
+                            <div class="secondary_image">
+                                <img src="/images/futbol-img1-3.jpg" alt="">
+                            </div>
+                        </div>
+                    </section>
+                    <section class="product_description_select">
+                        <h3 class="prodcut_title">Palota Oficial copa mundial de la FIFA - TELSTAR Rusia 2018</h3>
+                        <h4 class="main_product_price">$ 11.999</h4>
+                        <p class="in_installments">en 6x $ 2.433<span>16</span></p>
+                        <div class="color_container">
+                            <span class="product_color">Color</span>
+                            <span class="product_color">Color</span>
+                            <span class="product_color">Color</span>
+                        </div>
+                        <div class="size_container">
+                            <span class="product_size">Talle</span>
+                            <span class="product_size">Talle</span>
+                            <span class="product_size">Talle</span>
+                        </div>
+                        <div class="select_quantity">
+                            <a href=""><i class="fa-solid fa-square-minus"></i></a>
+                            <div>
+                                <span>Cantidad: </span><input type="text" name="" id="" placeholder="(24 Disponibles)">
+                            </div>
+                            <a href=""><i class="fa-solid fa-square-plus"></i></a>
+                        </div>
+                        <div class="payment_container">
+                            <p>Medios de pago</p>
+                            <div>
+                                <span class="payment_methods">Credito</span>
+                                <span class="payment_methods">Debito</span>
+                                <span class="payment_methods">Efectivo</span>
+                            </div>
+                        </div>
+                        <div class="button_container">
+                            <a class="button" href="">Agregar al carrito</a>
+                            <a class="button" href="">Comprar ahora</a>
+                        </div>
+                    </section>
+                </div>
+                <div>
+                    <section class="product_technical_details">
+                        <div class="specific_detail">
+                            <a href="">Descripcion del producto</a>
+                            <p>Telstar en movimiento, la icónica e inmediatamente reconocible pelota blanca y negra de
+                                la
+                                copa de 1970. Presenta una superficie termosoldada sin costuras que brinda una precisión
+                                absoluta en cada toque y una mínima absorción de agua. La primera de su tipo, incorpora
+                                un
+                                chip NFC que te permite acceder a contenidos exclusivos en tu smartphone. <br>
+                                <br>
+                                Exterior térmicamente sellado<br>
+                                Esta pelota presenta una superficie sin costuras que brinda una precisión absoluta en
+                                cada
+                                toque y una mínima absorción de agua.<br>
+                                <br>
+                                Diseño monopanel<br>
+                                Cada panel tiene el mismo tamaño y forma para ofrecer un rendimiento suave y
+                                continuo.<br>
+                                <br>
+                                FIFA Quality Pro<br>
+                                Certificado con los estándares más altos de la FIFA después de pruebas de
+                                circunferencia,
+                                peso, rebote y absorción de agua.
+                            </p>
+                        </div>
+                        <!-- <div>
                         <a href="">Video</a>
                         <iframe src="" frameborder="0"></iframe>
-                    </div>
-                </section>
+                    </div> -->
+                    </section>
+                </div>
             </article>
         </section>
-        <section>
+        <section class="conatainer_related_products">
             <h2>Productos relacionados</h2>
-            <article>
-                <a href="">
-                    <img src="" alt="">
-                    <p>Lorem ipsum dolor sit.</p>
-                    <h4>Precio</h4>
-                    <a href="">Agregar</a>
-                </a>
-            </article>
-            <article>
-                <a href="">
-                    <img src="" alt="">
-                    <p>Lorem ipsum dolor sit.</p>
-                    <h4>Precio</h4>
-                    <a href="">Agregar</a>
-                </a>
-            </article>
-            <article>
-                <a href="">
-                    <img src="" alt="">
-                    <p>Lorem ipsum dolor sit.</p>
-                    <h4>Precio</h4>
-                    <a href="">Agregar</a>
-                </a>
-            </article>
-            <article>
-                <a href="">
-                    <img src="" alt="">
-                    <p>Lorem ipsum dolor sit.</p>
-                    <h4>Precio</h4>
-                    <a href="">Agregar</a>
-                </a>
-            </article>
-            <article>
-                <a href="">
-                    <img src="" alt="">
-                    <p>Lorem ipsum dolor sit.</p>
-                    <h4>Precio</h4>
-                    <a href="">Agregar</a>
-                </a>
-            </article>
+            <div class="products_related">
+                <div class="item_container_related">
+                    <article class="related_article">
+                        <a class="" href="">
+                            <img src="/images/futbol-img1.jpg" alt="">
+                            <h4 class="product_price">Precio</h4>
+                            <p class="in_installments">Cuotas</p>
+                            <p class="product_name">Nombre del producto</p>
+                            <a class="button_article" href="">Ver producto</a>
+                        </a>
+                    </article>
+                    <article class="related_article">
+                        <a class="" href="">
+                            <img src="/images/futbol-img1.jpg" alt="">
+                            <h4 class="product_price">Precio</h4>
+                            <p class="in_installments">Cuotas</p>
+                            <p class="product_name">Nombre del producto</p>
+                            <a class="button_article" href="">Ver producto</a>
+                        </a>
+                    </article>
+                    <article class="related_article">
+                        <a class="" href="">
+                            <img src="/images/futbol-img1.jpg" alt="">
+                            <h4 class="product_price">Precio</h4>
+                            <p class="in_installments">Cuotas</p>
+                            <p class="product_name">Nombre del producto</p>
+                            <a class="button_article" href="">Ver producto</a>
+                        </a>
+                    </article>
+                </div>
+                <div class="item_container_related2">
+                    <article class="related_article">
+                        <a class="" href="">
+                            <img src="/images/futbol-img1.jpg" alt="">
+                            <h4 class="product_price">Precio</h4>
+                            <p class="in_installments">Cuotas</p>
+                            <p class="product_name">Nombre del producto</p>
+                            <a class="button_article" href="">Ver producto</a>
+                        </a>
+                    </article>
+                    <article class="related_article">
+                        <a class="" href="">
+                            <img src="/images/futbol-img1.jpg" alt="">
+                            <h4 class="product_price">Precio</h4>
+                            <p class="in_installments">Cuotas</p>
+                            <p class="product_name">Nombre del producto</p>
+                            <a class="button_article" href="">Ver producto</a>
+                        </a>
+                    </article>
+                    <article class="related_article">
+                        <a class="" href="">
+                            <img src="/images/futbol-img1.jpg" alt="">
+                            <h4 class="product_price">Precio</h4>
+                            <p class="in_installments">Cuotas</p>
+                            <p class="product_name">Nombre del producto</p>
+                            <a class="button_article" href="">Ver producto</a>
+                        </a>
+                    </article>
+                </div>
+            </div>
         </section>
     </main>
 </body>
+
 </html>
