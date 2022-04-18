@@ -161,33 +161,33 @@ p input{
 }
 
 .container1 {
-    padding: 15px;
+    padding: 30px;
     color:#02A28A;
-    
-    
 }
 
 .button{   
-    margin-top: 80px;
-   
-    padding: 0 15px;
-    display:flex;
-    flex-direction: column;
-    width: 100%;
+    padding: 35px;
+    width: 70%;
     max-width: 400px;
     margin: 0 auto;
 }
 
 .button input{
-    padding: 10px 0;
- 
+    background-color: white;
+    padding: 15px;
     border-radius: 6%;
     border-color: #02A28A;
-    margin-top: 15px;
-   
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
+}
+
+.button input:hover{
+    background-color:#02A28A;
+}
+
+.button input{
+    transition: color;
 }
 
 .barra{
@@ -197,6 +197,7 @@ p input{
     max-width: 400px;
     margin: 0 auto;
 }
+
 .barra2{
     width: 100%;
     display:flex;
@@ -205,4 +206,46 @@ p input{
     margin: 0 auto;
 }
 
+.enlace{
+    display:flex;
+    flex-direction: column; 
+    justify-content: center;
+    color: #02A28A;
+    padding: 35px 55px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
 
+@media (min-width: 361px){
+
+.button{   
+   width: 70%;
+}
+
+.enlace{  
+    text-align: center;
+    color: #02A28A;
+    padding: 25px 70px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    }
+
+@media (min-width: 460px){
+
+.button{   
+    display:flex;
+    justify-content: center;
+    width: 70%;
+    padding: 35px;
+    max-width: 400px;
+    margin: 0 auto;  
+    }
+
+.enlace{
+    margin-top: 40px;
+    }
+
+    }
+}
