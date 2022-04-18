@@ -156,7 +156,6 @@ p input{
     border-color: #02A28A;
     border-radius: 6%;
     padding: 5px;
-    background-color: #02A28A;
 }
 
 .container {
@@ -165,24 +164,77 @@ p input{
     width: 75%;
     display:flex;
     flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
 .button{   
-    margin-top: 80px;
-    margin-bottom: 120px;
-    padding: 0 15px;
-    display:flex;
-    flex-direction: column;
+    padding: 35px;
+    width: 70%;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .button input{
-    padding: 10px 0;
+    background-color: white;
+    padding: 15px;
     border-radius: 6%;
     border-color: #02A28A;
-    margin-top: 15px;
-    width: 150px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.button input:hover{
+    background-color:#02A28A;
 }
 
+.button input{
+   
+    transition: background-color;
+}
 
+.enlace1{
+    display:flex;
+    justify-content: center;
+    color: #02A28A;
+    padding: 25px;
+    width: 60%;
+    max-width: 400px;
+    margin: 0 auto;
+}
 
+@media (min-width: 361px){
+    
+.button{   
+    width: 60%;
+}
+    
+.enlace1{  
+    text-align: center;
+    color: #02A28A;
+    padding: 25px 70px;
+    width: 70%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+    
+@media (min-width: 460px){
+    
+.button{   
+       
+    justify-content: center;
+    width: 50%;
+    padding: 35px;
+    max-width: 400px;
+    margin: 0 auto;  
+}
+    
+.enlace1{
+    margin-top: 40px;
+}
+    
+}
+
+}
+    
 
