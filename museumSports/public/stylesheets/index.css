@@ -66,9 +66,9 @@ main h4 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
 }
-
 
 .icono{
     font-size: 50px;
@@ -77,7 +77,7 @@ main h4 {
 }
 
 /* tablet */
-@media (min-width: 500px) {
+@media (min-width: 768px) {
 
     .main__carrousel {
         width: 100%;
