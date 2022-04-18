@@ -189,7 +189,7 @@ p input{
 }
 
 .button input{
-    transition: color;
+    transition: background-color 0.5s;
 }
 
 .barra{
