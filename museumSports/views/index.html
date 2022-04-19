@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 <body>
     <header class="header-container">
         <div class="cont-logo-bars">
-            <a href="#">
+            <a href="/">
                 <div class="logo-container">
                     <div>
                         <p class="logo">M</p>
@@ -26,8 +26,8 @@
             </a>
             <div class="icon-cont">
                 <div class="iconUser_iconCard">
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                    <a href=""><i class="fa-solid fa-user"></i></a>
+                    <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="/login"><i class="fa-solid fa-user"></i></a>
                 </div>
                 <div id="main-bars">
                     <a class="main-burguer" href="#main-bars"><i class="fa-solid fa-bars"></i></a>
@@ -35,25 +35,25 @@
                 </div>
             </div>
         </div>
-        <nav class="nav-bars-container active">
+        <nav class="nav-bars-container">
             <div class="nav_search">
                 <input type="text" placeholder="Buscar">
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <ul class="nav-main-bars">
-                <li><a class="item" href="">Inicio</a></li>
+                <li><a class="item" href="/">Inicio</a></li>
                 <li><a class="item" href="#">Categorias</a>
                     <ul class="sub-main">
-                        <li><a href="">Futbol</a></li>
-                        <li><a href="">Tenis</a></li>
-                        <li><a href="">Basket</a></li>
-                        <li><a href="">Rugby</a></li>
-                        <li><a href="">hockey</a></li>
-                        <li><a href="">otros</a></li>
+                        <li><a href="/#">Futbol</a></li>
+                        <li><a href="/#">Tenis</a></li>
+                        <li><a href="/#">Basket</a></li>
+                        <li><a href="/#">Rugby</a></li>
+                        <li><a href="/#">hockey</a></li>
+                        <li><a href="/#">otros</a></li>
                     </ul>
                 </li>
-                <li><a class="item" href="">Acerca de</a></li>
-                <li><a class="item" href="">Contactenos</a></li>
+                <li><a class="item" href="#about_us">Acerca de</a></li>
+                <li><a class="item" href="#contact_us">Contactenos</a></li>
             </ul>
         </nav>
     </header>
@@ -71,11 +71,15 @@
                 <article class="index__box-article">
                     <a href="">
                         <div>
-                            <img class="index__image" src="/images/foto-tomate.jpg" alt="">
+                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
                         </div>
                         <div class="index__box-descripcion">
-                            <p class="index__precio">$10000</p>
-                            <h5 class="index__descripcion">Copa Mundial 1986</h5>
+                            <div class="index__precio-descuento">
+                                <p class="index__precio">$10000</p>
+                                <p class="index__descuento">10% OFF</p>
+                            </div>
+                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                            <h5 class="index__descripcion">Copa Mundial </h5>
                         </div>
                     </a>
                 </article>
@@ -83,7 +87,7 @@
                 <article class="index__box-article">
                     <a href="">
                         <div>
-                            <img class="index__image" src="/images/foto-tomate.jpg" alt="">
+                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
                         </div>
                         <div class="index__box-descripcion">
                             <p class="index__precio">$10000</p>
@@ -95,7 +99,7 @@
                 <article class="index__box-article-tablet">
                     <a href="">
                         <div>
-                            <img class="index__image" src="/images/foto-tomate.jpg" alt="">
+                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
                         </div>
                         <div class="index__box-descripcion">
                             <p class="index__precio">$10000</p>
@@ -107,7 +111,7 @@
                 <article class="index__box-article-desktop">
                     <a href="">
                         <div>
-                            <img class="index__image" src="/images/foto-tomate.jpg" alt="">
+                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
                         </div>
                         <div class="index__box-descripcion">
                             <p class="index__precio">$10000</p>
@@ -119,7 +123,7 @@
                 <article class="index__box-article-desktop">
                     <a href="">
                         <div>
-                            <img class="index__image" src="/images/foto-tomate.jpg" alt="">
+                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
                         </div>
                         <div class="index__box-descripcion">
                             <p class="index__precio">$10000</p>
@@ -130,14 +134,29 @@
             </div>
         </section>
         
-        <h4>Visto Recientemente</h4>
+            <h4>Categorias</h4>
+
+        <section class="index__iconos">
+            <div class="index__iconos-group1">
+                <a href=""><i class="fa-solid fa-futbol icono"></i></a>
+                <a href=""><i class="fa-solid fa-basketball icono"></i></a>            
+                <a href=""><i class="fas fa-swimmer icono"></i></a>
+            </div>
+            <div class="index__iconos-group2">
+                <a href=""><i class="fa-solid fa-futbol icono"></i></a>
+                <a href=""><i class="fa-solid fa-basketball icono"></i></a>            
+                <a href=""><i class="fas fa-swimmer icono"></i></a>
+            </div>
+        </section>
+
+        <h4>Ofertas <i class="fa-solid fa-fire-flame-curved"></i></h4>
         
         <section >
             <div class="index__box-section">
                 <article class="index__box-article">
                     <a href="">
                         <div>
-                            <img class="index__image" src="/images/foto-tomate.jpg" alt="">
+                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
                         </div>
                         <div class="index__box-descripcion">
                             <p class="index__precio">$10000</p>
@@ -149,7 +168,7 @@
                 <article class="index__box-article">
                     <a href="">
                         <div>
-                            <img class="index__image" src="/images/foto-tomate.jpg" alt="">
+                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
                         </div>
                         <div class="index__box-descripcion">
                             <p class="index__precio">$10000</p>
@@ -161,7 +180,7 @@
                 <article class="index__box-article-tablet">
                     <a href="">
                         <div>
-                            <img class="index__image" src="/images/foto-tomate.jpg" alt="">
+                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
                         </div>
                         <div class="index__box-descripcion">
                             <p class="index__precio">$10000</p>
@@ -173,7 +192,7 @@
                 <article class="index__box-article-desktop">
                     <a href="">
                         <div>
-                            <img class="index__image" src="/images/foto-tomate.jpg" alt="">
+                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
                         </div>
                         <div class="index__box-descripcion">
                             <p class="index__precio">$10000</p>
@@ -185,7 +204,7 @@
                 <article class="index__box-article-desktop">
                     <a href="">
                         <div>
-                            <img class="index__image" src="/images/foto-tomate.jpg" alt="">
+                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
                         </div>
                         <div class="index__box-descripcion">
                             <p class="index__precio">$10000</p>
@@ -195,44 +214,71 @@
                 </article>
             </div>
         </section>
-
-        <section class="index__iconos">
-            <div>
-                <a href=""><i class="fa-solid fa-futbol icono"></i></a>
-                <a href=""><i class="fa-solid fa-basketball icono"></i></a>            
-                <a href=""><i class="fas fa-swimmer icono"></i></a>
-            </div>
-            <div>
-                <a href=""><i class="fa-solid fa-futbol icono"></i></a>
-                <a href=""><i class="fa-solid fa-basketball icono"></i></a>            
-                <a href=""><i class="fas fa-swimmer icono"></i></a>
-            </div>
-            
+<H1>AGREGAR MERCADOLIBRE(DESCUBRI Y BANNERS X2</H1>
+        <section>
+            <h4>Tus favoritos</h4>
+            <article class="index__box-article-favoritos">
+               
+                <div class="index__box-image-favorito">
+                    <img class="index__image-favorito" src="/images/Imagenes/rugby6.jpg" alt="">
+                </div>
+                <div class="index__box-descripcion">
+                    <div class="index__precio-descuento-favorito">
+                        <p class="index__precio">$10000</p>
+                        <p class="index__descuento">10% OFF</p>
+                    </div>
+                    <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                    <h5 class="index__descripcion">Copa Mundial </h5>
+                </div>
+            </article>
+            <article class="index__box-article-favoritos">
+               
+                <div class="index__box-image-favorito">
+                    <img class="index__image-favorito" src="/images/Imagenes/rugby6.jpg" alt="">
+                </div>
+                <div class="index__box-descripcion">
+                    <div class="index__precio-descuento-favorito">
+                        <p class="index__precio">$10000</p>
+                        <p class="index__descuento">10% OFF</p>
+                    </div>
+                    <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                    <h5 class="index__descripcion">Copa Mundial </h5>
+                </div>
+            </article>
+            <article class="index__box-article-favoritos">
+               
+                <div class="index__box-image-favorito">
+                    <img class="index__image-favorito" src="/images/Imagenes/rugby6.jpg" alt="">
+                </div>
+                <div class="index__box-descripcion">
+                    <div class="index__precio-descuento-favorito">
+                        <p class="index__precio">$10000</p>
+                        <p class="index__descuento">10% OFF</p>
+                    </div>
+                    <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                    <h5 class="index__descripcion">Copa Mundial </h5>
+                </div>
+            </article>
         </section>
+
+
+        <h3><i class="fas fa-envelope-open-text"></i> Recibi ofertas y novedades</h3>
+        <input type="email" name="email" placeholder="Email...">
+        
     </main>
 
-
-    <footer>
-        <section>
-            <section>
-                <h3>Quienes Somos</h3>
-                <a href="">Logo</a>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A quos modi laboriosam id nam magnam
     <!--          ------------FOOTER------------       -->
     <footer class="footer-container">
         <section class="container-firs">
-            <section class="container-deploy about_us">
+            <section class="container-deploy about_us" id="about_us">
                 <div class="title-icon deploy">
                     <h3>Quienes Somos</h3>
                     <a><i class="fa-solid fa-square-plus"></i></a>
                 </div>
                 <!-- <a href="">Logo</a> -->
-                <p class="deploy_cont text-about_us">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A quos
-                    modi laboriosam
-                    id nam magnam
-                    molestiae
-                    dolores est iste. Consectetur quidem laudantium qui a vero amet totam optio, dolores accusantium.
-                </p>
+                <p class="deploy_cont text-about_us">MuseumSports es una página dedicada a la venta de artículos deportivos de colección. Todos estos artículos fueron utilizados por famosos deportistas, ya sean camisetas de futbol, raquetas de tenis, pelotas, botines, aros de basquet, etc.
+                    MuseumSports es una página dedicada a la venta de artículos deportivos de colección. Todos estos artículos fueron utilizados por famosos deportistas, ya sean camisetas de futbol, raquetas de tenis, pelotas, botines, aros de basquet, etc. <br>
+                    El público al que aspiramos es a los fanáticos del deporte y coleccionistas en la materia.</p>
             </section>
             <section class="cont_nav-cont_reds">
                 <section class="nav_footer">
@@ -241,34 +287,34 @@
                     </div>
                     <div>
                         <ul class="cont_categories">
-                            <li class="list_item"><a href="">Futbol</a></li>
-                            <li class="list_item"><a href="">Tenis</a></li>
-                            <li class="list_item"><a href="">Basket</a></li>
-                            <li class="list_item"><a href="">Rugby</a></li>
-                            <li class="list_item"><a href="">Hockey</a></li>
-                            <li class="list_item"><a href="">Otros</a></li>
+                            <li class="list_item"><a href="/#">Futbol</a></li>
+                            <li class="list_item"><a href="/#">Tenis</a></li>
+                            <li class="list_item"><a href="/#">Basket</a></li>
+                            <li class="list_item"><a href="/#">Rugby</a></li>
+                            <li class="list_item"><a href="/#">Hockey</a></li>
+                            <li class="list_item"><a href="/#">Otros</a></li>
                         </ul>
                     </div>
                 </section>
                 <section class="contact-us">
                     <div class="title-icon">
-                        <h3>Contactenos</h3>
+                        <h3 id="contact_us">Contactenos</h3>
                     </div>
                     <div>
                         <ul class="cont_redes">
-                            <li class="list_item"><a href=""><i class="fa-brands fa-facebook-square"></i><span
+                            <li class="list_item"><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"></i><span
                                         class="name_red"> Facebook</span></a></li>
-                            <li class="list_item"><a href=""><i class="fa-brands fa-instagram-square"></i><span
+                            <li class="list_item"><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram-square"></i><span
                                         class="name_red"> Instagram</span></a></li>
-                            <li class="list_item"><a href=""><i class="fa-brands fa-twitter-square"></i><span
+                            <li class="list_item"><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter-square"></i><span
                                         class="name_red"> Twitter</span></a></li>
-                            <li class="list_item"><a href=""><i class="fa-brands fa-linkedin"></i><span
+                            <li class="list_item"><a href="https://ar.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i><span
                                         class="name_red">
                                         Linkedin</span></a></li>
-                            <li class="list_item"><a href=""><i class="fa-brands fa-whatsapp-square"></i><span
+                            <li class="list_item"><a href="" target="_blank"><i class="fa-brands fa-whatsapp-square"></i><span
                                         class="name_red">
                                         WhatsApp</span></a></li>
-                            <li class="list_item"><a href=""><i class="fa-solid fa-phone"></i><span class="name_red">
+                            <li class="list_item"><a href="" target="_blank"><i class="fa-solid fa-phone"></i><span class="name_red">
                                         00110011</span></a></li>
                         </ul>
                     </div>
@@ -281,9 +327,9 @@
                 </div>
                 <div class="deploy_cont">
                     <form action="">
-                        <input type="text" name="" id="" placeholder="Ingrese su nombre">
-                        <input type="text" name="" id="" placeholder="Ingrese su correo">
-                        <input type="text" name="" id="" placeholder="Asunto">
+                        <input type="text" name="name" id="name" placeholder="Ingrese su nombre">
+                        <input type="email" name="email" id="email" placeholder="Ingrese su correo">
+                        <input type="text" name="business" id="business" placeholder="Asunto">
                         <textarea name="" id="" cols="30" rows="8" placeholder="Escriba brevemente su consulta"></textarea>
                         <div><button class="button_form" type="submit">Enviar</button></div>
                     </form>

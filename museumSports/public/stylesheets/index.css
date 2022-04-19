@@ -1,7 +1,8 @@
 .index-box {
-    /* background-color: #ebebeb; */
+    
     width: 95%;
     margin: 0 auto;
+
 }
 
 .main__box-carrousel{
@@ -16,12 +17,16 @@
 
 main h4 {
     font-size: 24px;
-    text-align: center;
-    margin: 15px auto;
+    text-align:center;
+    margin: 30px  auto 10px  ;
+}
+
+.fa-fire-flame-curved {
+    color: red;
 }
 
 .index__box-section {
-    
+   
     width: 100%;
     display: flex;
     justify-content: center;
@@ -32,6 +37,11 @@ main h4 {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     margin: 10px;
     width: 45%;
+    transition: .5s;
+}
+
+.index__box-article:hover {
+    transform: scale(1.1);
 }
 
 .index__box-article-tablet {
@@ -50,34 +60,85 @@ main h4 {
 
 .index__box-descripcion {
     padding: 10px;
+    border-top: solid 1px var(--color-header-botones);
+    
+}
+
+.index__precio-descuento {
+    display: flex;
 }
 
 .index__precio {
-  margin: 20px 0 ;
-  
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
+.index__descuento {
+    font-size: 16px;
+    color: green;
+}
+
+.index__envio {
+    color: green;
+    font-size: 15px;
+    margin-bottom: 10px;
+    
 }
 
 .index__descripcion {
-    margin: 20px 0 10px;
-    font-size: 16px;
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    
+}
+
+.index__box-article-favoritos {
+    display: flex;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.index__box-image-favorito {
+    width: 40%;
+}
+
+.index__image-favorito {
+    width: 100%;
 }
 
 .index__iconos{
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+}
 
+.index__iconos-group1 {
+    width: 100%;
+    text-align: center;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
+}
+
+.index__iconos-group2 {
+    width: 100%;
+    text-align: center;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .icono{
+    width: 30%;
     font-size: 50px;
     padding: 30px;
     border: solid 1px black;
+    transition: all .5s; 
+}
+
+.icono:hover {
+    background-color: var(--color-header-botones);
+    transform: scale(1.1);
 }
 
 /* tablet */
-@media (min-width: 768px) {
+@media (min-width: 425px) {
 
     .main__carrousel {
         width: 100%;
@@ -100,7 +161,7 @@ main h4 {
 }
 
 /* desktop */
-@media (min-width: 900px){
+@media (min-width: 768px){
     .index__box-article-desktop{
         display: block;
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
