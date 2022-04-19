@@ -4,7 +4,9 @@ let menuClose = document.querySelector('.main-burguerClose')
 
 burguer.addEventListener('click', () => {
     nav_menu.classList.add("active")
+
 })
+
 menuClose.addEventListener('click', () => {
     nav_menu.classList.remove('active')
 })
