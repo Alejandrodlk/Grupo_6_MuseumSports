@@ -22,3 +22,7 @@ li {
 i {
     font-size: var(--tamaño-iconos);
 }
+
+img {
+    width: 100%;
+}

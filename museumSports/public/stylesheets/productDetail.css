@@ -1,15 +1,5 @@
-img {
-    width: 100%;
-}
-
-main {
+main.product_detail_main {
     padding: 15px;
-}
-
-main h1 {
-    padding-top: 10px;
-    font-size: 22px;
-    padding-left: 20px;
     position: relative;
 }
 
@@ -18,6 +8,8 @@ main section article.product_container .image_container {
     flex-direction: column;
     width: 100%;
     margin-top: 70px;
+    max-width: 450px;
+    margin: 40px auto 0;
 }
 
 main section .image_container .secondary_image_container {
@@ -33,7 +25,7 @@ main section .secondary_image_container .secondary_image {
 
 main section .product_description_select .prodcut_title {
     position: absolute;
-    top: 70px;
+    top: 20px;
     font-size: 16px;
 }
 
@@ -140,12 +132,6 @@ main section .product_description_select .payment_container div {
     gap: 10px;
 }
 
-/* main section .product_description_select .button_container {
-    
-    justify-content: center;
-    gap: 15px;
-} */
-
 main section .product_description_select .button_container .button {
     background-color: var(--color-header-botones);
     padding: 8px;
@@ -178,12 +164,13 @@ main .conatainer_related_products h2 {
 }
 
 main .conatainer_related_products .related_article {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 10px;
+    /* width: 100%; */
     box-shadow: 0 0 10px rgb(100, 100, 100);
     padding: 10px;
+    max-width: 350px;
+    margin: 15px auto 0px;
 }
+
 
 main .conatainer_related_products .related_article h4 {
     border-top: 1px solid #e7e7e7;
@@ -205,18 +192,44 @@ main .conatainer_related_products .related_article .in_installments {
     color: #00A650;
 }
 
+  /*--------- MEDIA QUERIES 480px-------------*/
+
+@media screen and (min-width:480px) {
+    main section article.product_container .product_item {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    main section .product_description_select .prodcut_title {
+        top: 30px;
+        font-size: 20px;
+    }
+
+    main .conatainer_related_products .products_related {
+        display: flex; 
+        gap: 15px;
+    }
+
+    main .conatainer_related_products .item_container_related {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+}
+
 /*       ---------MEDIA QUERIES 768px---------    */
 
 
 @media screen and (min-width:768px) {
-    
-    main h1 {
-        text-align: center;
-        padding-left: 0px;
-        font-size: 30px;
-        position: relative;
-    }
-    
+    main section article.product_container .product_item {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+        margin: none;
+    }    
+
     main section article.product_container .image_container {
         margin-top: 80px;
     }
@@ -228,14 +241,20 @@ main .conatainer_related_products .related_article .in_installments {
     }
     
     main section .product_description_select .prodcut_title {
-        position: absolute;
-        top: 90px;
+        top: 50px;
         font-size: 24px;
+        margin-left: 50px;
     }
     
     main section .product_description_select .main_product_price {
         font-weight: 600;
+        margin-left: 50px;
     }
+
+    main section .product_description_select .in_installments {
+        margin-left: 50px;
+    }
+    
     
     main section .product_description_select .color_container,
     main section .product_description_select .size_container,
@@ -244,6 +263,10 @@ main .conatainer_related_products .related_article .in_installments {
         gap: 30px;
     }
     
+    main section .product_description_select .payment_container p {
+        margin-left: 50px;
+    }
+
     main section .product_description_select .color_container .product_color,
     main section .product_description_select .size_container .product_size,
     main section .product_description_select .payment_container .payment_methods {
@@ -310,12 +333,22 @@ main .conatainer_related_products .related_article .in_installments {
         margin-bottom: 50px;
         font-size: 30px;
     }
-
-    main .conatainer_related_products .item_container_related,
-    main .conatainer_related_products .item_container_related2 {
-        display: flex;
+    
+    main .conatainer_related_products .products_related {
+        display: flex; 
         gap: 15px;
-        margin-bottom: 30px;
+        flex-direction: column;
+    }
+    
+    main .conatainer_related_products .item_container_related {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        margin-bottom: 0px;
+    }
+
+    main .conatainer_related_products .related_article {
+        margin: 0;
     }
 
     main .conatainer_related_products .related_article:hover {
@@ -398,8 +431,7 @@ main .conatainer_related_products .related_article .in_installments {
     }
 
     main .conatainer_related_products .products_related {
-        display: flex;
-        gap: 15px;
+        flex-direction: row;
     }
     
     main .conatainer_related_products h2 {
