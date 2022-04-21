@@ -7,12 +7,14 @@
 
 .main__box-carrousel{
     margin: 10px 0 30px;
+    border-radius: 5px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);    
 }
 
 .main__carrousel {
    width: 100%;
-   height: 180px;  
+   height: 180px; 
+   border-radius: 5px;
 }
 
 main h4 {
@@ -33,7 +35,7 @@ main h4 {
     
 }
 
-.index__box-article {
+.index__box-article{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     margin: 10px;
     width: 45%;
@@ -43,6 +45,8 @@ main h4 {
 .index__box-article:hover {
     transform: scale(1.1);
 }
+
+
 
 .index__box-article-tablet {
     display: none;
@@ -91,10 +95,23 @@ main h4 {
     
 }
 
+/* Favoritos */
+.main__section-favoritos {
+    width: 90%;
+    margin: 0 auto;
+}
+
 .index__box-article-favoritos {
     display: flex;
+    align-items: center;
     border: solid 1px black;
     border-radius: 5px;
+    width: 100%;
+}
+
+.index__precio-favorito {
+    margin-top: 20px;
+    font-size: 1.5rem;
 }
 
 .index__box-image-favorito {
@@ -129,13 +146,42 @@ main h4 {
     font-size: 50px;
     padding: 30px;
     border: solid 1px black;
-    transition: all .5s; 
+    transition: transform .5s; 
 }
 
 .icono:hover {
     background-color: var(--color-header-botones);
     transform: scale(1.1);
 }
+
+/* Newsteller */
+
+.home__envolope {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto 5px;
+}
+
+.home__input-boton {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 30px;
+}
+
+.home__input {
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.home__boton {
+    font-size: 20px;
+    background-color: var(--color-header-botones);
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
 
 /* tablet */
 @media (min-width: 425px) {
@@ -151,13 +197,21 @@ main h4 {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
         margin: 10px;
         width: 25%;
+        transition: .5s;
+    }
+
+    .index__box-article-tablet:hover {
+        transform: scale(1.1);
     }
 
     .index__box-article {
         width: 25%;
     }
 
-
+    .main__section-favoritos {
+        width: 70%;
+        margin: 0 auto;
+    }
 }
 
 /* desktop */
@@ -166,7 +220,12 @@ main h4 {
         display: block;
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
         margin: 10px;
-        width: 18%; 
+        width: 18%;
+        transition: .5s; 
+    }
+
+    .index__box-article-desktop:hover {
+        transform: scale(1.1);
     }
 
     .index__box-article-tablet {
@@ -179,4 +238,16 @@ main h4 {
         
     }
 
+    .main__section-favoritos {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .newsteller {
+        display: flex;
+        justify-content: center;
+       
+    }
+    
 }
