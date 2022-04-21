@@ -1,0 +1,322 @@
+main section.product_container_in_cart {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 30px; */
+    background-color: lightgray;
+    padding-top: 20px;
+}
+
+main section article.product_in_cart {
+    display: flex;
+    padding: 15px;
+    margin-top: 5px;
+    background-color: white;
+    gap: 15px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+main section article .container_image {
+    width: 30%;
+}
+
+main section article .container_image img {
+    max-width: 200px;
+}
+
+
+main section article .product_details {
+    display: flex;
+    flex-direction: column;
+}
+
+main section article .product_details .product_description h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+main section article .product_details .product_description p {
+    font-size: 14px;
+}
+
+main section article .product_details .product_description p a {
+    margin-left: 5px;
+    color: var(--color-header-botones);
+    padding: 3px;
+}
+
+main section article .product_details .qoutas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+main section article .product_details .select_quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #02a28a67;
+    padding: 3px;
+    border-radius: 3px;
+    width: 80px;
+    justify-content: center;
+}
+
+main section article .product_details .select_quantity .fa-solid {
+    color: var(--color-header-botones);
+    padding: 2px;
+    font-size: 16px;
+}
+
+main section article .product_details .select_quantity input {
+    width: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+main section article .product_details .select_quantity input:focus {
+    outline: none;
+}
+
+main section article .product_details .price_in_qoutas {
+    display: flex;
+    justify-content: end;
+    margin-top: 15px;
+}
+
+main section .product_actions {
+    display: flex;
+    gap: 5px;
+    border-top: 1px solid #02a28a67;
+    background-color: white;
+    justify-content: space-evenly;
+}
+
+main section .product_actions a {
+    padding: 2px;
+    color: var(--color-header-botones);
+    padding: 15px 0;
+}
+
+main section .container_purchase_price {
+    background-color: white;
+    margin: 20px 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+main section .container_purchase_price .shipping {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+main section .container_purchase_price .shipping h5 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+main section .container_purchase_price .total_to_pay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid #02a28a67;
+}
+
+main section .container_purchase_price .total_to_pay h4 {
+    font-weight: 500;
+    font-size: 22px;
+}
+
+main section .container_purchase_price .buy_button {
+    background-color: var(--color-header-botones);
+    padding: 10px;
+    font-size: 20px;
+    display: block;
+    max-width: 400px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    margin: 30px auto;
+}
+
+main section.container_all_views {
+    background-color: lightgray;
+}
+
+main .title_related_views {
+    padding: 60px 15px 50px;
+    font-weight: 500;
+}
+
+main section .viewed_product {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    align-items: center;
+}
+
+main section .viewed_product .item_container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+}
+
+main section .viewed_product .item_container .image {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 270px;  
+}
+
+main section .item_container .view_prod_description {
+    border-top: 1px solid #02a28a67;
+    margin-top: 15px;
+    padding: 15px 0;
+}
+
+main section .item_container .view_prod_description h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+main section .item_container .view_prod_description button {
+    display: block;
+    padding: 8px;
+    background-color: var(--color-header-botones);
+    border: none;
+    border-radius: 4px;
+    margin: 15px auto 0;
+    color: white;
+    width: 80%;
+    text-align: center;
+}
+
+
+/*    ----MEDIA QUERIES  480px------    */
+
+ @media screen and (min-width: 480px) {
+   
+    main section .viewed_product {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        gap: 10px;
+        justify-content: space-evenly;
+        width: 100%;
+        
+    }
+
+    main section .container_purchase_price .buy_button {
+        max-width: 300px;
+        margin-right: 20px;
+    }
+}
+
+
+/*    ----MEDIA QUERIES  900px------    */
+
+@media screen and (min-width: 850px) {
+
+
+    main section article .product_details .product_description h3 {
+        font-size: 16px;
+    }
+
+    main section article .product_details .product_description p a:hover {
+        color: #00705f;
+    }
+    
+    main section article .product_details .qoutas {
+        margin-top: 15px;
+    }
+    
+    
+    main section article .product_details .select_quantity .fa-solid:hover {
+        color: #00705f;
+    }
+    
+    main section article .product_details .price_in_qoutas {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    
+    main section .product_actions {
+        gap: 0px;
+        justify-content: end;
+    }
+    
+    main section .product_actions a {
+        margin-right: 30px;
+    }
+
+    main section .product_actions a:hover {
+        color: #00705f;
+    }
+    
+    main section .container_purchase_price .total_to_pay h4 {
+        font-size: 24px;
+    }
+
+    main section .container_purchase_price .buy_button {
+        transition: all .5s ease-in-out;
+    }
+    
+    main section .container_purchase_price .buy_button:hover {
+        background-color: #00705f;
+    }
+    
+    main section .viewed_product_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    main .title_related_views {
+        font-size: 30px;
+    }
+
+    main section .viewed_product {
+        padding: 0px;
+        display: flex;
+        justify-content: space-around;
+        gap: 15px;
+    }
+    
+    main section .viewed_product .item_container {
+        max-width: 270px;
+    }
+
+    main section .viewed_product .item_container:hover {
+        transform: scale(1.1);
+    }
+    
+    main section .viewed_product .item_container .image {
+        height: 240px;  
+    }
+    
+    main section .item_container .view_prod_description {
+        padding-bottom: 5px;
+    }
+    
+    main section .item_container .view_prod_description button {
+        transition: all .5s ease-in-out;
+    }
+
+    main section .item_container .view_prod_description button:hover {
+        background-color: #00705f;
+    }
+}
