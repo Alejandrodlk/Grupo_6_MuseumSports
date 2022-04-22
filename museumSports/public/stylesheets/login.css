@@ -79,7 +79,7 @@ p input{
     margin: 0 auto;
 }
 
-@media (min-width: 361px){
+@media (min-width: 480px){
 
 .button{   
    width: 70%;
@@ -94,7 +94,7 @@ p input{
     margin: 0 auto;
     }
 
-@media (min-width: 460px){
+@media (min-width: 768px){
 
 .button{   
     display:flex;

@@ -1,1 +1,293 @@
-r.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/464b5abef1.js" crossorigin="anonymous"></script>
+    <title>Product cart</title>
+    <link rel="shortcut icon" href="/images/favicon.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="cont-logo-bars">
+            <a href="/">
+                <div class="logo-container">
+                    <div>
+                        <p class="logo">M</p>
+                    </div>
+                    <div>
+                        <p class="logo-text">MUSEUM</p>
+                        <p class="logo-text">SPORTS</p>
+                    </div>
+                </div>
+            </a>
+            <div class="icon-cont">
+                <div class="iconUser_iconCard">
+                    <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="/login"><i class="fa-solid fa-user"></i></a>
+                </div>
+                <div id="main-bars">
+                    <a class="main-burguer" href="#main-bars"><i class="fa-solid fa-bars"></i></a>
+                    <a class="main-burguerClose" href="#"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-bars-container">
+            <div class="nav_search">
+                <input type="text" placeholder="Buscar">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <ul class="nav-main-bars">
+                <li><a class="item" href="/">Inicio</a></li>
+                <li><a class="item" href="#">Categorias</a>
+                    <ul class="sub-main">
+                        <li><a href="/#">Futbol</a></li>
+                        <li><a href="/#">Tenis</a></li>
+                        <li><a href="/#">Basket</a></li>
+                        <li><a href="/#">Rugby</a></li>
+                        <li><a href="/#">hockey</a></li>
+                        <li><a href="/#">otros</a></li>
+                    </ul>
+                </li>
+                <li><a class="item" href="#about_us">Acerca de</a></li>
+                <li><a class="item" href="#contact_us">Contactenos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--             ------------- Main----------------            -->
+    <main>
+        <section class="product_container_in_cart">
+            <article class="product_in_cart">
+                <div class="container_image">
+                    <img src="/images/bg-home.jpg" alt="">
+                </div>
+                <div class="container_product">
+                    <div class="product_details">
+                        <section class="product_description">
+                            <h3>Nombre del producto</h3>
+                            <p>Color: <span>Color</span><a href="#">Modificar</a></p>
+                        </section>
+                        <section class="qoutas">
+                            <h4>Coutas</h4>
+                            <div class="select_quantity">
+                                <a href="#"><i class="fa-solid fa-minus"></i></a>
+                                <input type="text" name="quantity" id="" value="1">
+                                <a href="#"><i class="fa-solid fa-plus"></i></a>
+                            </div>
+                        </section>
+                        <h4 class="price_in_qoutas">$ Total por producto</h4>
+                    </div>
+                </div>
+            </article>
+            <div class="product_actions">
+                <a href="#">Eliminar</a>
+                <a href="#">Guardar</a>
+                <a href="#">Comprar este producto</a>
+            </div>
+            <article class="product_in_cart">
+                <div class="container_image">
+                    <img src="/images/bg-home.jpg" alt="">
+                </div>
+                <div class="container_product">
+                    <div class="product_details">
+                        <section class="product_description">
+                            <h3>Nombre del producto</h3>
+                            <p>Color: <span>Color</span><a href="#">Modificar</a></p>
+                        </section>
+                        <section class="qoutas">
+                            <h4>Coutas</h4>
+                            <div class="select_quantity">
+                                <a href="#"><i class="fa-solid fa-minus"></i></a>
+                                <input type="text" name="quantity" id="" value="1">
+                                <a href="#"><i class="fa-solid fa-plus"></i></a>
+                            </div>
+                        </section>
+                        <h4 class="price_in_qoutas">$ Total por producto</h4>
+                    </div>
+                </div>
+            </article>
+            <div class="product_actions">
+                <a href="#">Eliminar</a>
+                <a href="#">Guardar</a>
+                <a href="#">Comprar este producto</a>
+            </div>
+            <article class="product_in_cart">
+                <div class="container_image">
+                    <img src="/images/bg-home.jpg" alt="">
+                </div>
+                <div class="container_product">
+                    <div class="product_details">
+                        <section class="product_description">
+                            <h3>Nombre del producto</h3>
+                            <p>Color: <span>Color</span><a href="#">Modificar</a></p>
+                        </section>
+                        <section class="qoutas">
+                            <h4>Coutas</h4>
+                            <div class="select_quantity">
+                                <a href="#"><i class="fa-solid fa-minus"></i></a>
+                                <input type="text" name="quantity" id="" value="1">
+                                <a href="#"><i class="fa-solid fa-plus"></i></a>
+                            </div>
+                        </section>
+                        <h4 class="price_in_qoutas">$ Total por producto</h4>
+                    </div>
+                </div>
+            </article>
+            <div class="product_actions">
+                <a href="#">Eliminar</a>
+                <a href="#">Guardar</a>
+                <a href="#">Comprar este producto</a>
+            </div>
+            <div class="container_purchase_price">
+                <div class="shipping">
+                    <p>Costo por envío</p>
+                    <h5>Precio del envío</h5>
+                </div>
+                <div class="total_to_pay">
+                    <h3>Total con envío</h3>
+                    <h4>Precio Total</h4>
+                </div>
+                <div>
+                    <a class="buy_button" href="#">Realizar compra</a>
+                </div>
+            </div>
+        </section>
+        <section class="container_all_views">
+            <h2 class="title_related_views">Paroductos que te interesaron</h2>
+            <div class="viewed_product_container">
+                <div class="viewed_product">
+                    <a href="/productDetail" class="item_container">
+                        <div class="image">
+                            <img class="prueba" src="/images/bg-home.jpg" alt="">
+                        </div>
+                        <div class="view_prod_description">
+                            <h4>Price</h4>
+                            <p>Descripcion</p>
+                            <button class="button_article">Ver producto</button>
+                        </div>
+                    </a>
+                    <a href="/productDetail" class="item_container">
+                        <div class="image">
+                            <img class="prueba" src="/images/bg-home.jpg" alt="">
+                        </div>
+                        <div class="view_prod_description">
+                            <h4>Price</h4>
+                            <p>Descripcion</p>
+                            <button class="button_article">Ver producto</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="viewed_product">
+                    <a href="/productDetail" class="item_container">
+                        <div class="image">
+                            <img class="prueba" src="/images/bg-home.jpg" alt="">
+                        </div>
+                        <div class="view_prod_description">
+                            <h4>Price</h4>
+                            <p>Descripcion</p>
+                            <button class="button_article">Ver producto</button>
+                        </div>
+                    </a>
+                    <a href="/productDetail" class="item_container">
+                        <div class="image">
+                            <img class="prueba" src="/images/bg-home.jpg" alt="">
+                        </div>
+                        <div class="view_prod_description">
+                            <h4>Price</h4>
+                            <p>Descripcion</p>
+                            <button class="button_article">Ver producto</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--             ------------- footer----------------            -->
+    <footer class="footer-container">
+        <section class="container-firs">
+            <section class="container-deploy about_us" id="about_us">
+                <div class="title-icon deploy">
+                    <h3>Quienes Somos</h3>
+                    <a><i class="fa-solid fa-square-plus"></i></a>
+                </div>
+                <!-- <a href="">Logo</a> -->
+                <p class="deploy_cont text-about_us">MuseumSports es una página dedicada a la venta de artículos
+                    deportivos de colección. Todos estos artículos fueron utilizados por famosos deportistas, ya sean
+                    camisetas de futbol, raquetas de tenis, pelotas, botines, aros de basquet, etc.
+                    MuseumSports es una página dedicada a la venta de artículos deportivos de colección. Todos estos
+                    artículos fueron utilizados por famosos deportistas, ya sean camisetas de futbol, raquetas de tenis,
+                    pelotas, botines, aros de basquet, etc. <br>
+                    El público al que aspiramos es a los fanáticos del deporte y coleccionistas en la materia.</p>
+            </section>
+            <section class="cont_nav-cont_reds">
+                <section class="nav_footer">
+                    <div class="title-icon">
+                        <h3>Categorias</h3>
+                    </div>
+                    <div>
+                        <ul class="cont_categories">
+                            <li class="list_item"><a href="/#">Futbol</a></li>
+                            <li class="list_item"><a href="/#">Tenis</a></li>
+                            <li class="list_item"><a href="/#">Basket</a></li>
+                            <li class="list_item"><a href="/#">Rugby</a></li>
+                            <li class="list_item"><a href="/#">Hockey</a></li>
+                            <li class="list_item"><a href="/#">Otros</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="contact-us">
+                    <div class="title-icon">
+                        <h3 id="contact_us">Contactenos</h3>
+                    </div>
+                    <div>
+                        <ul class="cont_redes">
+                            <li class="list_item"><a href="https://www.facebook.com/" target="_blank"><i
+                                        class="fa-brands fa-facebook-square"></i><span class="name_red">
+                                        Facebook</span></a></li>
+                            <li class="list_item"><a href="https://www.instagram.com/" target="_blank"><i
+                                        class="fa-brands fa-instagram-square"></i><span class="name_red">
+                                        Instagram</span></a></li>
+                            <li class="list_item"><a href="https://twitter.com/" target="_blank"><i
+                                        class="fa-brands fa-twitter-square"></i><span class="name_red">
+                                        Twitter</span></a></li>
+                            <li class="list_item"><a href="https://ar.linkedin.com/" target="_blank"><i
+                                        class="fa-brands fa-linkedin"></i><span class="name_red">
+                                        Linkedin</span></a></li>
+                            <li class="list_item"><a href="" target="_blank"><i
+                                        class="fa-brands fa-whatsapp-square"></i><span class="name_red">
+                                        WhatsApp</span></a></li>
+                            <li class="list_item"><a href="" target="_blank"><i class="fa-solid fa-phone"></i><span
+                                        class="name_red">
+                                        00110011</span></a></li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section class="container-deploy">
+                <div class="title-icon deploy">
+                    <h3>Escribinos</h3>
+                    <a><i class="fa-solid fa-square-plus"></i></a>
+                </div>
+                <div class="deploy_cont">
+                    <form action="">
+                        <input type="text" name="name" id="name" placeholder="Ingrese su nombre">
+                        <input type="email" name="email" id="email" placeholder="Ingrese su correo">
+                        <input type="text" name="business" id="business" placeholder="Asunto">
+                        <textarea name="" id="" cols="30" rows="8"
+                            placeholder="Escriba brevemente su consulta"></textarea>
+                        <div><button class="button_form" type="submit">Enviar</button></div>
+                    </form>
+                </div>
+            </section>
+        </section>
+        <p class="copyright">COPYRIGHT MuseumSports - 2022. Todos los derechos reservados.</p>
+    </footer>
+    <script src="/javascript/burguer.js"></script>
+    <script src="/javascript/deploy-footer.js"></script>
+</body>
+
+</html>
