@@ -225,9 +225,9 @@ main section .item_container .view_prod_description button {
 }
 
 
-/*    ----MEDIA QUERIES  900px------    */
+/*    ----MEDIA QUERIES  768px------    */
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 768px) {
 
 
     main section article .product_details .product_description h3 {

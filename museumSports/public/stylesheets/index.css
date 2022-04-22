@@ -184,7 +184,7 @@ main h4 {
 
 
 /* tablet */
-@media (min-width: 425px) {
+@media (min-width: 480px) {
 
     .main__carrousel {
         width: 100%;

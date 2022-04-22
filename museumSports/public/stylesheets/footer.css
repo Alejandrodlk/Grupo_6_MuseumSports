@@ -124,7 +124,7 @@ footer p.copyright {
     text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
     footer.footer-container h3 {
         font-size: 24px;
     }
@@ -263,7 +263,7 @@ footer p.copyright {
 
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
     footer .container-firs {
         flex-direction: row;
         justify-content: space-around;
