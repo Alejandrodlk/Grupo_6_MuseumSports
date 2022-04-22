@@ -102,6 +102,7 @@ footer section form textarea {
     border-radius: 3px;
     border: none;
     margin-bottom: 5px;
+    resize: none;
 }
 
 footer section form div {
