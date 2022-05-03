@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("./partials/head", { title : "productCart" }) %>
+
+<body>
+    
+    <%- include("./partials/header") %> 
+
+    <!--             ------------- Main----------------            -->
+    <main>
+        <section class="product_container_in_cart">
+            <article class="product_in_cart">
+                <div class="container_image">
+                    <img src="/images/bg-home.jpg" alt="">
+                </div>
+                <div class="container_product">
+                    <div class="product_details">
+                        <section class="product_description">
+                            <h3>Nombre del producto</h3>
+                            <p>Color: <span>Color</span><a href="#">Modificar</a></p>
+                        </section>
+                        <section class="qoutas">
+                            <h4>Coutas</h4>
+                            <div class="select_quantity">
+                                <a href="#"><i class="fa-solid fa-minus"></i></a>
+                                <input type="text" name="quantity" id="" value="1">
+                                <a href="#"><i class="fa-solid fa-plus"></i></a>
+                            </div>
+                        </section>
+                        <h4 class="price_in_qoutas">$ Total por producto</h4>
+                    </div>
+                </div>
+            </article>
+            <div class="product_actions">
+                <a href="#">Eliminar</a>
+                <a href="#">Guardar</a>
+                <a href="#">Comprar este producto</a>
+            </div>
+            <article class="product_in_cart">
+                <div class="container_image">
+                    <img src="/images/bg-home.jpg" alt="">
+                </div>
+                <div class="container_product">
+                    <div class="product_details">
+                        <section class="product_description">
+                            <h3>Nombre del producto</h3>
+                            <p>Color: <span>Color</span><a href="#">Modificar</a></p>
+                        </section>
+                        <section class="qoutas">
+                            <h4>Coutas</h4>
+                            <div class="select_quantity">
+                                <a href="#"><i class="fa-solid fa-minus"></i></a>
+                                <input type="text" name="quantity" id="" value="1">
+                                <a href="#"><i class="fa-solid fa-plus"></i></a>
+                            </div>
+                        </section>
+                        <h4 class="price_in_qoutas">$ Total por producto</h4>
+                    </div>
+                </div>
+            </article>
+            <div class="product_actions">
+                <a href="#">Eliminar</a>
+                <a href="#">Guardar</a>
+                <a href="#">Comprar este producto</a>
+            </div>
+            <article class="product_in_cart">
+                <div class="container_image">
+                    <img src="/images/bg-home.jpg" alt="">
+                </div>
+                <div class="container_product">
+                    <div class="product_details">
+                        <section class="product_description">
+                            <h3>Nombre del producto</h3>
+                            <p>Color: <span>Color</span><a href="#">Modificar</a></p>
+                        </section>
+                        <section class="qoutas">
+                            <h4>Coutas</h4>
+                            <div class="select_quantity">
+                                <a href="#"><i class="fa-solid fa-minus"></i></a>
+                                <input type="text" name="quantity" id="" value="1">
+                                <a href="#"><i class="fa-solid fa-plus"></i></a>
+                            </div>
+                        </section>
+                        <h4 class="price_in_qoutas">$ Total por producto</h4>
+                    </div>
+                </div>
+            </article>
+            <div class="product_actions">
+                <a href="#">Eliminar</a>
+                <a href="#">Guardar</a>
+                <a href="#">Comprar este producto</a>
+            </div>
+            <div class="container_purchase_price">
+                <div class="shipping">
+                    <p>Costo por envío</p>
+                    <h5>Precio del envío</h5>
+                </div>
+                <div class="total_to_pay">
+                    <h3>Total con envío</h3>
+                    <h4>Precio Total</h4>
+                </div>
+                <div>
+                    <a class="buy_button" href="#">Realizar compra</a>
+                </div>
+            </div>
+        </section>
+        <section class="container_all_views">
+            <h2 class="title_related_views">Productos que te interesaron</h2>
+            <div class="viewed_product_container">
+                <div class="viewed_product">
+                    <a href="/productDetail" class="item_container">
+                        <div class="image">
+                            <img class="prueba" src="/images/bg-home.jpg" alt="">
+                        </div>
+                        <div class="view_prod_description">
+                            <h4>Price</h4>
+                            <p>Descripcion</p>
+                            <button class="button_article">Ver producto</button>
+                        </div>
+                    </a>
+                    <a href="/productDetail" class="item_container">
+                        <div class="image">
+                            <img class="prueba" src="/images/bg-home.jpg" alt="">
+                        </div>
+                        <div class="view_prod_description">
+                            <h4>Price</h4>
+                            <p>Descripcion</p>
+                            <button class="button_article">Ver producto</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="viewed_product">
+                    <a href="/productDetail" class="item_container">
+                        <div class="image">
+                            <img class="prueba" src="/images/bg-home.jpg" alt="">
+                        </div>
+                        <div class="view_prod_description">
+                            <h4>Price</h4>
+                            <p>Descripcion</p>
+                            <button class="button_article">Ver producto</button>
+                        </div>
+                    </a>
+                    <a href="/productDetail" class="item_container">
+                        <div class="image">
+                            <img class="prueba" src="/images/bg-home.jpg" alt="">
+                        </div>
+                        <div class="view_prod_description">
+                            <h4>Price</h4>
+                            <p>Descripcion</p>
+                            <button class="button_article">Ver producto</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--             ------------- footer----------------            -->
+    
+    <%- include("./partials/footer") %>
+
+    <script src="/javascript/burguer.js"></script>
+    <script src="/javascript/deploy-footer.js"></script>
+</body>
+
+</html>

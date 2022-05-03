@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("./partials/head", { title : "Login" }) %>
+
+<body>
+
+    <%- include("./partials/header") %> 
+
+
+        <!----    ------------------------------main--------------------------------- -->
+
+
+        <main>
+
+            <div class="tittle">
+                <h3>LOGIN</h3>
+            </div>
+    
+            <form action="register.html" method="POST">
+                <div class="container1">
+    
+                    <p class="barra">
+                        <label>EMAIL:</label>
+    
+                        <input type="Email" name="Email" required>
+                       
+                    </p>
+               
+        
+                    <p class="barra2">
+                        <label>CONTRASEÑA:</label>
+                        <input type="password" name="Contraseña" required>
+                    </p>
+    
+                </div>
+            </form>
+                <div class="button">
+                    <a>
+                        <input type="submit" value="INICIAR SESION">
+                    </input>
+                    <br>
+                    <br>
+                
+                    <a href="/users/register">
+                        <input type="submit" value="REGISTRATE">
+                    </a>
+    
+                </div>
+            
+    
+    <a class="enlace" href="Necesito ayuda para ingresar">Necesito ayuda para ingresar</a>
+        </main>
+
+
+
+    <!--          ------------FOOTER------------       -->
+    
+    <%- include("./partials/footer") %>
+
+    <script src="/javascript/burguer.js"></script>
+    <script src="/javascript/deploy-footer.js"></script>
+</body>
+
+</html>
