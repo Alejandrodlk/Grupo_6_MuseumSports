@@ -1,0 +1,47 @@
+<%- include("./partials/head", { title : "Agregar Producto" }) %>
+
+    <body>
+
+        <%- include("./partials/header") %>
+
+            <main class="productAdd">
+                <form class="register_form" action="" method="POST">
+                    <h3>Agregar producto / Modificar</h3>
+                    <div class="user_data">
+                        <input class="get_log" type="text" placeholder="Nombre del producto">
+                        <input class="get_log" type="text" placeholder="Descripcion">
+                        <input class="get_log" type="email" placeholder="Color">
+                        <input class="get_log" type="text" placeholder="Talle">
+                    </div>
+                    <a class="box_img" href="#">Subir imagen<input class="get_img" type="file"></a>
+                    <div class="box_tittle">
+                        <h4 class="tittle_categories">Categorias</h4>
+                    </div>
+                    <div class="select_check">
+                        <select name="select">
+                            <option value="Futbol Nacional">Futbol Nacional</option>
+                            <option value="Futbol Internacional">Futbol Internacional</option>
+                            <option value="Tenis">Tenis</option>
+                            <option value="Basket">Basket</option>
+                            <option value="Rugby">Rugby</option>
+                            <option value="Boxeo">Boxeo</option>
+                        </select>
+                    </div>
+                    <div class="password">
+                        <input class="get_log" type="number" name="pass" id="" placeholder="Precio">
+                        <input class="get_log" type="number" name="pass" id="" placeholder="Descuento">
+                    </div>
+                    <div class="buttons">
+                        <a class="box_button" href="/"><input class="button_get" type="button" value="Enviar"></a>
+                        <input class="button_get" type="reset" value="Reset">
+                    </div>
+                </form>
+            </main>
+
+            <%- include("./partials/footer") %>
+
+                <script src="/javascript/burguer.js"></script>
+                <script src="/javascript/deploy-footer.js"></script>
+    </body>
+
+    </html>
