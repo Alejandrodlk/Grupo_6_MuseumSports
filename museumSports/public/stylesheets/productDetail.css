@@ -336,14 +336,14 @@ main .conatainer_related_products .related_article .in_installments {
     
     main .conatainer_related_products .products_related {
         display: flex; 
-        gap: 15px;
+        gap: 20px;
         flex-direction: column;
     }
     
     main .conatainer_related_products .item_container_related {
         display: flex;
         flex-direction: row;
-        gap: 15px;
+        gap: 0 20px;
         margin-bottom: 0px;
     }
 
@@ -357,6 +357,7 @@ main .conatainer_related_products .related_article .in_installments {
     
     main .conatainer_related_products .related_article .button_article {
         transition: all .5s ease-in-out;
+        cursor: pointer;
     }
 
     main .conatainer_related_products .related_article .button_article:hover {

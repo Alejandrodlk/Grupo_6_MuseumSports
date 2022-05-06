@@ -46,6 +46,10 @@ footer section .deploy_cont {
     height: 0;
 }
 
+footer section .deploy_cont .input_text:focus {
+    outline: none;
+}
+
 .open .fa-square-plus {
     transform: rotate(90deg);
 }

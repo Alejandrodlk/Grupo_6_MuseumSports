@@ -2,8 +2,10 @@ main section.product_container_in_cart {
     display: flex;
     flex-direction: column;
     /* margin-top: 30px; */
-    background-color: lightgray;
-    padding-top: 20px;
+    background-color: rgba(211, 211, 211, 0.582);
+    padding: 20px 0;
+    align-items: center;
+    
 }
 
 main section article.product_in_cart {
@@ -88,6 +90,7 @@ main section article .product_details .price_in_qoutas {
 
 main section .product_actions {
     display: flex;
+    width: 100%;
     gap: 5px;
     border-top: 1px solid #02a28a67;
     background-color: white;
@@ -106,6 +109,7 @@ main section .container_purchase_price {
     padding: 15px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 main section .container_purchase_price .shipping {
@@ -146,7 +150,7 @@ main section .container_purchase_price .buy_button {
 }
 
 main section.container_all_views {
-    background-color: lightgray;
+    background-color: rgba(211, 211, 211, 0.582);
 }
 
 main .title_related_views {
@@ -201,6 +205,7 @@ main section .item_container .view_prod_description button {
     color: white;
     width: 80%;
     text-align: center;
+    text-transform: uppercase;
 }
 
 
@@ -229,6 +234,9 @@ main section .item_container .view_prod_description button {
 
 @media screen and (min-width: 768px) {
 
+    main section article.product_in_cart {
+        max-width: 900px; 
+    }
 
     main section article .product_details .product_description h3 {
         font-size: 16px;
@@ -255,6 +263,7 @@ main section .item_container .view_prod_description button {
     main section .product_actions {
         gap: 0px;
         justify-content: end;
+        max-width: 900px;
     }
     
     main section .product_actions a {
@@ -263,6 +272,10 @@ main section .item_container .view_prod_description button {
 
     main section .product_actions a:hover {
         color: #00705f;
+    }
+
+    main section .container_purchase_price {
+        max-width: 900px;
     }
     
     main section .container_purchase_price .total_to_pay h4 {
@@ -312,11 +325,12 @@ main section .item_container .view_prod_description button {
         padding-bottom: 5px;
     }
     
-    main section .item_container .view_prod_description button {
+    main section .item_container .view_prod_description .button_article {
         transition: all .5s ease-in-out;
+        cursor: pointer;
     }
 
-    main section .item_container .view_prod_description button:hover {
+    main section .item_container .view_prod_description .button_article:hover {
         background-color: #00705f;
     }
 }
