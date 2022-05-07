@@ -4,7 +4,7 @@ module.exports = {
 
     login : (req,res) => res.render("login"),
 
-    formulario : (req,res) => res.render("productsAdd")
+    
 
 
 }
