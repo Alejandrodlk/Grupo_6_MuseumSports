@@ -1,3 +1,7 @@
+.productsAll {
+    display: flex;
+}
+
 .index-box {
     
     width: 95%;

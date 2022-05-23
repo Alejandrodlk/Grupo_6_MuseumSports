@@ -1,0 +1,63 @@
+<%- include("./partials/head", { title : "Agregar Producto" }) %>
+
+    <body>
+
+        <%- include("./partials/header") %>
+
+            <main class="productAdd">
+                <form class="register_form" action="" method="POST">
+                    <h3>Agregar producto</h3>
+                    <div class="user_data">
+                        <input class="get_log" type="text" name="name" placeholder="Nombre del producto">
+                        <input class="get_log" type="text" name="description" placeholder="Descripcion">
+                        <input class="get_log" type="number" name="price" placeholder="Precio">
+                        <input class="get_log" type="number" name="discount" placeholder="descuento">
+                    </div>
+                    <a class="box_img" href="#">Subir imagen<input class="get_img" type="file"></a>
+                    <div class="box_tittle">
+                        <h4 class="tittle_categories">Tipo de Deporte</h4>
+                    </div>
+                    <div class="select_check">
+                        <select name="sport">
+                            <option value="" hidden selected>Selecciona uno..</option>
+                            <option value="futbol nacional">Futbol Nacional</option>
+                            <option value="futbol-Internacional">Futbol Internacional</option>
+                            <option value="Tenis">Tenis</option>
+                            <option value="Basket">Basket</option>
+                            <option value="Rugby">Rugby</option>
+                            <option value="Boxeo">Boxeo</option>
+                            
+                        </select>
+                    </div>
+
+                    <div class="box_tittle">
+                        <h4 class="tittle_categories">Categorias</h4>
+                    </div>
+                    <div class="select_check">
+                        <select name="category">
+                            <option value="" hidden selected>Selecciona uno..</option>
+                            <option value="destacados">Producto destacado</option>
+                            <option value="ofertas">Producto en oferta</option>   
+                            
+                        </select>
+                    </div>
+
+                  <!--   <div class="password">
+                        <input class="get_log" type="number" name="pass" id="" placeholder="Precio">
+                        <input class="get_log" type="number" name="pass" id="" placeholder="Descuento">
+                    </div> -->
+                    <div class="buttons">
+                        <a class="box_button" href="/"><input class="button_get" type="submit" value="Crear Producto"></a>
+                        <a class="box_button" href=""><input class="button_get" type="button" value="Crear Producto"></a>
+                        <input class="button_get" type="reset" value="Reset">
+                    </div>
+                </form>
+            </main>
+
+            <%- include("./partials/footer") %>
+
+                <script src="/javascript/burguer.js"></script>
+                <script src="/javascript/deploy-footer.js"></script>
+    </body>
+
+    </html>

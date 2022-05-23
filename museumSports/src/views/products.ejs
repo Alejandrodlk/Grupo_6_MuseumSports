@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+
+<%- include("./partials/head", { title : "home" }) %>
+
+<body>
+    
+    <%- include("./partials/header") %> 
+
+    <main class="productsAll">
+        <% products.forEach(({name,description,price,discount,image,sport,category}) => { %>
+         <article class="index__box-article">
+            <a href="/products/detail">
+                <div>
+                    <img class="index__image" src="/images/Imagenes/<%= image %>" alt="">
+                </div>
+                <div class="index__box-descripcion">
+                    <div class="index__precio-descuento">
+                        <p class="index__precio">$<%= price %> </p>
+                        <p class="index__descuento"><%= discount %> % OFF</p>
+                    </div>
+                    <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                    <h5 class="index__descripcion"><%= name %></h5>
+                </div>
+            </a>
+        </article>
+        <% }) %>
+        
+                 
+    </main>
+
+    <!--          ------------FOOTER------------       -->
+    
+    <%- include("./partials/footer") %> 
+
+    <script src="/javascript/burguer.js"></script>
+    <script src="/javascript/deploy-footer.js"></script>
+</body>
+
+</html>

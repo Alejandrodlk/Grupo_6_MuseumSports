@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const methodOverride =  require('method-override')
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -12,18 +13,15 @@ var app = express();
 
 
 // view engine setup
-app.set('views', path.join(__dirname, "src" , 'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public'))); 
-
-/* app.use('/', indexRouter);
-app.use('/users', usersRouter); */
-
+app.use(express.static(path.join(__dirname, '../public'))); 
+app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
 
 /* app.get("/" , (req,res) => res.sendFile(path.resolve(__dirname , "views","index.html"))) */

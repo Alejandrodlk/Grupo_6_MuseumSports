@@ -5,7 +5,7 @@
         <%- include("./partials/header") %>
 
             <main class="productAdd">
-                <form class="register_form" action="" method="POST">
+                <form class="register_form" action="/products/update/:id?_method=PUT" method="POST">
                     <h3>Modificar producto</h3>
                     <div class="user_data">
                         <input class="get_log" type="text" placeholder="Nombre del producto">
@@ -32,7 +32,7 @@
                         <input class="get_log" type="number" name="pass" id="" placeholder="Descuento">
                     </div>
                     <div class="buttons">
-                        <a class="box_button" href="/"><input class="button_get" type="button" value="Editar producto"></a>
+                        <a class="box_button" href="/"><input class="button_get" type="submit" value="Editar producto"></a>
                         <input class="button_get" type="reset" value="Reset">
                     </div>
                 </form>
