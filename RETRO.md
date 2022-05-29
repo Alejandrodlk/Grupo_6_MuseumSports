@@ -1,5 +1,5 @@
 
-##### RETROSPECTIVA SPRINT 2#####
+##### RETROSPECTIVA SPRINT 1#####
 
 # Hacer menos
 -------------------------------------------------------------------------------------------
@@ -35,7 +35,7 @@
 * Mejorar el uso de Trello.
 
 
-##### RETROSPECTIVA SPRINT 3#####
+##### RETROSPECTIVA SPRINT 2#####
 
 # Hacer menos
 -------------------------------------------------------------------------------------------
