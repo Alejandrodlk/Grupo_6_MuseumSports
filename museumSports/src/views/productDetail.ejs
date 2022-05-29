@@ -13,7 +13,7 @@
                 <div class="product_item">
                     <section class="image_container">
                         <div class="main_image">
-                            <img src="/images/futbol-img1-1.jpg" alt="">
+                            <img src="/images/products/<%= product.image %>" alt="">
                         </div>
                         <div class="secondary_image_container">
                             <div class="secondary_image">
@@ -31,19 +31,17 @@
                         </div>
                     </section>
                     <section class="product_description_select">
-                        <h3 class="prodcut_title">Palota Oficial copa mundial de la FIFA - TELSTAR Rusia 2018</h3>
-                        <h4 class="main_product_price">$ 11.999</h4>
+                        <h3 class="prodcut_title"><%= product.name %></h3>
+                        <h4 class="main_product_price">$<%= product.price %></h4>
                         <p class="in_installments">en 6x $ 2.433<span>16</span></p>
-                        <div class="color_container">
-                            <!-- <span class="product_color">Color</span>
-                            <span class="product_color">Color</span> -->
+                       <!--  <div class="color_container">
+                           
                             <span class="product_color">Color</span>
                         </div>
                         <div class="size_container">
-                            <!-- <span class="product_size">Talle</span>
-                            <span class="product_size">Talle</span> -->
+                            
                             <span class="product_size">Talle</span>
-                        </div>
+                        </div> -->
                         <div class="select_quantity">
                             <a href=""><i class="fa-solid fa-square-minus"></i></a>
                             <div>
@@ -62,9 +60,10 @@
                         <div class="button_container">
                             <a class="button" href="">Agregar al carrito</a>
                             <a class="button" href="">Comprar ahora</a>
-                            <a class="button" href="/products/edit">Editar producto</a>
-                            <a class="button" href="/products/remove/1?_method=DELETE">Borrar producto</a>
-
+                            <a class="button" href="/products/edit/<%= product.id %>">Editar producto</a>
+                            <form action="/products/remove/<%= product.id %>?_method=DELETE" method="POST" >
+                                <button class="button" type="submit">Eliminar Producto</button>
+                            </form>
                         </div>
                     </section>
                 </div>
@@ -72,27 +71,7 @@
                     <section class="product_technical_details">
                         <div class="specific_detail">
                             <a href="">Descripcion del producto</a>
-                            <p>Telstar en movimiento, la icónica e inmediatamente reconocible pelota blanca y negra de
-                                la
-                                copa de 1970. Presenta una superficie termosoldada sin costuras que brinda una precisión
-                                absoluta en cada toque y una mínima absorción de agua. La primera de su tipo, incorpora
-                                un
-                                chip NFC que te permite acceder a contenidos exclusivos en tu smartphone. <br>
-                                <br>
-                                Exterior térmicamente sellado<br>
-                                Esta pelota presenta una superficie sin costuras que brinda una precisión absoluta en
-                                cada
-                                toque y una mínima absorción de agua.<br>
-                                <br>
-                                Diseño monopanel<br>
-                                Cada panel tiene el mismo tamaño y forma para ofrecer un rendimiento suave y
-                                continuo.<br>
-                                <br>
-                                FIFA Quality Pro<br>
-                                Certificado con los estándares más altos de la FIFA después de pruebas de
-                                circunferencia,
-                                peso, rebote y absorción de agua.
-                            </p>
+                            <p> <%= product.description %></p>
                         </div>
                         <!-- <div>
                         <a href="">Video</a>

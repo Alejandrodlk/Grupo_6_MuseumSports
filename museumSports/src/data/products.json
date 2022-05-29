@@ -1,23 +1,11 @@
 [
    {
-      "id": 1,
-      "name": "Camiseta",
-      "description": "Camiseta de futbol",
-      "price": 100,
-      "discount": 5,
-      "image": "rugby6.jpg",
-      "sport": "futbol",
-      "category": "oferta"
-   },
-   {
       "id": 2,
       "name": "Copa del mundo",
       "description": "Copa del mundo 1986",
       "price": 10000,
       "discount": 10,
-      "image": "rugby6.jpg",
-      "sport": "futbol",
-      "category": "oferta"
+      "image": "image-1653864805183.jpg"
    },
    {
       "id": 3,
@@ -25,19 +13,32 @@
       "description": "Pelota que se uso en la final del mundial 2018",
       "price": 80000,
       "discount": 10,
-      "image": "rugby6.jpg",
-      "sport": "futbol",
-      "category": "oferta"
+      "image": "image-1653864787013.jpg"
    },
    {
-      "id": 4,
-      "name": "Camiseta maradora 1978",
-      "description": "Camiseta que utilizo maradona en el mundial 1978",
-      "price": 120000,
-      "discount": 10,
-      "image": "rugby6.jpg",
-      "sport": "futbol",
-      "category": "oferta"
+      "id": 7,
+      "name": "Smartwatchs",
+      "description": "camiseta de river utilizada en la final de la copa libertadores",
+      "price": 45,
+      "discount": 4,
+      "image": "image-1653864581856.png"
+   },
+   {
+      "id": 8,
+      "name": "Pelota mundial 2018",
+      "description": "camiseta de river utilizada en la final de la copa libertadores",
+      "price": 250000,
+      "discount": 15,
+      "image": "image-1653753320409.png"
+   },
+   {
+      "id": 9,
+      "name": "producto a borrar PRUEBA",
+      "description": "camiseta de river utilizada en la final de la copa libertadores",
+      "price": 250000,
+      "discount": 15,
+      "image": "default-image.png",
+      "sport": "",
+      "category": ""
    }
-   
 ]

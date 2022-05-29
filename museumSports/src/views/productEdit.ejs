@@ -1,19 +1,22 @@
-<%- include("./partials/head", { title : "Agregar Producto" }) %>
+<%- include("./partials/head", { title : "Editar Producto" }) %>
 
     <body>
 
         <%- include("./partials/header") %>
 
             <main class="productAdd">
-                <form class="register_form" action="/products/update/:id?_method=PUT" method="POST">
-                    <h3>Modificar producto</h3>
+                <form class="register_form" action="/products/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <h3>Editar producto</h3>
                     <div class="user_data">
-                        <input class="get_log" type="text" placeholder="Nombre del producto">
-                        <input class="get_log" type="text" placeholder="Descripcion">
-                        <input class="get_log" type="email" placeholder="Color">
-                        <input class="get_log" type="text" placeholder="Talle">
+                        <input class="get_log" type="text" id="name" name="name" value="<%= product.name %>">
+                        <input class="get_log" type="text" id="description" name="description" value="<%= product.description %>">           
                     </div>
-                    <a class="box_img" href="#">Subir imagen<input class="get_img" type="file"></a>
+                                      
+                    <div class="password">
+                        <input class="get_log" type="number" name="price" id="price" value="<%= product.price %>">
+                        <input class="get_log" type="number" name="discount" id="discount" value="<%= product.discount %>">
+                    </div>
+                    
                     <div class="box_tittle">
                         <h4 class="tittle_categories">Categorias</h4>
                     </div>
@@ -27,12 +30,14 @@
                             <option value="Boxeo">Boxeo</option>
                         </select>
                     </div>
-                    <div class="password">
-                        <input class="get_log" type="number" name="pass" id="" placeholder="Precio">
-                        <input class="get_log" type="number" name="pass" id="" placeholder="Descuento">
+
+                    <div >
+                        <img width="100px" height="200px" src="/images/products/<%= product.image %>" alt="">
                     </div>
+
+                    <a class="box_img" href="#">Subir imagen<input class="get_img" name="image" type="file" accept="image/*"></a>
                     <div class="buttons">
-                        <a class="box_button" href="/"><input class="button_get" type="submit" value="Editar producto"></a>
+                        <button type="submit" class="box_button button_get" >Guardar producto</button>
                         <input class="button_get" type="reset" value="Reset">
                     </div>
                 </form>

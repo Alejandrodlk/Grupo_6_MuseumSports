@@ -3,14 +3,17 @@
 
 
 
-<%- include("./partials/head", { title : "home" }) %>
+<%- include("./partials/head", { title : "Resultado Busqueda" }) %>
 
 <body>
     
     <%- include("./partials/header") %> 
 
     <main class="productsAll">
-        <% products.forEach(({id , name,description,price,discount,image,sport,category}) => { %>
+        <h2>Resultados de la búsqueda:<%= keyword %></h2>
+
+        <% if (results.length > 0) { %>
+        <% results.forEach(({id,name,description,price,discount,image,sport,category}) => { %>
          <article class="index__box-article">
             <a href="/products/detail/<%= id %>">
                 <div>
@@ -19,7 +22,7 @@
                 <div class="index__box-descripcion">
                     <div class="index__precio-descuento">
                         <p class="index__precio">$<%= price %> </p>
-                        <p class="index__descuento"><%= discount %> % OFF</p>
+                        <p class="index__descuento"><%= discount %> %OFF</p>
                     </div>
                     <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
                     <h5 class="index__descripcion"><%= name %></h5>
@@ -27,7 +30,11 @@
             </a>
         </article>
         <% }) %>
-        
+        <% }else{ %>
+            <div class="col-12">
+                <h2  style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+            </div>
+        <% } %>
                  
     </main>
 

@@ -23,10 +23,14 @@
         </div>
     </div>
     <nav class="nav-bars-container">
+
         <div class="nav_search">
-            <input type="text" placeholder="Buscar">
-            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <form action="/search" method="GET">
+                <input type="text" name="keyword" placeholder="Buscar">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
         </div>
+        
         <ul class="nav-main-bars">
             <li><a class="item" href="/">Inicio</a></li>
             <li><a class="item" href="#">Categorias</a>

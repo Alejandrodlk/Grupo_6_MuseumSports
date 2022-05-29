@@ -2,7 +2,13 @@ const fs = require('fs');
 const path = require('path');
 
 
-const readJSON = JSON.parse(fs.readFileSync("src/data/products.json" ,"utf8"))
+/* const readJSON = JSON.parse(fs.readFileSync("src/data/products.json" ,"utf8")) */
+
+const readJSON = () => {
+    const products = JSON.parse(fs.readFileSync("src/data/products.json", 'utf-8'));	
+	return products
+}
+
 const saveJSON = (e) => fs.writeFileSync("src/data/products.json" , JSON.stringify(e,null,3))
 
 module.exports = {
@@ -17,7 +23,7 @@ module.exports = {
     },
 
     store : (req,res) => {
-       let products = readJSON
+       let products = readJSON()
        const {id,name,description,price,discount,image,sport,category} = req.body 
         
        const newProduct = {
@@ -26,38 +32,70 @@ module.exports = {
            description,
            price : +price,
            discount : +discount,
-           image : "rugby6.jpg",
+           image : req.file ? req.file.filename : "default-image.png",
            sport,
            category
        }
-
+       
        products.push(newProduct)
        saveJSON(products)
 
-       res.redirect("/")
+       res.redirect("/products/all")
     },
 
     //Edicion de producto
     edit : (req,res) => {
-        return res.render("productEdit" , {
 
-        })
+        let products = readJSON()
+		let product = products.find(product => product.id === +req.params.id)
+
+		return res.render("productEdit" , {
+			product
+		})
+
     },
 
-    update : (req,res) => {
-        return res.send(req.body)
-    },
+    update: (req, res) => {
+		let products = readJSON()
+		const {name,price,discount,description,category,sport} = req.body
 
-    //Eliminar producto
-    remove : (req,res) => {
-        return res.send("Remove")
-    },
+		const product = products.find(product => product.id === +req.params.id)
+
+		const productsModify = products.map(product => {
+			if (product.id === +req.params.id) {
+				let productModify = {
+					...product,
+					name : name.trim(),
+					price : +price,
+					discount: +discount,
+					description : description.trim(),
+					image : req.file ? req.file.filename : product.image,
+					category,
+                    sport				
+				}	
+                
+				return 	productModify		
+			}
+			return product
+		})
+
+		saveJSON(productsModify)
+
+		return res.redirect("/products/all")
+	},
+
     
     //detalle de producto
     detail : (req,res) => {
 
         
-       return res.render("productDetail")
+        let products = readJSON()
+		let product = products.find(product => product.id === +req.params.id)
+
+		return res.render("productDetail" , {
+			product
+		})
+
     },
 
     //Carrito de compras
@@ -66,13 +104,24 @@ module.exports = {
     //Todos los productos
     all : (req,res) => {
 
-        let products = readJSON
+        let products = readJSON()
 
         res.render("products" , {
             products,
         })
-    }
+    },
 
-    
+    //Eliminar producto
+    remove : (req,res) => {
 
+        let products = readJSON()
+
+		const productsModify = products.filter(product => product.id !== +req.params.id)
+
+		
+		saveJSON(productsModify)
+
+		return res.redirect("/products/all")
+
+    },
 }

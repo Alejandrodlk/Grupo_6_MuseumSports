@@ -1,25 +1,29 @@
 const express = require("express")
 const router = express.Router()
 
-const {create , store, edit , update , remove , cart , detail , all } = require("../controllers/productsController")
+const upload = require('../middlewares/uploadImagesProducts');
+
+const {create , store, edit , update , remove , cart , detail , all ,} = require("../controllers/productsController")
 
 
 /* /products */
 
 
-router.get("/detail" , detail )
+router.get("/detail/:id" , detail )
 
 
 router.get("/create" , create)
-router.post("/create" , store)
+router.post("/create", upload.single("image") , store)
 
 router.get("/edit/:id" , edit)
-router.put("/update/:id" , update )
+router.put("/update/:id", upload.single("image") , update )
 
-router.delete("/remove" , remove)
+router.delete("/remove/:id" , remove)
 
 router.get("/cart" , cart )
 
 router.get("/all" , all)
+
+
 
 module.exports = router;
