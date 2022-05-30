@@ -1,0 +1,43 @@
+[
+   {
+      "id": 1,
+      "name": "",
+      "lastname": "",
+      "email": "",
+      "password": "",
+      "image": "",
+      "category": ""
+   },
+   {
+      "id": 2,
+      "name": "Beimar",
+      "lastname": "Delgado",
+      "email": "mail@gmail.com",
+      "password": "1234",
+      "image": "foto.jpg"
+   },
+   {
+      "id": 3,
+      "name": "Alejandro",
+      "lastname": "Iñiguez",
+      "email": "ale_165851@hotmail.com",
+      "password": "123123",
+      "image": "foto.jpg"
+   },
+   {
+      "id": 4,
+      "name": "Emiliano",
+      "lastname": "Dos Reis",
+      "email": "emi@mail.com",
+      "password": "12345",
+      "image": "foto.jpg"
+   },
+   {
+      "id": 5,
+      "name": "Agustin Matias",
+      "lastname": "Delgado",
+      "email": "agus@mail.com",
+      "password": "654321",
+      "image": "foto.jpg"
+   }
+]
