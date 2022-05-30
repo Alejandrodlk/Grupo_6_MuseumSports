@@ -39,5 +39,13 @@
       "email": "agus@mail.com",
       "password": "654321",
       "image": "foto.jpg"
+   },
+   {
+      "id": 6,
+      "name": "Emiliano",
+      "lastname": "dos Reis",
+      "email": "edosreis26@gmail.com",
+      "password": "1234",
+      "image": "foto.jpg"
    }
 ]
