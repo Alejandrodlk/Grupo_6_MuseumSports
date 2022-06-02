@@ -7,27 +7,27 @@
 * Cometer errores por no compartir nuestros avances.
 * Dejar pendiente detalles que luego atrasen una entrega.
 
-## Seguir haciendo
+# Seguir haciendo
 -------------------------------------------------------------------------------------------
 
 * Escuchar las opiniones del grupo.
 * Comprometerse con el grupo.
 * Ayudarnos como equipo.
 
-### Empezar a hacer
+# Empezar a hacer
 -------------------------------------------------------------------------------------------
 
 * Compartir nuestros progresos.
 * Consultar nuestras dudas.
 * Más comunicación con los profesores.
 
-#### Dejar de hacer
+# Dejar de hacer
 -------------------------------------------------------------------------------------------
 
 * Atrasarnos con entregas.
 * Dejar para después lo que se puede hacer en el momento.
 
-##### Hacer más
+# Hacer más
 -------------------------------------------------------------------------------------------
 
 * Reunirnos más.
@@ -47,7 +47,7 @@
     
 * No organizar las tareas previamente.
  
-## Seguir haciendo
+# Seguir haciendo
 -------------------------------------------------------------------------------------------
 
 * Escuchar las opiniones del grupo.
@@ -55,7 +55,7 @@
 * Ayudarnos como equipo.
 * Cumplir con los objetivos del sprint en tiempo y forma.
 
-### Empezar a hacer
+# Empezar a hacer
 -------------------------------------------------------------------------------------------
 
 * Trabajar mas seguido en ramas. 
@@ -63,12 +63,12 @@
 * Consultar nuestras dudas.
 * Más comunicación con los profesores.
 
-#### Dejar de hacer
+# Dejar de hacer
 -------------------------------------------------------------------------------------------
 
 * Reuniones de larga duracion.
 
-##### Hacer más
+# Hacer más
 -------------------------------------------------------------------------------------------
 
 * Hacer daylis mas seguido.
@@ -92,7 +92,7 @@
 * Atrazar reuniones.
 
  
-## Seguir haciendo
+# Seguir haciendo
 -------------------------------------------------------------------------------------------
 
 * Trabajar respetando los tiempos de cada uno.
@@ -100,7 +100,7 @@
 * Ayudarnos entre nosotros cuando alguno no comprende algún tema específico.
 
 
-### Empezar a hacer
+# Empezar a hacer
 -------------------------------------------------------------------------------------------
 
 * Consultar con los profesores dudas que nos surjan.
@@ -108,7 +108,7 @@
 * Realizar trabajos propios para ejercitarnos.
 
 
-#### Dejar de hacer
+# Dejar de hacer
 -------------------------------------------------------------------------------------------
 
 * Dejar tareas para el día siguiente.
@@ -116,7 +116,7 @@
 * Terminar todo a último momento.
 
 
-##### Hacer más
+# Hacer más
 -------------------------------------------------------------------------------------------
 
 * Reunirnos más seguido.
@@ -130,3 +130,43 @@
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+##### RETROSPECTIVA SPRINT 4 #####
+
+# Hacer menos
+-------------------------------------------------------------------------------------------
+    
+* Reunirnos pocas veces.
+* Reunirnos pocos minutos.
+
+ 
+# Seguir haciendo
+-------------------------------------------------------------------------------------------
+
+* Comprometerse con el sprint.
+* Ver las clases y repasar Playground para avanzar en el proyecto.
+* No desanimarnos cuando nos atrasamos.
+
+
+# Empezar a hacer
+-------------------------------------------------------------------------------------------
+
+* Compartir dudas con los profesores.
+* Informar nuestros avances a los profesores.
+* Comentarles los motivos cuando no llegamos a entregar en tiempo los sprint.
+
+
+# Dejar de hacer
+-------------------------------------------------------------------------------------------
+
+* Atrasar reuniones.
+* Entregar los sprint fuera del tiempo indicado.
+* Arrancar con el sprint días después de lanzarse.
+
+
+# Hacer más
+-------------------------------------------------------------------------------------------
+
+* Más reuniones.
+* Tomar apuntes relacionados al sprint.
+* Hablar sobre nuestros puntos fuertes y débiles de cada tarea.
