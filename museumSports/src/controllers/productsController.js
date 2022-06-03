@@ -17,7 +17,7 @@ module.exports = {
     // Creacion de producto
     create : (req,res) => {
         
-        return res.render("productAdd" , {
+        return res.render("./admin/productAdd" , {
 
         })
     },
@@ -49,7 +49,7 @@ module.exports = {
         let products = readJSON()
 		let product = products.find(product => product.id === +req.params.id)
 
-		return res.render("productEdit" , {
+		return res.render("./admin/productEdit" , {
 			product
 		})
 
@@ -70,8 +70,8 @@ module.exports = {
 					discount: +discount,
 					description : description.trim(),
 					image : req.file ? req.file.filename : product.image,
-					category,
-                    sport				
+					category : " ",
+                    sport :	" "		
 				}	
                 
 				return 	productModify		

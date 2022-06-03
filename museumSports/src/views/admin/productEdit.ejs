@@ -1,8 +1,8 @@
-<%- include("./partials/head", { title : "Editar Producto" }) %>
+<%- include("../partials/head", { title : "Editar Producto" }) %>
 
     <body>
 
-        <%- include("./partials/header") %>
+        <%- include("../partials/header") %>
 
             <main class="productAdd">
                 <form class="register_form" action="/products/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
@@ -43,7 +43,7 @@
                 </form>
             </main>
 
-            <%- include("./partials/footer") %>
+            <%- include("../partials/footer") %>
 
                 <script src="/javascript/burguer.js"></script>
                 <script src="/javascript/deploy-footer.js"></script>

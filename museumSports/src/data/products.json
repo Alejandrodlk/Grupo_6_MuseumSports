@@ -38,7 +38,7 @@
       "price": 250000,
       "discount": 15,
       "image": "default-image.png",
-      "sport": "",
-      "category": ""
+      "category": " ",
+      "sport": " "
    }
 ]
