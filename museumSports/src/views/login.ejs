@@ -9,45 +9,41 @@
 
 
         <!----    ------------------------------main--------------------------------- -->
-
-
         <main>
-
             <div class="tittle">
                 <h3>LOGIN</h3>
             </div>
     
-            <form action="register.html" method="POST">
+            <form action="" method="POST">
                 <div class="container1">
     
                     <p class="barra">
-                        <label>EMAIL:</label>
-    
-                        <input type="Email" name="Email" required>
-                       
+                        <label for="email">EMAIL:</label>  
+                        <input type="email" name="email" id="email" >
                     </p>
                
         
                     <p class="barra2">
-                        <label>CONTRASEÑA:</label>
-                        <input type="password" name="Contraseña" required>
+                        <label for="password">CONTRASEÑA:</label>
+                        <input type="password" name="password" id="password">
                     </p>
-    
-                </div>
-            </form>
-                <div class="button">
-                    <a href="/products/agregarProducto">
-                        <input type="submit" value="INICIAR SESION">
-                    </a>
-                    <br>
-                    <br>
-                
-                    <a href="/users/register">
-                        <input type="submit" value="REGISTRATE">
-                    </a>
+
+                    <div class="col-12 col-md-6">
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="checkbox" name="remember" style="width: 30px; height:30px">
+                            <label class="form-check-label form-label ms-2" for="checkbox">Recordarme</label>
+                          </div>
+                    </div>
     
                 </div>
             
+                <div class="button">            
+                    <button type="submit" >INICIAR SESION</button>
+                    
+                    <button><a href="/users/register">REGISTRATE</a></button>       
+                </div>
+           
+            </form>
     
     <a class="enlace" href="Necesito ayuda para ingresar">Necesito ayuda para ingresar</a>
         </main>

@@ -13,60 +13,53 @@
             <h3>REGISTRO</h3>
         </div>
 
-
-
         <div class="container">
-            <form action="/users/register" method="POST">
+            <form action="" method="POST">
                 <p>
-                    <label>NOMBRE:</label>
-                    <input type="text" name="name" required>
-                </p>
-
-                <p>
-                    <label>APELLIDO:</label>
-                    <input type="text" name="lastname" required>
-                </p>
-
-               <!--  <p>
-                    <label>DNI:</label>
-                    <input type="DNI" name="DNI" required>
-                </p> -->
-
-                <!-- <p>
-                    <label>PAÍS:</label>
-                    <input type="País" name="País" required>
-                </p> -->
-
-                <!-- <p>
-                    <label>PROVINCIA:</label>
-                    <input type="Provincia" name="Provincia" required>
-                </p> -->
-
-                <!-- <p>
-                    <label>LOCALIDAD:</label>
-                    <input type="Localidad" name="Localidad" required>
-                </p> -->
-
-                <!-- <p>
-                    <label>CÓDIGO POSTAL:</label>
-                    <input type="Código postal" name="Código postal" required>
-                </p> -->
-
-                <p><label>EMAIL:</label>
-                    <input type="email" name="email" required>
+                    <label for="name">NOMBRE:</label>
+                    <input type="text" name="name" id="name" value="<%= locals.old && old.name ? old.name : null %>">
+                    <span class="text-danger"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
                 </p>
 
                 <p>
-                    <label>CONTRASEÑA:</label>
-                    <input type="password" name="password" required>
+                    <label for="lastname">APELLIDO:</label>
+                    <input type="text" name="lastname" id="lastname" value="<%= locals.old && old.lastname ? old.lastname : null %>">
+                    <span class="text-danger"><%= locals.errors && errors.lastname ? errors.lastname.msg : null %></span>
                 </p>
+
+                <p>
+                    <label for="email">EMAIL:</label>
+                    <input type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : null %>">
+                    <span class="text-danger"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+                </p>
+
+                <p>
+                    <label for="password">CONTRASEÑA:</label>
+                    <input type="password" name="password" id="password">
+                    <span class="text-danger"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
+                </p>
+
+                <p>
+                    <label for="password2">REINGRESAR CONTRASEÑA:</label>
+                    <input type="password" name="password2" id="password2">
+                    <span class="text-danger"><%= locals.errors && errors.password2 ? errors.password2.msg : null %></span>
+                </p>
+            
+                <p>
+                    <input name="bases" class="form-check-input" type="checkbox" value="" id="bases" style="width:30px; height:30px;">
+                    <label class="form-check-label form-label ms-2" for="bases">
+                        Acepto las bases y condiciones
+                    </label>
+                    <span class="text-danger"><%= locals.errors && errors.bases ? errors.bases.msg : null %></span>
+                </p>
+
             </div>
 
             <div class="button">
             <button type="submit" class="button_action">REGISTRATE</button>
             <a class="enlace1" href="/login">Ya tenés cuenta? Click acá</a>
-
             </div>
+
         </form>
     </main>
 

@@ -1,5 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+const bcryptjs = require('bcryptjs')
+
+const {validationResult} = require('express-validator')
 
 
 /* const readJSON = JSON.parse(fs.readFileSync("src/data/products.json" ,"utf8")) */
@@ -18,34 +21,77 @@ module.exports = {
     },
     
     processRegister: (req, res) => {
-        let users = readJSON();
-        const {id, name, lastname, image, category, password, email} = req.body
+        const errors = validationResult(req)
 
-        const newUser = {
-            id: users[users.length - 1].id +1,
-            name: name.trim(),
-            lastname: lastname.trim(),
-            email ,
-            password ,
-            image: "foto.jpg",
-            category
-        };
+        if (errors.isEmpty()) {
+            let users = readJSON()
+            let lastId = users.length !== 0 ? users[users.length -1].id : 0 
+            const {id, name, lastname, image, rol, password, email} = req.body
 
-        users.push(newUser);
-
-        saveJSON(users)
-
-        res.redirect('/')
+            const newUser = {
+                id: +lastId +1,
+                name: name.trim(),
+                lastname: lastname.trim(),
+                email ,
+                password : bcryptjs.hashSync(password , 10),
+                image: "foto.jpg",
+                rol : 'user'
+            };
+    
+            users.push(newUser);
+    
+            saveJSON(users)
+    
+            res.redirect('/users/login')
+        }else{
+            return res.render('register' , {
+                old : req.body,
+                errors : errors.mapped()
+            })
+        }      
     }, 
 
-    login : (req,res) => res.render("login"),
+    login : (req,res) => {
+        return res.render('login')
+    },
+
+    processLogin : (req,res) => {
+        const errors = validationResult(req)
+        
+        if (errors.isEmpty()) {
+            let users = readJSON()
+            const {id,name,image,rol} = users.find(user => user.email === req.body.email)
+
+            req.session.userLogin = { // Estoy creando userLogin dentro de session
+                id,
+                name,
+                image,
+                rol
+            }
+            if(req.body.remember){
+                res.cookie('museumSports' , req.session.userLogin , {maxAge: 1000*60*2})
+            }
+            res.redirect('/')
+        }else{
+            return res.render('login' , {
+                old : req.body,
+                errors : errors.mapped()
+            })
+        }
+    },
 
     profile : (req,res) =>{
-        return res.send('perfil')
+        return res.send('perfil de usuario')
     },
 
     processProfile : (req,res) => {
         return res.send('perfil en proceso')
+    },
+
+    logout : (req,res) => {
+        req.session.destroy() // destruir session
+        res.cookie('museumSports' , null , {maxAge : -1}) // destruir cookie
+        res.redirect('/')
     }
 
    

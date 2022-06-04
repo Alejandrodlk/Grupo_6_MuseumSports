@@ -12,40 +12,36 @@
       "id": 2,
       "name": "Beimar",
       "lastname": "Delgado",
-      "email": "mail@gmail.com",
-      "password": "1234",
-      "image": "foto.jpg"
+      "email": "beimar@delgado.com",
+      "password": "$2a$10$8y8saC30PrXpTQPESQEGP.JwCd8vHWepjZjaBRhS8I0YRhTlHL/DK",
+      "image": "foto.jpg",
+      "rol": "user"
    },
    {
       "id": 3,
       "name": "Alejandro",
-      "lastname": "Iñiguez",
-      "email": "ale_165851@hotmail.com",
-      "password": "123123",
-      "image": "foto.jpg"
+      "lastname": "iniguez",
+      "email": "alejandro@iniguez.com",
+      "password": "$2a$10$P4qHmveeWD45WrnDOxKjZ.B10SVMjIe9SP2IqOZCHTjiekUBg0N3i",
+      "image": "foto.jpg",
+      "rol": "user"
    },
    {
       "id": 4,
       "name": "Emiliano",
-      "lastname": "Dos Reis",
-      "email": "emi@mail.com",
-      "password": "12345",
-      "image": "foto.jpg"
+      "lastname": "DosReis",
+      "email": "emiliano@dosreis.com",
+      "password": "$2a$10$iXI0QxFZNlmof9yMovbrAuKYy1EqvFCORsqCk3vq/qogaLrQcoKPu",
+      "image": "foto.jpg",
+      "rol": "user"
    },
    {
       "id": 5,
-      "name": "Agustin Matias",
-      "lastname": "Delgado",
-      "email": "agus@mail.com",
-      "password": "654321",
-      "image": "foto.jpg"
-   },
-   {
-      "id": 6,
-      "name": "Emiliano",
-      "lastname": "dos Reis",
-      "email": "edosreis26@gmail.com",
-      "password": "1234",
-      "image": "foto.jpg"
+      "name": "Matias",
+      "lastname": "Lopez",
+      "email": "matias@lopez.com",
+      "password": "$2a$10$PiYp9J.zeW.LNrx/NuS7oOU0q1A9dAzwxvIvOMtFoOLyi4PblIxhS",
+      "image": "foto.jpg",
+      "rol": "user"
    }
 ]

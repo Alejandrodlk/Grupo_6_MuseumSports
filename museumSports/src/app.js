@@ -4,6 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride =  require('method-override')
+const session = require('express-session')
+const localsCheck = require('./middlewares/localsCheck')
+const cookiesCheck = require('./middlewares/cookiesCheck')
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -22,7 +25,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public'))); 
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(session({
+  secret : 'museumSports',
+  resave : false,
+  saveUninitialized : true
+}))
 
+app.use(cookiesCheck)
+app.use(localsCheck)
 
 /* app.get("/" , (req,res) => res.sendFile(path.resolve(__dirname , "views","index.html"))) */
 app.use("/" , indexRouter)

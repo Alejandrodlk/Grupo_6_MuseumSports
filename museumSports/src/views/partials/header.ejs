@@ -13,8 +13,14 @@
         </a>
         <div class="icon-cont">
             <div class="iconUser_iconCard">
-                <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="/users/login"><i class="fa-solid fa-user"></i></a>
+                <% if (locals.userLogin) { %>
+                    <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <li><a href="/users/profile"><i class="fas fa-user"></i></a></li>
+                    <a href="/users/logout">Salir</a>
+                <% }else{ %>
+                    <a href="/users/login"><i class="fa-solid fa-user"></i></a>
+                <% } %>
+                
             </div>
             <div id="main-bars">
                 <a class="main-burguer" href="#main-bars"><i class="fa-solid fa-bars"></i></a>
@@ -43,9 +49,12 @@
                     <li><a href="/#">Boxeo</a></li>
                 </ul>
             </li>
-            <li><a class="item" href="#about_us">Acerca de</a></li>
-            <li><a class="item" href="/products/all">Todos los productos</a></li>
-            <li><a class="item" href="/products/create">Agregar producto</a></li>
+            <% if (locals.userLogin) { %>
+                <li><a class="item" href="/products/create">Agregar producto</a></li>
+                <li><a class="item" href="/products/all">Todos los productos</a></li> 
+            <% }else{ %>
+                <li><a class="item" href="#about_us">Acerca de</a></li>                  
+            <% } %>
         </ul>
     </nav>
 </header>
