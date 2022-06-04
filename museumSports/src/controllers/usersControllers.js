@@ -13,7 +13,9 @@ const saveJSON = (e) => fs.writeFileSync("src/data/users.json" , JSON.stringify(
 
 module.exports = {
 
-    register : (req,res) => res.render("register"),
+    register : (req,res) => {
+        return res.render("register")
+    },
     
     processRegister: (req, res) => {
         let users = readJSON();
@@ -36,7 +38,15 @@ module.exports = {
         res.redirect('/')
     }, 
 
-    login : (req,res) => res.render("login")
+    login : (req,res) => res.render("login"),
+
+    profile : (req,res) =>{
+        return res.send('perfil')
+    },
+
+    processProfile : (req,res) => {
+        return res.send('perfil en proceso')
+    }
 
    
 }
