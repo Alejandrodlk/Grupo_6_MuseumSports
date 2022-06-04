@@ -1,44 +1,62 @@
 [
    {
-      "id": 2,
-      "name": "Copa del mundo",
-      "description": "Copa del mundo 1986",
+      "id": 10,
+      "name": "Camiseta de Boca Juniors",
+      "description": "Utilizada por Diego Maradona durante el campeonato argentino de 1984",
+      "price": 25000,
+      "discount": 15,
+      "image": "image-1654372028267.jfif",
+      "sport": "futbol nacional",
+      "category": "ofertas"
+   },
+   {
+      "id": 11,
+      "name": "Camiseta de la selección argentina",
+      "description": "Utilizada por Diego Maradona durante el mundial de México 1986",
+      "price": 30000,
+      "discount": 15,
+      "image": "image-1654372142756.jfif",
+      "sport": "futbol nacional",
+      "category": "ofertas"
+   },
+   {
+      "id": 12,
+      "name": "Camiseta de la selección argentina",
+      "description": "Utilizada por Omar Corbatta en la copa América en Perú 1957",
+      "price": 15000,
+      "discount": 20,
+      "image": "image-1654372399650.jfif",
+      "sport": "futbol nacional",
+      "category": "ofertas"
+   },
+   {
+      "id": 13,
+      "name": "Camiseta del Barcelona",
+      "description": "Utilizada por Johan Cruyff durante el campeonato español de 1994",
+      "price": 15000,
+      "discount": 10,
+      "image": "image-1654372651997.webp",
+      "sport": "futbol-Internacional",
+      "category": "ofertas"
+   },
+   {
+      "id": 14,
+      "name": "Camiseta del Inter de Milán",
+      "description": "Utilizada por Roberto Baggio en el campeonato italiano de 1999",
+      "price": 10000,
+      "discount": 0,
+      "image": "image-1654372830245.jfif",
+      "sport": "futbol-Internacional",
+      "category": "destacados"
+   },
+   {
+      "id": 15,
+      "name": "Camiseta de la selección de México",
+      "description": "Utilizada por hugo Sánchez durante la copa América de Ecuador 1993",
       "price": 10000,
       "discount": 10,
-      "image": "image-1653864805183.jpg"
-   },
-   {
-      "id": 3,
-      "name": "Pelota final 2018",
-      "description": "Pelota que se uso en la final del mundial 2018",
-      "price": 80000,
-      "discount": 10,
-      "image": "image-1653864787013.jpg"
-   },
-   {
-      "id": 7,
-      "name": "Smartwatchs",
-      "description": "camiseta de river utilizada en la final de la copa libertadores",
-      "price": 50,
-      "discount": 4,
-      "image": "image-1653864581856.png"
-   },
-   {
-      "id": 8,
-      "name": "Pelota mundial 2018",
-      "description": "camiseta de river utilizada en la final de la copa libertadores",
-      "price": 250000,
-      "discount": 15,
-      "image": "image-1653753320409.png"
-   },
-   {
-      "id": 9,
-      "name": "producto a borrar PRUEBA",
-      "description": "camiseta de river utilizada en la final de la copa libertadores",
-      "price": 250000,
-      "discount": 15,
-      "image": "default-image.png",
-      "category": " ",
-      "sport": " "
+      "image": "image-1654373162705.jfif",
+      "sport": "futbol-Internacional",
+      "category": "ofertas"
    }
 ]
