@@ -14,35 +14,39 @@
         </div>
 
         <div class="container">
-            <form action="" method="POST">
+            <form action="" method="POST" enctype="multipart/form-data">
                 <p>
                     <label for="name">NOMBRE:</label>
                     <input type="text" name="name" id="name" value="<%= locals.old && old.name ? old.name : null %>">
-                    <span class="text-danger"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+                    <span style="color:red;"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
                 </p>
 
                 <p>
                     <label for="lastname">APELLIDO:</label>
                     <input type="text" name="lastname" id="lastname" value="<%= locals.old && old.lastname ? old.lastname : null %>">
-                    <span class="text-danger"><%= locals.errors && errors.lastname ? errors.lastname.msg : null %></span>
+                    <span style="color:red;"><%= locals.errors && errors.lastname ? errors.lastname.msg : null %></span>
                 </p>
 
                 <p>
                     <label for="email">EMAIL:</label>
                     <input type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : null %>">
-                    <span class="text-danger"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+                    <span style="color:red;"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
                 </p>
 
                 <p>
                     <label for="password">CONTRASEÑA:</label>
                     <input type="password" name="password" id="password">
-                    <span class="text-danger"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
+                    <span style="color:red;"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
                 </p>
 
                 <p>
                     <label for="password2">REINGRESAR CONTRASEÑA:</label>
                     <input type="password" name="password2" id="password2">
-                    <span class="text-danger"><%= locals.errors && errors.password2 ? errors.password2.msg : null %></span>
+                    <span style="color:red;"><%= locals.errors && errors.password2 ? errors.password2.msg : null %></span>
+                </p>
+                <p>
+                    <label for="avatar">Cargar Avatar</label>
+                    <input type="file" name="avatar" id="avatar" accept="image/*">
                 </p>
             
                 <p>
@@ -50,7 +54,7 @@
                     <label class="form-check-label form-label ms-2" for="bases">
                         Acepto las bases y condiciones
                     </label>
-                    <span class="text-danger"><%= locals.errors && errors.bases ? errors.bases.msg : null %></span>
+                    <span style="color:red;"><%= locals.errors && errors.bases ? errors.bases.msg : null %></span>
                 </p>
 
             </div>

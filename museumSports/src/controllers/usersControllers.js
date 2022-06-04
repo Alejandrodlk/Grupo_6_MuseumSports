@@ -26,7 +26,7 @@ module.exports = {
         if (errors.isEmpty()) {
             let users = readJSON()
             let lastId = users.length !== 0 ? users[users.length -1].id : 0 
-            const {id, name, lastname, image, rol, password, email} = req.body
+            const {id, name, lastname, avatar, rol, password, email} = req.body
 
             const newUser = {
                 id: +lastId +1,
@@ -34,7 +34,7 @@ module.exports = {
                 lastname: lastname.trim(),
                 email ,
                 password : bcryptjs.hashSync(password , 10),
-                image: "foto.jpg",
+                avatar : req.file ? req.file.filename : "default-image.png",
                 rol : 'user'
             };
     

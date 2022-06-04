@@ -5,7 +5,7 @@
       "lastname": "",
       "email": "",
       "password": "",
-      "image": "",
+      "avatar": "",
       "category": ""
    },
    {
@@ -14,7 +14,7 @@
       "lastname": "Delgado",
       "email": "beimar@delgado.com",
       "password": "$2a$10$8y8saC30PrXpTQPESQEGP.JwCd8vHWepjZjaBRhS8I0YRhTlHL/DK",
-      "image": "foto.jpg",
+      "avatar": "foto.jpg",
       "rol": "user"
    },
    {
@@ -23,7 +23,7 @@
       "lastname": "iniguez",
       "email": "alejandro@iniguez.com",
       "password": "$2a$10$P4qHmveeWD45WrnDOxKjZ.B10SVMjIe9SP2IqOZCHTjiekUBg0N3i",
-      "image": "foto.jpg",
+      "avatar": "foto.jpg",
       "rol": "user"
    },
    {
@@ -32,7 +32,7 @@
       "lastname": "DosReis",
       "email": "emiliano@dosreis.com",
       "password": "$2a$10$iXI0QxFZNlmof9yMovbrAuKYy1EqvFCORsqCk3vq/qogaLrQcoKPu",
-      "image": "foto.jpg",
+      "avatar": "foto.jpg",
       "rol": "user"
    },
    {
@@ -41,7 +41,16 @@
       "lastname": "Lopez",
       "email": "matias@lopez.com",
       "password": "$2a$10$PiYp9J.zeW.LNrx/NuS7oOU0q1A9dAzwxvIvOMtFoOLyi4PblIxhS",
-      "image": "foto.jpg",
+      "avatar": "foto.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 6,
+      "name": "Agustin",
+      "lastname": "Delgado",
+      "email": "agustin@delgado.com",
+      "password": "$2a$10$zVrxHyus7feedjtLHh3bpeLwOvFUwOpZFo0MABxH1OAAWA6HlhWMS",
+      "avatar": "avatar-1654384460845.png",
       "rol": "user"
    }
 ]
