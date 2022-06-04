@@ -20,12 +20,14 @@
                     <p class="barra">
                         <label for="email">EMAIL:</label>  
                         <input type="email" name="email" id="email" >
+                        <small style="color:red;"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
                     </p>
                
         
                     <p class="barra2">
                         <label for="password">CONTRASEÑA:</label>
                         <input type="password" name="password" id="password">
+                        <small style="color:red;"><%= locals.errors && errors.password ? errors.password.msg : null %></small>
                     </p>
 
                     <div class="col-12 col-md-6">
