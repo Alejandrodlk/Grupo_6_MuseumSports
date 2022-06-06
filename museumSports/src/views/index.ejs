@@ -19,85 +19,25 @@
 
         <section >
             <div class="index__box-section">
+                <% products.forEach(product => { %>
+                    <% if (product.category === "ofertas") { %>
                 <article class="index__box-article">
-                    <a href="/products/detail/1">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
+                     <a href="/products/detail/<%= product.id %>">
+                    <div>
+                        <img class="index__image" src="/images/products/<%= product.image %>" alt="">
+                    </div>
+                    <div class="index__box-descripcion">
+                        <div class="index__precio-descuento">
+                            <p class="index__precio">$<%= product.price %> </p>
+                            <p class="index__descuento"><%= product.discount %>% OFF</p>
                         </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$ <%= products.price %></p>
-                                <p class="index__descuento"><%= products.discount %>% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion"><%= products.name %></h5>
-                        </div>
+                        <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                        <h5 class="index__descripcion"><%= product.name %></h5>
+                    </div>
                     </a>
                 </article>
-            
-                <article class="index__box-article">
-                    <a href="/products/detail/2">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="index__box-article-tablet">
-                    <a href="/products/detail/3">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="index__box-article-desktop">
-                    <a href="/products/detail/4">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="index__box-article-desktop">
-                    <a href="/products/detail/5">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
+                    <% } %>                   
+                <% }) %>    
             </div>
         </section>
         
@@ -119,89 +59,31 @@
         <h4>Ofertas <i class="fa-solid fa-fire-flame-curved"></i></h4>
         
         <section >
-            <div class="index__box-section">
-                <article class="index__box-article">
-                    <a href="/products/detail">
+            <div class="index__box-section">              
+                    <% products.forEach(product => { %>
+                        <% if (product.category === "destacados") { %>
+                    <article class="index__box-article">
+                         <a href="/products/detail/<%= product.id %>">
                         <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
+                            <img class="index__image" src="/images/products/<%= product.image %>" alt="">
                         </div>
                         <div class="index__box-descripcion">
                             <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
+                                <p class="index__precio">$<%= product.price %> </p>
+                                <p class="index__descuento"><%= product.discount %>% OFF</p>
                             </div>
                             <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
+                            <h5 class="index__descripcion"><%= product.name %></h5>
                         </div>
-                    </a>
-                </article>
-            
-                <article class="index__box-article">
-                    <a href="/products/detail">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="index__box-article-tablet">
-                    <a href="/products/detail">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="index__box-article-desktop">
-                    <a href="/products/detail">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="index__box-article-desktop">
-                    <a href="/products/detail">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
+                        </a>
+                    </article>
+                        <% } %>                   
+                    <% }) %>                                          
             </div>
         </section>
-        <h4>Tus favoritos <i class="fa-solid fa-heart"></i></h4>
+
+        <% if (locals.userLogin) { %>
+         <h4>Tus favoritos <i class="fa-solid fa-heart"></i></h4>
         <section class="main__section-favoritos">
             <div>
                 <a href="/products/detail">
@@ -272,6 +154,8 @@
                 </a>
             </div>  
         </section>
+        <% } %>
+        
 
         <section class="newsteller">
             <form action="" method="POST">

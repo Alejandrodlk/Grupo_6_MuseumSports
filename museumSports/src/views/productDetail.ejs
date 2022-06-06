@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include("./partials/head", { title : "productDetail" }) %>
+    <%- include("./partials/head", { title : "Detalle de producto" }) %>
 
 <body>
     
@@ -58,12 +58,16 @@
                             </div>
                         </div>
                         <div class="button_container">
-                            <a class="button" href="">Agregar al carrito</a>
-                            <a class="button" href="">Comprar ahora</a>
-                            <a class="button" href="/products/edit/<%= product.id %>">Editar producto</a>
+                            <% if (locals.userLogin) { %>
+                             <a class="button" href="">Agregar al carrito</a>       
+                             <a class="button" href="/products/edit/<%= product.id %>">Editar producto</a>
                             <form action="/products/remove/<%= product.id %>?_method=DELETE" method="POST" >
                                 <button class="button" type="submit">Eliminar Producto</button>
                             </form>
+                            <% }else{ %>
+                                <a class="button" href="/users/login">Comprar ahora</a>
+                            <% } %>
+                            
                         </div>
                     </section>
                 </div>

@@ -6,8 +6,8 @@
       "price": 25000,
       "discount": 15,
       "image": "image-1654372028267.jfif",
-      "sport": "futbol nacional",
-      "category": "ofertas"
+      "sport": "Futbol nacional",
+      "category": "destacados"
    },
    {
       "id": 11,
@@ -37,7 +37,7 @@
       "discount": 10,
       "image": "image-1654372651997.webp",
       "sport": "futbol-Internacional",
-      "category": "ofertas"
+      "category": "destacados"
    },
    {
       "id": 14,
@@ -56,7 +56,7 @@
       "price": 10000,
       "discount": 10,
       "image": "image-1654373162705.jfif",
-      "sport": "futbol-Internacional",
+      "sport": "Futbol nacional",
       "category": "ofertas"
    }
 ]

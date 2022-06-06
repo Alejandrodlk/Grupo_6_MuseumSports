@@ -70,8 +70,8 @@ module.exports = {
 					discount: +discount,
 					description : description.trim(),
 					image : req.file ? req.file.filename : product.image,
-					category : " ",
-                    sport :	" "		
+					category,
+                    sport 	
 				}	
                 
 				return 	productModify		
