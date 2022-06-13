@@ -81,7 +81,7 @@ module.exports = {
     },
 
     profile : (req,res) =>{
-        return res.send('perfil de usuario')
+        return res.render('admin/profile')
     },
 
     processProfile : (req,res) => {
