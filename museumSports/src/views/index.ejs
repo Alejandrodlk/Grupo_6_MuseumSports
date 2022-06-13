@@ -20,7 +20,7 @@
         <section >
             <div class="index__box-section">
                 <% products.forEach(product => { %>
-                    <% if (product.category === "ofertas") { %>
+                    <% if (product.category === "destacados") { %>
                 <article class="index__box-article">
                      <a href="/products/detail/<%= product.id %>">
                     <div>
@@ -61,7 +61,7 @@
         <section >
             <div class="index__box-section">              
                     <% products.forEach(product => { %>
-                        <% if (product.category === "destacados") { %>
+                        <% if (product.category === "ofertas") { %>
                     <article class="index__box-article">
                          <a href="/products/detail/<%= product.id %>">
                         <div>
