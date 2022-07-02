@@ -1,12 +1,12 @@
 [
    {
       "id": 10,
-      "name": "Camiseta de Boca Juniors",
+      "name": "Camiseta Maradona Napoli final",
       "description": "Utilizada por Diego Maradona durante el campeonato argentino de 1984",
       "price": 25000,
-      "discount": 15,
-      "image": "image-1654372028267.jfif",
-      "sport": "Futbol nacional",
+      "discount": 10,
+      "image": "image-1656706481755.jpg",
+      "sport": "Futbol-internacional",
       "category": "destacados"
    },
    {
@@ -31,32 +31,42 @@
    },
    {
       "id": 13,
-      "name": "Camiseta del Barcelona",
+      "name": "Raqueta Del potro final Us open 2009",
       "description": "Utilizada por Johan Cruyff durante el campeonato español de 1994",
-      "price": 15000,
+      "price": 365000,
       "discount": 10,
-      "image": "image-1654372651997.webp",
-      "sport": "futbol-Internacional",
+      "image": "image-1656705673923.jpg",
+      "sport": "",
       "category": "destacados"
    },
    {
       "id": 14,
-      "name": "Camiseta del Inter de Milán",
-      "description": "Utilizada por Roberto Baggio en el campeonato italiano de 1999",
-      "price": 10000,
-      "discount": 0,
-      "image": "image-1654372830245.jfif",
-      "sport": "futbol-Internacional",
+      "name": "Bufanda Zanetti final champions",
+      "description": "Utilizada por Zanetti  en el campeonato italiano de 1999",
+      "price": 40800,
+      "discount": 5,
+      "image": "image-1656704464182.jpg",
+      "sport": "",
       "category": "destacados"
    },
    {
-      "id": 15,
-      "name": "Camiseta de la selección de México",
-      "description": "Utilizada por hugo Sánchez durante la copa América de Ecuador 1993",
-      "price": 10000,
+      "id": 18,
+      "name": "Camiseta Michael Jordan Chicago Bulls",
+      "description": "camiseta de river utilizada en la final de la copa libertadores",
+      "price": 463000,
       "discount": 10,
-      "image": "image-1654373162705.jfif",
-      "sport": "Futbol nacional",
-      "category": "ofertas"
+      "image": "image-1656706424400.jpg",
+      "sport": "Basket",
+      "category": "destacados"
+   },
+   {
+      "id": 20,
+      "name": "Pantalon Messi final Copa del rey",
+      "description": "camiseta de river utilizada en la final de la copa libertadores",
+      "price": 250000,
+      "discount": 15,
+      "image": "image-1656705258141.jpg",
+      "sport": "futbol nacional",
+      "category": "destacados"
    }
 ]

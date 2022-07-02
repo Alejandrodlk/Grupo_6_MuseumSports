@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 /* const readJSON = JSON.parse(fs.readFileSync("src/data/products.json" ,"utf8")) */
 
@@ -93,7 +95,9 @@ module.exports = {
 		let product = products.find(product => product.id === +req.params.id)
 
 		return res.render("productDetail" , {
-			product
+			product,
+            toThousand,
+            priceDiscount : toThousand((product.price - (product.price * product.discount) / 100) / 6)
 		})
 
     },
@@ -108,6 +112,7 @@ module.exports = {
 
         res.render("products" , {
             products,
+            toThousand
         })
     },
 

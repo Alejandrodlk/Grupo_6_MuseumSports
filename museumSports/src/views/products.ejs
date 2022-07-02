@@ -10,25 +10,26 @@
     <%- include("./partials/header") %> 
 
     <main class="productsAll">
-        <% products.forEach(({id , name,description,price,discount,image,sport,category}) => { %>
-         <article class="index__box-article">
-            <a href="/products/detail/<%= id %>">
-                <div>
-                    <img class="index__image" src="/images/products/<%= image %>" alt="">
-                </div>
-                <div class="index__box-descripcion">
-                    <div class="index__precio-descuento">
-                        <p class="index__precio">$<%= price %> </p>
-                        <p class="index__descuento"><%= discount %> % OFF</p>
+        <section >
+            <div class="index__box-sectiones">
+                <% products.forEach(product => { %>  
+                <article class="index__box-article">
+                    <a href="/products/detail/<%= product.id %>">
+                    <img class="index__image" height="65%" src="/images/products/<%= product.image %>" alt="">
+                            
+                    <div class="index__box-descripcion">
+                        <div class="index__precio-descuento">
+                        <p class="index__precio">$<%= toThousand(product.price) %> </p>
+                        <p class="index__descuento"><%= product.discount %>% OFF</p>
+                        </div>
+                        <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                            <h5 class="index__descripcion"><%= product.name %></h5> 
                     </div>
-                    <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                    <h5 class="index__descripcion"><%= name %></h5>
-                </div>
-            </a>
-        </article>
-        <% }) %>
-        
-                 
+                </a>
+                </article>                    
+                <% }) %>    
+            </div>
+        </section>
     </main>
 
     <!--          ------------FOOTER------------       -->

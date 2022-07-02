@@ -1,6 +1,8 @@
 const fs = require('fs')
 
 const readJSON = JSON.parse(fs.readFileSync("src/data/products.json" ,"utf8"))
+const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 module.exports = {
 
@@ -8,7 +10,8 @@ module.exports = {
         let products = readJSON
 
         res.render("index" , {
-            products
+            products,
+            toThousand
         })
     },
 
@@ -20,7 +23,8 @@ module.exports = {
         
         return res.render('results' , {
             results,
-            keyword
+            keyword,
+            toThousand
        })
 
     }

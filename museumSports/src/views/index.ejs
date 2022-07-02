@@ -21,21 +21,22 @@
             <div class="index__box-section">
                 <% products.forEach(product => { %>
                     <% if (product.category === "destacados") { %>
+                
                 <article class="index__box-article">
-                     <a href="/products/detail/<%= product.id %>">
-                    <div>
-                        <img class="index__image" src="/images/products/<%= product.image %>" alt="">
-                    </div>
+                    <a href="/products/detail/<%= product.id %>">
+                    <img class="index__image" height="65%" src="/images/products/<%= product.image %>" alt="">
+                            
                     <div class="index__box-descripcion">
                         <div class="index__precio-descuento">
-                            <p class="index__precio">$<%= product.price %> </p>
-                            <p class="index__descuento"><%= product.discount %>% OFF</p>
+                        <p class="index__precio">$<%= toThousand(product.price) %> </p>
+                        <p class="index__descuento"><%= product.discount %>% OFF</p>
                         </div>
                         <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                        <h5 class="index__descripcion"><%= product.name %></h5>
+                            <h5 class="index__descripcion"><%= product.name %></h5> 
                     </div>
-                    </a>
+                </a>
                 </article>
+            
                     <% } %>                   
                 <% }) %>    
             </div>
@@ -69,7 +70,7 @@
                         </div>
                         <div class="index__box-descripcion">
                             <div class="index__precio-descuento">
-                                <p class="index__precio">$<%= product.price %> </p>
+                                <p class="index__precio">$<%= toThousand(product.price) %> </p>
                                 <p class="index__descuento"><%= product.discount %>% OFF</p>
                             </div>
                             <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>

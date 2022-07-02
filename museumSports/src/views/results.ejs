@@ -10,7 +10,7 @@
     <%- include("./partials/header") %> 
 
     <main class="productsAll">
-        <h2>Resultados de la búsqueda:<%= keyword %></h2>
+        <h2>Resultados de la búsqueda: <%= keyword %></h2>
 
         <% if (results.length > 0) { %>
         <% results.forEach(({id,name,description,price,discount,image,sport,category}) => { %>
@@ -21,7 +21,7 @@
                 </div>
                 <div class="index__box-descripcion">
                     <div class="index__precio-descuento">
-                        <p class="index__precio">$<%= price %> </p>
+                        <p class="index__precio">$<%= toThousand(price) %> </p>
                         <p class="index__descuento"><%= discount %> %OFF</p>
                     </div>
                     <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>

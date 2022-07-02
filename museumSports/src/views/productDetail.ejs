@@ -32,8 +32,13 @@
                     </section>
                     <section class="product_description_select">
                         <h3 class="prodcut_title"><%= product.name %></h3>
-                        <h4 class="main_product_price">$<%= product.price %></h4>
-                        <p class="in_installments">en 6x $ 2.433<span>16</span></p>
+                        <% if (product.discount !== 0) { %>
+                            <p class="in_installments"><%= toThousand(product.price) %> '<span>  <%=  product.discount + ' ' + '%OFF' %></span></p>
+
+                            <p><h4 class="main_product_price">$<%= toThousand(product.price - (product.price * product.discount) / 100) %></h4></p>
+
+                        <% } %>
+                        <p class="in_installments"> en 6x $<%= priceDiscount %> Sin interes </p>
                        <!--  <div class="color_container">
                            
                             <span class="product_color">Color</span>
