@@ -28,11 +28,11 @@
                         <span style="color:red;"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
                         <input class="input-log" type="password" name="password2" placeholder="Reingresa tu contraseña">
                         <span style="color:red;"><%= locals.errors && errors.password2 ? errors.password2.msg : null %></span>
+                        <div class="input-log">
+                            <label for="avatar">Cargar Avatar</label>
+                            <input type="file" name="avatar" id="avatar" accept="image/*">
+                        </div>
                     
-                </div>
-                <div class="container-date">
-                    <label for="avatar">Cargar Avatar</label>
-                    <input type="file" name="avatar" id="avatar" accept="image/*">
                 </div>
                 <p class="conditions"><input type="checkbox" name="bases" id="bases" value="">Acepta los <span
                         href="#">Términos
