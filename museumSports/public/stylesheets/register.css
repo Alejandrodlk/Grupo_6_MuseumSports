@@ -139,10 +139,6 @@ main.register .container-register .container-form .log-in {
     main.register .container-register .input-log {
         width: 47%;
     }
-
-    /* main.register .container-register .container-date .input_container {
-       width: 47%;
-    } */
     
     main.register .container-register .container-form .conditions {
         font-size: 14px;
