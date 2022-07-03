@@ -22,12 +22,13 @@ module.exports = {
     
     processRegister: (req, res) => {
         const errors = validationResult(req)
-
+        
+        return res.send(req.body)
         if (errors.isEmpty()) {
             let users = readJSON()
             let lastId = users.length !== 0 ? users[users.length -1].id : 0 
             const {id, name, lastname, avatar, rol, password, email} = req.body
-
+            
             const newUser = {
                 id: +lastId +1,
                 name: name.trim(),
@@ -41,9 +42,11 @@ module.exports = {
             users.push(newUser);
     
             saveJSON(users)
+            
     
             res.redirect('/users/login')
         }else{
+            /* return res.send(req.file) */
             return res.render('register' , {
                 old : req.body,
                 errors : errors.mapped()

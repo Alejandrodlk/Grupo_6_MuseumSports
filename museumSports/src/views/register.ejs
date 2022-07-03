@@ -7,64 +7,42 @@
     
     <%- include("./partials/header") %> 
 
-    <main>
-
-        <div class="tittle">
-            <h3>REGISTRO</h3>
-        </div>
-
-        <div class="container">
-            <form action="" method="POST" enctype="multipart/form-data">
-                <p>
-                    <label for="name">NOMBRE:</label>
-                    <input type="text" name="name" id="name" value="<%= locals.old && old.name ? old.name : null %>">
-                    <span style="color:red;"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
-                </p>
-
-                <p>
-                    <label for="lastname">APELLIDO:</label>
-                    <input type="text" name="lastname" id="lastname" value="<%= locals.old && old.lastname ? old.lastname : null %>">
-                    <span style="color:red;"><%= locals.errors && errors.lastname ? errors.lastname.msg : null %></span>
-                </p>
-
-                <p>
-                    <label for="email">EMAIL:</label>
-                    <input type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : null %>">
-                    <span style="color:red;"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
-                </p>
-
-                <p>
-                    <label for="password">CONTRASEÑA:</label>
-                    <input type="password" name="password" id="password">
-                    <span style="color:red;"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
-                </p>
-
-                <p>
-                    <label for="password2">REINGRESAR CONTRASEÑA:</label>
-                    <input type="password" name="password2" id="password2">
-                    <span style="color:red;"><%= locals.errors && errors.password2 ? errors.password2.msg : null %></span>
-                </p>
-                <p>
+    <main class="register">
+        <section class="container-register">
+            <h2 class="title">Únete hoy</h2>
+            <p class="slogan-register">Empieza tu camino de aprendizaje</p>
+            <div class="register-accounts">
+                <button href="#" class="btn-log-facebook btn">Registrate con Facebook</button>
+                <button href="#" class="btn-log-google btn">Registrate con Google</button>
+            </div>
+            <form class="container-form" action="" method="post" enctype="multipart/form-data">
+                <div class="container-date">
+                    
+                        <input class="input-log" type="text" class="input-style" name="name" placeholder="Ingresa tu Nombre" value="<%= locals.old && old.name ? old.name : null %>">
+                        <span style="color:red;"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+                        <input class="input-log" type="text" class="input-style" name="lastname" placeholder="Ingresa tu Apellido" value="<%= locals.old && old.lastname ? old.lastname : null %>">
+                        <span style="color:red;"><%= locals.errors && errors.lastname ? errors.lastname.msg : null %></span>
+                        <input class="input-log" type="email" class="input-style" name="email" placeholder="Ingresa tu Email" value="<%= locals.old && old.email ? old.email : null %>">
+                        <span style="color:red;"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+                        <input class="input-log" type="password" class="input-style" name="password" placeholder="Crea tu contraseña">
+                        <span style="color:red;"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
+                        <input class="input-log" type="password" name="password2" placeholder="Reingresa tu contraseña">
+                        <span style="color:red;"><%= locals.errors && errors.password2 ? errors.password2.msg : null %></span>
+                    
+                </div>
+                <div class="container-date">
                     <label for="avatar">Cargar Avatar</label>
                     <input type="file" name="avatar" id="avatar" accept="image/*">
-                </p>
-            
-                <p>
-                    <input name="bases" class="form-check-input" type="checkbox" value="" id="bases" style="width:30px; height:30px;">
-                    <label class="form-check-label form-label ms-2" for="bases">
-                        Acepto las bases y condiciones
-                    </label>
-                    <span style="color:red;"><%= locals.errors && errors.bases ? errors.bases.msg : null %></span>
-                </p>
-
-            </div>
-
-            <div class="button">
-            <button type="submit" class="button_action">REGISTRATE</button>
-            <a class="enlace1" href="/login">Ya tenés cuenta? Click acá</a>
-            </div>
-
-        </form>
+                </div>
+                <p class="conditions"><input type="checkbox" name="bases" id="bases" value="">Acepta los <span
+                        href="#">Términos
+                        y Condiciones</span></p>
+                        <span style="color:red;"><%= locals.errors && errors.bases ? errors.bases.msg : null %></span>
+                <button type="submit" class="btn btn-log">Registrarse</button>
+                <p class="account-exists">¿Ya tenes cuenta? <a class="log-in" href="login">Inicia sesión aquí</a></p>
+    
+            </form>
+        </section>
     </main>
 
     <!--          ------------FOOTER------------       -->

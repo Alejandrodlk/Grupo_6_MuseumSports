@@ -1,4 +1,4 @@
-
+/* 
 
 .tittle{
     margin-top: 15px;
@@ -76,4 +76,171 @@ p input{
     max-width: 400px;
     margin: 0 auto;
 }
+} */
+
+main.register{
+    background-color: #112031;
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
 }
+
+/*      FORM-REGISTER      */
+
+main.register .container-register {
+    margin: 30px 0;
+    max-width: 320px;
+    color: white;
+    width: 100%;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+main.register .container-register .title {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+main.register .container-register .slogan-register  {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+main.register .container-register .register-accounts {
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+    margin-bottom: 20px;
+}
+
+main.register .container-register .btn-log-facebook {
+    background-color: #335089;
+}
+
+main.register .container-register .btn-log-google {
+    background-color: #9dabb1;
+}
+
+main.register .container-register .btn-log-facebook:hover,
+main.register .container-register .btn-log-google:hover {
+    box-shadow: 0 0 5px rgb(129, 129, 129);
+}
+
+main.register .container-register .input-log {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+main.register .container-register .input-log:focus {
+    outline: none;
+}
+
+main.register .container-register .container-form .conditions {
+    margin: 20px 0;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+main.register .container-register .container-form .conditions span {
+    color: #34D69B;
+    cursor: pointer;
+}
+
+main.register .container-register .btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    box-shadow:  0 3px 3px grey;
+}
+
+main.register .container-register .btn-log {
+    background-color: #98CA3F;
+    text-transform: uppercase;
+}
+
+main.register .container-register .container-form .account-exists {
+    text-align: center;
+    margin-top: 20px;
+}
+
+main.register .container-register .container-form .log-in {
+    color: #34D69B;
+    font-weight: 700;
+}
+ 
+/*   -----------Media Queries----------    */
+
+@media screen and (min-width:600px) {
+    
+    /*    ----------   FORM   -----------      */
+    
+    /*      FORM-REGISTER      */
+    
+    main.register .container-register {
+        margin: 40px 0;
+        max-width: 800px;
+        padding: 0 10px;
+    }
+    
+    main.register .container-register .title {
+        font-size: 40px;
+        padding-left: 50px;
+    }
+    
+    main.register .container-register .slogan-register  {
+        font-size: 1.2rem;
+    }
+    
+    main.register .container-register .register-accounts {
+        flex-direction: row;
+        gap: 0 20px;
+    }
+    
+    main.register .container-register .container-date {
+        display: flex;
+        gap: 0 20px;
+        flex-wrap: wrap;
+    }
+
+    main.register .container-register .input-log {
+        width: 47%;
+    }
+
+    /* main.register .container-register .container-date .input_container {
+       width: 47%;
+    } */
+    
+    main.register .container-register .container-form .conditions {
+        font-size: 14px;
+    }
+    
+    
+    main.register .container-register .btn {
+        font-size: 16px;
+    }
+
+    
+    main.register .container-register .btn-log {
+        max-width: 400px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    main.register .container-register .btn-log:hover {
+        background: linear-gradient(225deg, #cc245c, #ccf000);
+        box-shadow: 0 0 5px rgb(129, 129, 129);
+        font-size: 18px;
+    }
+}
+
