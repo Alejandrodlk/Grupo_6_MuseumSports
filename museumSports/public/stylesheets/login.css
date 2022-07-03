@@ -1,6 +1,6 @@
 
 
-.tittle{
+/* .tittle{
     margin-top: 15px;
     color:white;
     background-color: #02A28A;
@@ -111,4 +111,206 @@ p input{
     }
 
     }
+} */
+
+main.login {
+    margin: 30px 0;
+}
+
+main.login section.container-login {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    margin: 0 auto;
+}
+main.login section.container-login .title {
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+main.login section.container-login div.lineal {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+main.login section.container-login div.lineal .line-one {
+    height: 3px;
+    left: 0%;
+    width: 47%;
+    background-color: black;
+    margin-top: 8px;
+    border: none;
+}
+
+main.login section.container-login div.lineal .line-two {
+    height: 3px;
+    right: 0%;
+    width: 47%;
+    background-color: black;
+    margin-top: 8px;
+    border: none;
+}
+
+main.login section.container-login .lineal .separator {
+    padding: 0 5px;
+    font-weight: 600;
+}
+
+
+main.login section.container-login .btn {
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(50, 50, 50);
+    
+}
+
+main.login section.container-login .btn-log-facebook {
+    background-color: #335089;
+    color: white;
+}
+
+main.login section.container-login .btn-log-google {
+    background-color: #A8B8BF;
+    color: white;
+}
+
+main.login section.container-login .btn-log-google:hover,
+main.login section.container-login .btn-log-facebook:hover {
+    box-shadow:  0 5px 5px grey;
+}
+
+main.login section.container-login .container-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main.login section.container-login .container-form .btn-log:hover {
+    background: linear-gradient(225deg, #cc245c, #ccf000);
+    box-shadow:  0 5px 5px grey;
+    font-size: 20px;
+}
+
+
+main.login section.container-login .container-form .btn-log {
+    background-color: #98CA3F;
+    color: white;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+main.login section.container-login .container-form .btn-register {
+    border: solid 2px #263CFF;
+    color: #263CFF;
+    background-color: white;
+    margin-top: 8px;
+    height: 37px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 5px;
+}
+
+
+main.login section.container-login .container-form .btn-register:hover {
+    background-color: rgb(226, 216, 216);
+    box-shadow:  0 5px 5px grey;
+}
+
+main.login section.container-login .input-container {
+    width: 100%;
+}
+
+main.login section.container-login .container-form .input-log {
+    height: 50px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+main.login section.container-login .container-form .input-log:focus {
+    outline: 1px solid #02a28a;
+    border: none;
+    border-radius: 5px;
+}
+
+main.login section.container-login .container-form .check-remember {
+    margin-top: 1rem;
+}
+
+main.login section .container-form p.link_pass-recover a {
+    cursor: pointer;
+    color: blue;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+main.login section .container-form p.link_pass-recover {
+    margin-bottom: 30px;
+}
+
+
+/* -------------Media Queries----------------*/
+
+
+@media screen and (min-width: 480px) {
+    
+    section.container-login {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        margin: 0 auto;
+        padding: 20px;
+        margin-bottom: 60px;
+        box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.21);
+        -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.21);
+        -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.21);
+    }
+    
+    section.container-login h2 {
+        margin-bottom: 30px;
+    }
+    
+    section.container-login .btn {
+        font-size: 1rem;
+        height: 50px;
+    }
+    
+    section.container-login .container-form .btn-log:hover {
+        font-size: 23px;
+    }
+    
+    section.container-login .container-form .btn-log {
+        font-size: 1.2rem;
+    }
+    
+    section.container-login .container-form .btn-register {
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    section.container-login .input-container {
+        width: 100%;
+    }
+    
+    section.container-login .container-form .input-log {
+        height: 60px;
+        margin: 10px 0;
+    }
+    
 }
