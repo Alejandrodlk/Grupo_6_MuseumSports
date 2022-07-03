@@ -52,5 +52,14 @@
       "password": "$2a$10$zVrxHyus7feedjtLHh3bpeLwOvFUwOpZFo0MABxH1OAAWA6HlhWMS",
       "avatar": "avatar-1654384460845.png",
       "rol": "user"
+   },
+   {
+      "id": 7,
+      "name": "Nataly",
+      "lastname": "Julian",
+      "email": "naty@gmail.com",
+      "password": "$2a$10$PDgReSxzpEGt70a2kTNmPeVqvHg1iWUx3jYPxmXT5JA7j5BkPc72K",
+      "avatar": "default-image.png",
+      "rol": "user"
    }
 ]

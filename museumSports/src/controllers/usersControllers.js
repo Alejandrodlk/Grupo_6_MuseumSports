@@ -22,8 +22,6 @@ module.exports = {
     
     processRegister: (req, res) => {
         const errors = validationResult(req)
-        
-        return res.send(req.body)
         if (errors.isEmpty()) {
             let users = readJSON()
             let lastId = users.length !== 0 ? users[users.length -1].id : 0 
@@ -46,7 +44,7 @@ module.exports = {
     
             res.redirect('/users/login')
         }else{
-            /* return res.send(req.file) */
+            
             return res.render('register' , {
                 old : req.body,
                 errors : errors.mapped()
