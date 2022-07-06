@@ -12,6 +12,8 @@ const cookiesCheck = require('./middlewares/cookiesCheck')
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require("./routes/products")
+const categoriesRouter = require('./routes/categories')
+const athletesRouter = require('./routes/athletes')
 
 var app = express();
 
@@ -42,6 +44,9 @@ app.use("/users" , usersRouter)
 
 app.use("/products" , productsRouter)
 
+app.use('/categories' , categoriesRouter)
+
+app.use('/athletes' , athletesRouter)
 
 
 /* app.get("/productDetail" , (req,res) => res.sendFile(path.resolve(__dirname , "views","productDetail.html"))) */

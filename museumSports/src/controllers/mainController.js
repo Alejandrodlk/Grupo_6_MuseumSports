@@ -1,7 +1,7 @@
 const fs = require('fs')
-
 const readJSON = JSON.parse(fs.readFileSync("src/data/products.json" ,"utf8"))
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 
 module.exports = {
