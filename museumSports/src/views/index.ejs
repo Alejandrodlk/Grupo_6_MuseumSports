@@ -19,25 +19,22 @@
 
         <section >
             <div class="index__box-section">
-                <% products.forEach(product => { %>
-                    <% if (product.category === "destacados") { %>
-                
+                <% dest.forEach(product => { %>
                 <article class="index__box-article">
                     <a href="/products/detail/<%= product.id %>">
-                    <img class="index__image" height="65%" src="/images/products/<%= product.image %>" alt="">
-                            
+                        <% product.images.forEach(image => { %>
+                              <img class="index__image" height="65%" src="/images/products/<%= image.name %>" alt="">
+                        <% }) %>                        
                     <div class="index__box-descripcion">
                         <div class="index__precio-descuento">
                         <p class="index__precio">$<%= toThousand(product.price) %> </p>
                         <p class="index__descuento"><%= product.discount %>% OFF</p>
                         </div>
                         <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion"><%= product.name %></h5> 
+                            <h5 class="index__descripcion"><%= product.title %></h5> 
                     </div>
-                </a>
-                </article>
-            
-                    <% } %>                   
+                    </a>
+                </article>               
                 <% }) %>    
             </div>
         </section>
@@ -57,31 +54,56 @@
             </div>
         </section>
 
-        <h4>Ofertas <i class="fa-solid fa-fire-flame-curved"></i></h4>
-        
+        <h4>En oferta<i class="fa-solid fa-fire-flame-curved"></i></h4>
+
         <section >
-            <div class="index__box-section">              
-                    <% products.forEach(product => { %>
-                        <% if (product.category === "ofertas") { %>
-                    <article class="index__box-article">
-                         <a href="/products/detail/<%= product.id %>">
-                        <div>
-                            <img class="index__image" src="/images/products/<%= product.image %>" alt="">
+            <div class="index__box-section">
+                <% oferta.forEach(product => { %>
+                <article class="index__box-article">
+                    <a href="/products/detail/<%= product.id %>">
+                        <% product.images.forEach(image => { %>
+                              <img class="index__image" height="65%" src="/images/products/<%= image.name %>" alt="">
+                        <% }) %>                        
+                    <div class="index__box-descripcion">
+                        <div class="index__precio-descuento">
+                        <p class="index__precio">$<%= toThousand(product.price) %> </p>
+                        <p class="index__descuento"><%= product.discount %>% OFF</p>
                         </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$<%= toThousand(product.price) %> </p>
-                                <p class="index__descuento"><%= product.discount %>% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion"><%= product.name %></h5>
-                        </div>
-                        </a>
-                    </article>
-                        <% } %>                   
-                    <% }) %>                                          
+                        <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                            <h5 class="index__descripcion"><%= product.title %></h5> 
+                    </div>
+                    </a>
+                </article>               
+                <% }) %>    
             </div>
         </section>
+
+
+        <h4>Ultimos agregados <i class="fa-solid fa-fire-flame-curved"></i></h4>
+        
+        <section >
+            <div class="index__box-section">
+                <% ultimos.forEach(product => { %>
+                <article class="index__box-article">
+                    <a href="/products/detail/<%= product.id %>">
+                        <% product.images.forEach(image => { %>
+                              <img class="index__image" height="65%" src="/images/products/<%= image.name %>" alt="">
+                        <% }) %>                        
+                    <div class="index__box-descripcion">
+                        <div class="index__precio-descuento">
+                        <p class="index__precio">$<%= toThousand(product.price) %> </p>
+                        <p class="index__descuento"><%= product.discount %>% OFF</p>
+                        </div>
+                        <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                            <h5 class="index__descripcion"><%= product.title %></h5> 
+                    </div>
+                    </a>
+                </article>               
+                <% }) %>    
+            </div>
+        </section>
+
+        
 
         <% if (locals.userLogin) { %>
          <h4>Tus favoritos <i class="fa-solid fa-heart"></i></h4>

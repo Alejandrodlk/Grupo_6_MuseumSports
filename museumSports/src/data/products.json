@@ -25,8 +25,8 @@
       "description": "Utilizada por Omar Corbatta en la copa América en Perú 1957",
       "price": 15000,
       "discount": 20,
-      "image": "image-1654372399650.jfif",
-      "sport": "futbol nacional",
+      "image": "image-1657233782368.jpeg",
+      "sport": "",
       "category": "ofertas"
    },
    {
@@ -67,6 +67,286 @@
       "discount": 15,
       "image": "image-1656705258141.jpg",
       "sport": "futbol nacional",
+      "category": "destacados"
+   },
+   {
+      "id": 21,
+      "name": "prueba",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657551466994.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 22,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657552486617.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 23,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657552698584.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 24,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657552815826.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 25,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657552970758.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 26,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657553169794.webp",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 27,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657553280367.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 28,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657553389919.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 29,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "default-image.png",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 30,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657553478612.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 31,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657553609319.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 32,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657553698098.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 33,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657553807448.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 34,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657553930075.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 35,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657554024022.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 36,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657554143169.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 37,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657554213722.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 38,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657554279585.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 39,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657554356257.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 40,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657554445947.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 41,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657554514950.jpeg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 42,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "default-image.png",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 43,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657554606571.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 44,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657554670422.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 45,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657554733276.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 46,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657554834812.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 47,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657554910617.jpg",
+      "sport": "",
+      "category": "destacados"
+   },
+   {
+      "id": 48,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "image-Product-1657554963423.jpg",
+      "sport": "",
       "category": "destacados"
    }
 ]

@@ -1,10 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
+const db = require('../database/models')
+
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
-
-/* const readJSON = JSON.parse(fs.readFileSync("src/data/products.json" ,"utf8")) */
 
 const readJSON = () => {
     const products = JSON.parse(fs.readFileSync("src/data/products.json", 'utf-8'));	
@@ -15,7 +14,25 @@ const saveJSON = (e) => fs.writeFileSync("src/data/products.json" , JSON.stringi
 
 module.exports = {
 
-    
+    //Todos los productos
+    all : (req,res) => {
+        db.Product.findAll({
+            include : ['images']
+        })
+            .then(products => {
+                return res.send(products)
+            })
+
+        //////////////////////
+        /* let products = readJSON()
+
+        res.render("products" , {
+            products,
+            toThousand
+        }) */
+         //////////////////////
+    },
+
     // Creacion de producto
     create : (req,res) => {
         
@@ -105,16 +122,7 @@ module.exports = {
     //Carrito de compras
     cart : (req,res) => res.render("productCart"),
 
-    //Todos los productos
-    all : (req,res) => {
-
-        let products = readJSON()
-
-        res.render("products" , {
-            products,
-            toThousand
-        })
-    },
+    
 
     //Eliminar producto
     remove : (req,res) => {

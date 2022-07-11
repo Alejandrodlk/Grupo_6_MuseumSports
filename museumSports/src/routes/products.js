@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 
-const upload = require('../middlewares/uploadImagesProducts');
+const {uploadImageProducts} = require('../middlewares/upImages');
 const productsAddCheck = require('../middlewares/productsAddCheck');
 const productsEditCheck = require('../middlewares/productsEditCheck');
 
@@ -15,10 +15,10 @@ router.get("/detail/:id" , detail )
 
 
 router.get("/create" , productsAddCheck, create)
-router.post("/create", upload.single("image") , store)
+router.post("/create", uploadImageProducts.single("image") , store)
 
 router.get("/edit/:id" , productsEditCheck, edit)
-router.put("/update/:id", upload.single("image") , update )
+router.put("/update/:id", uploadImageProducts.single("image") , update )
 
 router.delete("/remove/:id" , remove)
 
