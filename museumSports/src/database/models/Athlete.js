@@ -45,12 +45,19 @@ module.exports = (sequelize, dataTypes) => {
     const Athlete = sequelize.define(alias, cols, config);
 
     //Aquí debes realizar lo necesario para crear las relaciones con el modelo (Movie)
-   /*  Genre.associate = function(models){
-        Genre.hasMany(models.Movie, {
-            as : 'movies',
-            foreignKey : 'genre_id'
+    Athlete.associate = function(models){
+
+        Athlete.hasMany(models.Product, {
+            as : 'products',
+            foreignKey : 'athleteId'
         })
-    } */
+
+        Athlete.belongsTo(models.Category , {
+            as : 'category',
+            foreignKey : 'categoryId'
+        })
+    }
+
 
     return Athlete
 };

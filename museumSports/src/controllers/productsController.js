@@ -16,12 +16,14 @@ module.exports = {
 
     //Todos los productos
     all : (req,res) => {
-        db.Product.findAll({
-            include : ['images']
+
+        db.Category.findAll({
+            include : ['athletes']
         })
             .then(products => {
                 return res.send(products)
             })
+            .catch(error => console.log(error))
 
         //////////////////////
         /* let products = readJSON()

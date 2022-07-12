@@ -61,6 +61,16 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey : 'productId' ,
         })
 
+        Product.belongsTo(models.Category, {
+            as : 'category' ,
+            foreignKey : 'categoryId' ,
+        })
+
+        Product.belongsTo(models.Athlete , {
+            as : 'athlete',
+            foreignKey : 'athleteId' 
+        })
+
     }
 
 
