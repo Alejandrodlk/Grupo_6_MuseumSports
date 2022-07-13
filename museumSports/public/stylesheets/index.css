@@ -1,5 +1,6 @@
 .productsAll {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .index-box {

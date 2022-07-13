@@ -13,22 +13,23 @@
         <h2>Resultados de la búsqueda: <%= keyword %></h2>
 
         <% if (results.length > 0) { %>
-        <% results.forEach(({id,name,description,price,discount,image,sport,category}) => { %>
-         <article class="index__box-article">
-            <a href="/products/detail/<%= id %>">
-                <div>
-                    <img class="index__image" src="/images/products/<%= image %>" alt="">
-                </div>
+        <% results.forEach(({id,title,description,price,discount,images}) => { %>
+            <article class="index__box-article">
+                <a href="/products/detail/<%= id %>">
+                    <% images.forEach(image => { %>
+                        <img class="index__image" height="65%" src="/images/products/<%= image.name %>" alt="">
+                  <% }) %>                            
                 <div class="index__box-descripcion">
                     <div class="index__precio-descuento">
-                        <p class="index__precio">$<%= toThousand(price) %> </p>
-                        <p class="index__descuento"><%= discount %> %OFF</p>
+                    <p class="index__precio">$<%= toThousand(price) %> </p>
+                    <p class="index__descuento"><%= discount %>% OFF</p>
                     </div>
                     <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                    <h5 class="index__descripcion"><%= name %></h5>
+                        <h5 class="index__descripcion"><%= title %></h5> 
                 </div>
             </a>
-        </article>
+            </article>
+         
         <% }) %>
         <% }else{ %>
             <div class="col-12">

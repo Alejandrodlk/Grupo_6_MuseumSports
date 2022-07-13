@@ -1,9 +1,9 @@
-const fs = require('fs')
 const db = require('../database/models')
 const { Op } = require("sequelize");
-const readJSON = JSON.parse(fs.readFileSync("src/data/products.json" ,"utf8"))
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+/* const fs = require('fs')
+const readJSON = JSON.parse(fs.readFileSync("src/data/products.json" ,"utf8")) */
 
 
 module.exports = {
@@ -34,36 +34,39 @@ module.exports = {
         Promise.all([destacados , ultimosAgregados , enOferta])
 
         .then(([dest,ultimos,oferta]) => {
-            //return res.send(dest)
             return res.render('index' , {
                 dest,
                 ultimos,
                 oferta,
                 toThousand
             })
-            return res.send([dest,ultimos,Oferta])
         })
         .catch(error => console.log(error))
-
-       /*  let products = readJSON
-        res.render("index" , {
-            products,
-            toThousand
-        }) */
     },
 
     search : (req,res) => {
-        let products = readJSON
         const {keyword} = req.query
 
-        let results = products.filter(product => product.name.toLowerCase().includes(keyword.toLowerCase()) || product.description.toLowerCase().includes(keyword.toLowerCase()))
-        
-        return res.render('results' , {
-            results,
-            keyword,
-            toThousand
-       })
-
+        db.Product.findAll({
+            where : {
+                [Op.or] : [
+                    {
+                        title : {[Op.substring] : keyword}
+                    },
+                    {
+                        description : {[Op.substring] : keyword}
+                    }
+                ]
+            },
+            include : ['images']
+        })
+            .then(results => {
+                return res.render('results' , {
+                    results,
+                    keyword,
+                    toThousand
+                })
+            })
+            .catch(error => console.log(error))
     }
-
 }
