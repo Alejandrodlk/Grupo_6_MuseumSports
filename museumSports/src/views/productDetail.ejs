@@ -13,7 +13,9 @@
                 <div class="product_item">
                     <section class="image_container">
                         <div class="main_image">
-                            <img src="/images/products/<%= product.image %>" alt="">
+                            <% product.images.forEach(image => { %>
+                                <img class="index__image" height="65%" src="/images/products/<%= image.name %>" alt="">
+                          <% }) %>
                         </div>
                         <div class="secondary_image_container">
                             <div class="secondary_image">
@@ -31,7 +33,7 @@
                         </div>
                     </section>
                     <section class="product_description_select">
-                        <h3 class="prodcut_title"><%= product.name %></h3>
+                        <h3 class="prodcut_title"><%= product.title %></h3>
                         <% if (product.discount !== 0) { %>
                             <p class="in_installments"><%= toThousand(product.price) %> '<span>  <%=  product.discount + ' ' + '%OFF' %></span></p>
 

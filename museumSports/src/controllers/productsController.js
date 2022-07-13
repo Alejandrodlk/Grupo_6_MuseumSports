@@ -17,11 +17,14 @@ module.exports = {
     //Todos los productos
     all : (req,res) => {
 
-        db.Category.findAll({
-            include : ['athletes']
+        db.Product.findAll({
+            include : ['images']
         })
             .then(products => {
-                return res.send(products)
+                return res.render('products', {
+                    products,
+                    toThousand
+                })
             })
             .catch(error => console.log(error))
 
@@ -33,6 +36,28 @@ module.exports = {
             toThousand
         }) */
          //////////////////////
+    },
+     //detalle de producto
+     detail : (req,res) => {
+
+        db.Product.findByPk(req.params.id , {
+            include : ['images']
+        })
+            .then(product => {
+                return res.render('productDetail' ,{
+                    product,
+                    priceDiscount : toThousand((product.price - (product.price * product.discount) / 100) / 6),
+                    toThousand
+                })
+            })
+        /* let products = readJSON()
+		let product = products.find(product => product.id === +req.params.id)
+		return res.render("productDetail" , {
+			product,
+            toThousand,
+            priceDiscount : toThousand((product.price - (product.price * product.discount) / 100) / 6)
+		})
+ */
     },
 
     // Creacion de producto
@@ -106,20 +131,7 @@ module.exports = {
 	},
 
     
-    //detalle de producto
-    detail : (req,res) => {
-
-        
-        let products = readJSON()
-		let product = products.find(product => product.id === +req.params.id)
-
-		return res.render("productDetail" , {
-			product,
-            toThousand,
-            priceDiscount : toThousand((product.price - (product.price * product.discount) / 100) / 6)
-		})
-
-    },
+   
 
     //Carrito de compras
     cart : (req,res) => res.render("productCart"),

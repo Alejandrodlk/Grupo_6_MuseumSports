@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-const {all} = require('../controllers/categoriesController')
+const {categoryDetail} = require('../controllers/categoriesController')
 
-router.get('/all' , all)
+router.get('/detail/:id' , categoryDetail)
 
 module.exports = router
