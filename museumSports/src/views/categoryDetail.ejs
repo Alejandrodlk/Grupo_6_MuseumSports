@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include("./partials/head", { title : "Detalle de producto" }) %>
+    <%- include("./partials/head", { title : "Products By category" }) %>
 
 <body>
     
@@ -13,9 +13,7 @@
                 <% category.products.forEach(product => { %>  
                 <article class="index__box-article">
                     <a href="/products/detail/<%= product.id %>">
-                        
-                            <img class="index__image" height="65%" src="/images/products/<%= product.id == images.productId ? images.name : null %>" alt="imagen">
-                                                 
+                        <img class="index__image" height="65%" src="/images/products/<%= product.images[0].name %>" alt="imagen">  
                     <div class="index__box-descripcion">
                         <div class="index__precio-descuento">
                         <p class="index__precio">$<%= toThousand(product.price) %> </p>

@@ -4,19 +4,20 @@ const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g,
 
 module.exports = {
     categoryDetail : (req,res) => {
-      let cat = db.Category.findByPk(req.params.id , {
-            include : ['products'] , 
+        let idCategory = req.params.id
+
+        db.Category.findByPk(req.params.id , {
+            include : [
+                {
+                    association : 'products',
+                    include : ['images']
+                }
+            ],
         })
-
-      let img = db.Image.findAll()
-
-      Promise.all([cat , img])
-
-            .then(([category,images])  => {
-               //return res.send(images)
+            .then(category => {
+                //return res.send(category)
                 return res.render('categoryDetail' , {
                     category,
-                    images,
                     toThousand
                 })
             })
