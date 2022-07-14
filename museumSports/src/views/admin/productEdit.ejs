@@ -8,7 +8,7 @@
                 <form class="register_form" action="/products/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <h3>Editar producto</h3>
                     <div class="user_data">
-                        <input class="get_log" type="text" id="name" name="name" value="<%= product.name %>">
+                        <input class="get_log" type="text" id="name" name="name" value="<%= product.title %>">
                         <input class="get_log" type="text" id="description" name="description" value="<%= product.description %>">           
                     </div>
                                       
@@ -18,37 +18,41 @@
                     </div>
                     
                     <div class="box_tittle">
-                        <h4 class="tittle_categories">Tipo de deporte</h4>
+                        <h4 class="tittle_categories">Categoria</h4>
                     </div>
                     <div class="select_check">
-                        <select name="sport">
+                        <select name="categoryId">
                             <option value="" hidden selected>Selecciona uno..</option>
-                            <option value="Futbol nacional">Futbol Nacional</option>
-                            <option value="Futbol-internacional">Futbol Internacional</option>
-                            <option value="Tenis">Tenis</option>
-                            <option value="Basket">Basket</option>
-                            <option value="Rugby">Rugby</option>
-                            <option value="Boxeo">Boxeo</option>
+                            <% categories.forEach(category => { %>
+								<option value="<%= category.id %>" <%= product.categoryId === category.id ? 'selected' : null %>><%= category.name %> </option>
+							<% }) %>
                         </select>
                     </div>
 
                     <div class="box_tittle">
-                        <h4 class="tittle_categories">Categorias</h4>
+                        <h4 class="tittle_categories">Deportista</h4>
                     </div>
+
                     <div class="select_check">
-                        <select name="category">
-                            <option value="" >Selecciona uno..</option>
-                            <option value="destacados" hidden selected>Producto destacado</option>
-                            <option value="ofertas">Producto en oferta</option>   
-                            
+                        <select name="athleteId">
+                            <option value="" hidden selected>Selecciona uno..</option>
+                            <% athletes.forEach(athlete => { %>
+								<option value="<%= athlete.id %>" <%= product.athleteId  === athlete.id ? 'selected' : null %>><%= athlete.lastName %> </option>
+							<% }) %>
                         </select>
                     </div>
+                    
+                    <img src="/images/products/<%= product.images[0].name %>" alt="">
 
-                    <div >
-                        <img width="100px" height="200px" src="/images/products/<%= product.image %>" alt="">
-                    </div>
+                    <!-- Recorre todas las imagenes, en este caso mo tengo inconveniente porque solo tengo una imagen. Y CON MUCHAS IMAGENES??? -->
+                   <!--  <% product.images.forEach(image => { %>
+                        <div >
+                            <img width="100px" height="200px" src="/images/products/<%= image.name %>" alt="img">
+                        </div>
+                    <% }) %> -->
+                    
 
-                    <a class="box_img" href="#">Subir imagen<input class="get_img" name="image" type="file" accept="image/*"></a>
+                    <a class="box_img" href="#">Subir imagen<input class="get_img" name="images" type="file" accept="image/*"></a>
                     <div class="buttons">
                         <button type="submit" class="box_button button_get" >Guardar producto</button>
                         <input class="button_get" type="reset" value="Reset">

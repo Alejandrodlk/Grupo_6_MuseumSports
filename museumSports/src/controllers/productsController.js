@@ -62,16 +62,52 @@ module.exports = {
 
     // Creacion de producto
     create : (req,res) => {
-        
-        return res.render("./admin/productAdd" , {
+        let cat = db.Category.findAll()
 
+        let ath = db.Athlete.findAll({
+            order : [['lastName' , 'ASC']]
         })
+
+        Promise.all([cat,ath])
+            .then(([categories,athletes]) => {
+                return res.render("./admin/productAdd", {
+                    categories,
+                    athletes
+                })
+            })
+            .catch(error => console.log(error))
     },
 
     store : (req,res) => {
-       let products = readJSON()
-       const {id,name,description,price,discount,image,sport,category} = req.body 
+        const {title,description,price,discount,categoryId,athleteId} = req.body
         
+        db.Product.create({
+            title ,
+            description : description,
+            price : +price,
+            discount : +discount,
+            categoryId : +categoryId,
+            athleteId : +athleteId
+        })
+        .then(product => {
+            if(req.files.length > 0){  // Verifico que llegue alguna imagen
+                let images = req.files.map(({filename},i) => {  ////desestructuro req.files su propiedad filename
+                    let image = {  // Cuando mapeamos images creamos un objeto image
+                        name : filename,  // Las 3 columnas hacen referencia a los campos configurados en el modelo "Image"
+                        productId : product.id,  
+                        primary : i === 0 ? 1 : 0 // 'i'  lugar que ocupa cada elemento en el array
+                    }
+                    return image  //RETORNAMOS EL OBJETO EN CADA VUELTA DEL MAP
+                })
+                db.Image.bulkCreate(images,{validate :true})
+                    .then( (result) => console.log(result))		
+            }
+            return res.redirect('/products/all')
+        })
+        .catch(error => console.log(error))
+
+       /* let products = readJSON()
+       const {id,name,description,price,discount,image,sport,category} = req.body  
        const newProduct = {
            id : products[products.length -1].id +1,
            name,
@@ -81,32 +117,87 @@ module.exports = {
            image : req.file ? req.file.filename : "default-image.png",
            sport,
            category
-       }
-       
+       }  
        products.push(newProduct)
        saveJSON(products)
-
-       res.redirect("/products/all")
+       res.redirect("/products/all") */
     },
 
     //Edicion de producto
     edit : (req,res) => {
 
-        let products = readJSON()
-		let product = products.find(product => product.id === +req.params.id)
+            let prod = db.Product.findByPk(req.params.id , {
+                include : ['images']
+            })
 
+            let cat = db.Category.findAll()
+
+            let ath = db.Athlete.findAll({
+                order : [['lastName' , 'ASC']]
+            })
+    
+            Promise.all([prod,cat,ath])
+                .then(([product,categories,athletes]) => {
+                    return res.render("./admin/productEdit", {
+                        product,
+                        categories,
+                        athletes,
+                    })
+                })
+                .catch(error => console.log(error))
+
+       /*  let products = readJSON()
+		let product = products.find(product => product.id === +req.params.id)
 		return res.render("./admin/productEdit" , {
 			product
-		})
-
+		}) */
     },
 
     update: (req, res) => {
-		let products = readJSON()
+
+        const {title,description,price,discount,categoryId,athleteId} = req.body
+
+        db.Product.update(
+            {
+                title ,
+                description : description,
+                price : +price,
+                discount : +discount,
+                categoryId : +categoryId,
+                athleteId : +athleteId
+            },
+            {
+                where : {
+                    id : req.params.id
+                }
+            }
+        )
+
+            .then(() => {
+                if (req.file) {
+                    db.Image.update(
+                        {
+                            name : req.file.filename
+                        },
+                        {
+                            where : {
+                                productId : req.params.id,  //productId hace referencia a la table images al id que esta llegando de products
+                                primary : 1
+                            }
+                        }
+                    )
+                    .then(() => {
+                        console.log('MODIFICACION EXITOSA!!');
+                    })
+                }
+                return res.redirect('/products/all') // OJO Redirecciono en el then() peincipal APARTE: reiniciar servidor
+            })
+            .catch(error => console.log(error))
+
+
+		/* let products = readJSON()
 		const {name,price,discount,description,category,sport} = req.body
-
 		const product = products.find(product => product.id === +req.params.id)
-
 		const productsModify = products.map(product => {
 			if (product.id === +req.params.id) {
 				let productModify = {
@@ -118,16 +209,13 @@ module.exports = {
 					image : req.file ? req.file.filename : product.image,
 					category,
                     sport 	
-				}	
-                
+				}	          
 				return 	productModify		
 			}
 			return product
 		})
-
 		saveJSON(productsModify)
-
-		return res.redirect("/products/all")
+		return res.redirect("/products/all") */
 	},
 
     
@@ -141,14 +229,19 @@ module.exports = {
     //Eliminar producto
     remove : (req,res) => {
 
-        let products = readJSON()
+        db.Product.destroy({
+            where : {
+                id : req.params.id
+            }
+        })
+            .then(() => {
+                    return res.redirect('/products/all');
+                })
+                .catch(error => console.log(error))
 
+        /* let products = readJSON()
 		const productsModify = products.filter(product => product.id !== +req.params.id)
-
-		
 		saveJSON(productsModify)
-
-		return res.redirect("/products/all")
-
+		return res.redirect("/products/all") */
     },
 }

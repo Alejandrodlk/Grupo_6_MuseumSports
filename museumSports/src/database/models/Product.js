@@ -59,6 +59,7 @@ module.exports = (sequelize, dataTypes) => {
         Product.hasMany(models.Image, {
             as : 'images' ,
             foreignKey : 'productId' ,
+            onDelete: 'cascade' //para poder eliminar el producto que tiene imagenes relacionadas(tambien modificar tabla en workbench images, foreignKey, delete : on cascade)
         })
 
         Product.belongsTo(models.Category, {

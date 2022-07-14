@@ -8,45 +8,39 @@
                 <form  action="" method="POST" enctype="multipart/form-data" class="register_form">
                     <h3>Agregar producto</h3>
                     <div class="user_data">
-                        <input class="get_log" type="text" name="name" placeholder="Nombre del producto">
+                        <input class="get_log" type="text" name="title" placeholder="Nombre del producto">
                         <input class="get_log" type="text" name="description" placeholder="Descripcion">
                         <input class="get_log" type="number" name="price" placeholder="Precio">
-                        <input class="get_log" type="number" name="discount" placeholder="descuento">
+                        <input class="get_log" type="number" name="discount" placeholder="Descuento">
                     </div>
-
                     <!-- <a class="box_img" href="#">Subir imagen<input class="get_img" type="file"></a> -->
-
-
                     <div class="box_tittle">
-                        <h4 class="tittle_categories">Tipo de Deporte</h4>
+                        <h4 class="tittle_categories">Categoria</h4>
                     </div>
                     <div class="select_check">
-                        <select name="sport">
+                        <select name="categoryId">
                             <option value="" hidden selected>Selecciona uno..</option>
-                            <option value="futbol nacional">Futbol Nacional</option>
-                            <option value="futbol-internacional">Futbol Internacional</option>
-                            <option value="Tenis">Tenis</option>
-                            <option value="Basket">Basket</option>
-                            <option value="Rugby">Rugby</option>
-                            <option value="Boxeo">Boxeo</option>
-                            
+                            <% categories.forEach(category => { %>
+                                <option value="<%= category.id %>"><%= category.name %></option>
+                            <% }) %>
                         </select>
                     </div>
 
                     <div class="box_tittle">
-                        <h4 class="tittle_categories">Categorias</h4>
+                        <h4 class="tittle_categories">Deportista</h4>
                     </div>
+
                     <div class="select_check">
-                        <select name="category">
-                            <option value="" >Selecciona uno..</option>
-                            <option value="destacados"hidden selected>Producto destacado</option>
-                            <option value="ofertas">Producto en oferta</option>   
-                            
+                        <select name="athleteId">
+                            <option value="" hidden selected>Selecciona uno..</option>
+                            <% athletes.forEach(athlete => { %>
+                                <option value="<%= athlete.id %>"><%= athlete.lastName %></option>
+                            <% }) %>
                         </select>
                     </div>
 
                     <label for="image" class="box_img">Agregar imagen:</label>
-					<input type="file" id="image" name="image" class="get_img" accept="image/*" >
+					<input type="file" id="image" name="images" class="get_img" accept="image/*" >
                     
                     <div class="buttons">
                         <a class="box_button" href="/"><input class="button_get" type="submit" value="Crear Producto"></a>
