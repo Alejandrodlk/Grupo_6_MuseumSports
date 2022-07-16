@@ -66,8 +66,8 @@ CREATE TABLE `images` (
   `productId` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_images_products_idx` (`productId`),
-  CONSTRAINT `FK_images_products` FOREIGN KEY (`productId`) REFERENCES `products` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  CONSTRAINT `FK_images_products` FOREIGN KEY (`productId`) REFERENCES `products` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,7 +90,7 @@ CREATE TABLE `products` (
   KEY `FK_products_athletes_idx` (`athleteId`),
   CONSTRAINT `FK_products_athletes` FOREIGN KEY (`athleteId`) REFERENCES `athletes` (`id`),
   CONSTRAINT `FK_products_categories` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -104,7 +104,7 @@ CREATE TABLE `types` (
   `id` int NOT NULL AUTO_INCREMENT,
   `type` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -130,7 +130,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   KEY `FK_users_types_idx` (`typeId`),
   CONSTRAINT `FK_users_types` FOREIGN KEY (`typeId`) REFERENCES `types` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -142,4 +142,4 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-11 20:12:11
+-- Dump completed on 2022-07-16 18:10:18
