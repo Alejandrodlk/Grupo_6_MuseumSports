@@ -99,7 +99,7 @@ module.exports = {
                     }
                     return image  //RETORNAMOS EL OBJETO EN CADA VUELTA DEL MAP
                 })
-                db.Image.bulkCreate(images,{validate :true})
+                db.Image.bulkCreate(images,{validate :true})  //validate???
                     .then( (result) => console.log(result))		
             }
             return res.redirect('/products/all')
@@ -190,7 +190,7 @@ module.exports = {
                         console.log('MODIFICACION EXITOSA!!');
                     })
                 }
-                return res.redirect('/products/all') // OJO Redirecciono en el then() peincipal APARTE: reiniciar servidor
+                return res.redirect('/products/all') // OJO Redirecciono en el then() peincipal. APARTE: reiniciar servidor
             })
             .catch(error => console.log(error))
 
@@ -226,7 +226,7 @@ module.exports = {
 
     
 
-    //Eliminar producto
+    //Eliminar producto // Previamente configurar modelo en  onDelete: 'cascade' para borrar el producto y sus imagenes asociadas
     remove : (req,res) => {
 
         db.Product.destroy({

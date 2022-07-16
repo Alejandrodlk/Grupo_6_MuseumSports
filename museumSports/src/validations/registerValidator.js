@@ -7,7 +7,7 @@ module.exports = [
         .isLength({min : 3}).withMessage('Minimo 2 caracteres').bail()
         .isAlpha().withMessage('solo letras'),
 
-    check('lastname')
+    check('lastName')
         .isLength({min : 3}).withMessage('Minimo 2 caracteres').bail()
         .isAlpha().withMessage('solo letras'),
 

@@ -61,12 +61,12 @@ module.exports = (sequelize, dataTypes) => {
     const User = sequelize.define(alias, cols, config)
 
     //Aquí debes realizar lo necesario para crear las relaciones con el modelo (Movie)
-   /*  Genre.associate = function(models){
-        Genre.hasMany(models.Movie, {
-            as : 'movies',
-            foreignKey : 'genre_id'
+    User.associate = function(models){
+        User.belongsTo(models.Type, {
+            as : 'type',
+            foreignKey : 'typeId'
         })
-    } */
-
+    }
+    
     return User
 };

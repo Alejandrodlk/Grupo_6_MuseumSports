@@ -9,7 +9,7 @@ const loginCheck = require('../middlewares/loginCheck')
 
 const {login,logout,processLogin, register, processRegister ,profile,processProfile} = require("../controllers/usersControllers")
 
-/* /users. */
+/* /users */
 router.get('/login', loginCheck, login )
 router.post('/login' ,loginValidator, processLogin)
 router.get('/logout' , logout)
@@ -18,7 +18,7 @@ router.get('/register' , register )
 router.post('/register', uploadImageUsers.single('avatar') , registerValidator, processRegister)
 
 router.get('/profile' , profile)
-router.post('/profile' , processProfile )
+router.put('/update' ,uploadImageUsers.single('avatar'), processProfile )
 
 
 module.exports = router;
