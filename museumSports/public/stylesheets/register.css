@@ -155,6 +155,8 @@ main.register .container-register .container-form .log-in {
         display: block;
         margin: 0 auto;
     }
+
+
     
     main.register .container-register .btn-log:hover {
         background: linear-gradient(225deg, #cc245c, #ccf000);

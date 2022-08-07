@@ -28,15 +28,17 @@
                         <span style="color:red;"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
                         <input class="input-log" type="password" name="password2" placeholder="Reingresa tu contraseña">
                         <span style="color:red;"><%= locals.errors && errors.password2 ? errors.password2.msg : null %></span>
-                        <!-- <div class="input-log">
+                        <div class="input-log">
                             <label for="avatar">Cargar Avatar</label>
                             <input type="file" name="avatar" id="avatar" accept="image/*">
-                        </div> -->
+                        </div>
                     
                 </div>
-                <p class="conditions"><input type="checkbox" name="bases" id="bases" value="">Acepta los <a href="#"><span>Términos y Condiciones</span></a></p>
+                <p class="conditions"><input type="checkbox" name="bases" id="bases" value="">Aceptar <a href= "#"> <span> Términos y Condiciones</span> </a> </p>
                         <span style="color:red;"><%= locals.errors && errors.bases ? errors.bases.msg : null %></span>
                 <button type="submit" class="btn btn-log">Registrarse</button>
+
+
                 <p class="account-exists">¿Ya tenes cuenta? <a class="log-in" href="login">Inicia sesión aquí</a></p>
     
             </form>
