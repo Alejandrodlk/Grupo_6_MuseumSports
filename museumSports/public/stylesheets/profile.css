@@ -1,0 +1,35 @@
+main.view_profile {
+    
+}
+
+.view_profile .aside_profile {
+    overflow: hidden;
+    border-left: 1px solid #b9b8b8;
+    border-right: 1px solid #b9b8b8;
+    margin: 0 .5px;
+}
+
+.aside_profile .setting_option{
+    left: 50px;
+    color: #878787;
+    display: flex;
+    border-bottom: 1px solid #b9b8b8;
+    width: 100%;
+    gap: 15px;
+    text-transform: uppercase;
+    align-items: center;
+    padding: 10px 0;
+    font-weight: 530;
+    transition: all 200ms ease-in-out;
+}
+
+.aside_profile .setting_option:hover {
+    box-shadow: -5px 0px 0px 0px #054ff0;
+    color: black;
+    transform: translate(5px);    
+}
+
+main .content_profile {
+    /* transform: translate(-100%); */
+    overflow: hidden;
+}

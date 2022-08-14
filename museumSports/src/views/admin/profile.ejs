@@ -4,55 +4,177 @@
 
         <%- include("../partials/header") %>
 
-            <main>
-                <h1>PERFIL DE USUARIO: <%= user.name %></h1>
+            <main class="view_profile">
+                <!-- <h1>PERFIL DE USUARIO: <%= user.name %>
+                </h1> -->
 
-                <form action="/users/update?_method=PUT" method="POST" enctype="multipart/form-data">
-<div  style="display: flex; flex-direction:column; width: 30%; align-items: center;">
-                    <label for="name">Nombre</label>
-                    <input type="text" name="name" id="name" value="<%= user.name %>">
-                    <br>
-                    <label for="lastName">Apellido:</label>
-                    <input type="text" name="lastName" id="lastName" value="<%= user.lastName %>">
-                    <br>
-                    <label for="password">Nueva Contraseña:</label>
-                    <input type="password" name="password" id="password">
-                    <br>
-                    <!-- <label for="password2">Confirmar contraseña:</label>
-                    <input type="password" name="password2" id="password2">
-                    <br> -->
-                    <label for="country">Pais:</label>
-                    <input type="text" name="country" id="country" value="<%= user.country %>">
-                    <br>
-                    <label for="city">Ciudad:</label>
-                    <input type="text" name="city" id="city" value="<%= user.city %>">
-                    <br>
-                    <label for="direcction">Direccion:</label>
-                    <input type="text" name="direcction" id="direcction" value="<%= user.direcction %>">
-                    <br>
-                    <select name="preference" id="preference">
+                <!-- <form action="/users/update?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <div style="display: flex; flex-direction:column; width: 30%; align-items: center;">
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name" value="<%= user.name %>">
+                        <br>
+                        <label for="lastName">Apellido:</label>
+                        <input type="text" name="lastName" id="lastName" value="<%= user.lastName %>">
+                        <br>
+                        <label for="password">Nueva Contraseña:</label>
+                        <input type="password" name="password" id="password">
+                        <br>
+                        <label for="country">Pais:</label>
+                        <input type="text" name="country" id="country" value="<%= user.country %>">
+                        <br>
+                        <label for="city">Ciudad:</label>
+                        <input type="text" name="city" id="city" value="<%= user.city %>">
+                        <br>
+                        <label for="direcction">Direccion:</label>
+                        <input type="text" name="direcction" id="direcction" value="<%= user.direcction %>">
+                        <br>
+                        <select name="preference" id="preference">
 
-                        Agregar tabla 'preferences'?? un susuario tiene muchas preferencias y una preferencia le pertenece a un usuario
-                        <% if (!user.preference) { %>
-                            <option value="">Selecciona una categoria de preferencia..</option>
-                            <% categories.forEach(category => { %>
-                                <option value="<%= category.name %>"><%= category.name %></option>
-                            <% }) %>
-                        <% }else{ %>
-                            <% categories.forEach(category => { %>
-                                <option value="<%= category.name %>" <%= category.name === user.preference ? 'selected' : null %>><%= category.name %></option>
-                            <% }) %>
-                        <% } %>
+                            Agregar tabla 'preferences'?? un susuario tiene muchas preferencias y una preferencia le
+                            pertenece a un usuario
+                            <% if (!user.preference) { %>
+                                <option value="">Selecciona una categoria de preferencia..</option>
+                                <% categories.forEach(category=> { %>
+                                    <option value="<%= category.name %>">
+                                        <%= category.name %>
+                                    </option>
+                                    <% }) %>
+                                        <% }else{ %>
+                                            <% categories.forEach(category=> { %>
+                                                <option value="<%= category.name %>" <%=category.name===user.preference
+                                                    ? 'selected' : null %>><%= category.name %>
+                                                </option>
+                                                <% }) %>
+                                                    <% } %>
 
-                    </select>
-                    <br>
-                    <img  src="/images/users/<%= user.avatar %>" width="50%px" height="150px" alt="Avatar">
-                    <label for="avatar">Subir imagen de perfil:</label>
-                    <input type="file" name="avatar" id="avatar" accept="image/*">
+                        </select>
+                        <br>
+                        <img src="/images/users/<%= user.avatar %>" width="50%px" height="150px" alt="Avatar">
+                        <label for="avatar">Subir imagen de perfil:</label>
+                        <input type="file" name="avatar" id="avatar" accept="image/*">
 
-                    <button type="submit" style="background-color: blue; color: white; height: 50px; width: 150px; border-radius: 5px; font-size: 20px; ">Guardar cambios</button>
-                </form>
-</div>
+                        <button type="submit"
+                            style="background-color: blue; color: white; height: 50px; width: 150px; border-radius: 5px; font-size: 20px; ">Guardar
+                            cambios</button>
+                    </div>
+                </form> -->
+
+                <div class="aside_profile">
+                    <ul>
+                        <li><a class="setting_option" href=""><span></span><i class="fa-solid fa-user"></i>General</a></li>
+                        <li><a class="setting_option" href=""><span></span><i class="fa-solid fa-bell"></i>Comunicaciones</a></li>
+                        <li><a class="setting_option" href=""><span></span><i class="fa-solid fa-clock-rotate-left"></i>Transacciones</a></li>
+                        <li><a class="setting_option" href=""><span></span><i class="fa-solid fa-key"></i>Contraseña y Seguridad</a></li>
+                    </ul>
+                    <div>
+                        <a href="">¿Necesitas ayuda?</a>
+                    </div>
+                </div>
+                <div class="content_profile">
+                    <section>
+                        <h2>Ajustes Generales</h2>
+                        <p>Administra la cuenta que has compartido con Epic Games e incluye tu nombre, dirección de
+                            contacto
+                            y más.</p>
+                        <h2>Información de la cuenta</h2>
+                        <form action="/users/update?_method=PUT" method="POST" enctype="multipart/form-data">
+                            <div>
+                                <div>
+                                    <img src="/images/users/<%= user.avatar %>" alt="" height="50px" width="50px">
+                                </div>
+                                <label for="avatar">SUBIR IMAGEN
+                                    <input type="file" name="avatar" id="avatar" style="display: none;">
+                                </label>
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Nombre">
+                                <input type="text" placeholder="Apellidos">
+                                <input type="email" placeholder="Email">
+                                <input type="number" placeholder="Telefono">
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Pais/Region">
+                                <input type="text" placeholder="Localidad">
+                                <input type="text" placeholder="Direccion">
+                                <input type="number" placeholder="Codigo postal">
+                            </div>
+                            <div>
+                                <input type="reset" value="DESCARTAR CAMBIOS">
+                                <input type="submit" value="GUARDAR CAMBIOS">
+                            </div>
+                        </form>
+                    </section>
+                    <section>
+                        <h2>Historial de compras</h2>
+                        <p>Ver los detalles de pago y las transacciones de su cuenta. Lea la política de reembolso de <a
+                                href="">Emprendimientos 31</a></p>
+                        <div>
+                            <table>
+                                <thead>
+                                    <th>Titulo</th>
+                                    <th>Titulo</th>
+                                    <th>Titulo</th>
+                                    <th>Titulo</th>
+                                </thead>
+                                <tbody>
+                                    <td>Daato</td>
+                                    <td>Daato</td>
+                                    <td>Daato</td>
+                                    <td>Daato</td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Cambia tu contraseña</h2>
+                        <p>Por su seguridad, le recomendamos que elija una contraseña única que no use para ninguna otra
+                            cuenta en línea.</p>
+                        <form action="">
+                            <label for="">Contraseña actual</label>
+                            <input type="password" name="" id="" placeholder="Ingrese contraseña">
+                            <label for="">Nueva contraseña</label>
+                            <input type="password" name="" id="" placeholder="Ingrese contraseña">
+                            <label for="">Reescriba nueva contraseña</label>
+                            <input type="password" name="" id="" placeholder="Ingrese contraseña">
+                            <div>
+                                <input type="reset" name="" id="" value="DESCARTAR CAMBIOS">
+                                <input type="submit" name="" id="" value="GUARDAR CAMBIOS">
+                            </div>
+                            <div>
+                                <h2>Autenticación SMS</h2>
+                                <div>
+                                    <p>Use su teléfono como su autenticación de dos factores (2FA) cuando inicie sesión,
+                                        se
+                                        le pedirá que use el código de seguridad que le enviamos a través de un mensaje
+                                        SMS.
+                                    </p>
+                                    <label for="radio"><input type="radio" name="radio"
+                                            id="radio"><span>Off</span></label>
+                                </div>
+                            </div>
+                            <div>
+                                <h2>Eliminar cuenta</h2>
+                                <div>
+                                    <p>Haga clic en SOLICITAR ELIMINACIÓN DE CUENTA para iniciar el proceso de
+                                        eliminación
+                                        permanente de su cuenta de Epic Games, incluida toda la información personal,
+                                        las
+                                        compras, el progreso del juego, el contenido del juego, los proyectos de Unreal
+                                        y la
+                                        cuenta de Epic Games Wallet. Una vez que se elimine su cuenta de Epic Games, el
+                                        saldo de su billetera también se eliminará de forma permanente. <br>Si solicita
+                                        eliminar su cuenta, su cuenta se eliminará en 14 días. Durante este tiempo,
+                                        puede
+                                        iniciar sesión para reactivar su cuenta, lo que cancelará su eliminación.
+                                        Después de
+                                        14 días, la eliminación será irreversible.</p>
+                                    <input type="submit" value="SOLICITAR ELIMINACIÓN DE CUENTA">
+
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
             </main>
 
             <%- include("../partials/footer") %>
