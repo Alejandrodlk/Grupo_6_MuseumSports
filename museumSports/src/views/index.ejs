@@ -28,7 +28,7 @@
                     <div class="index__box-descripcion">
                         <div class="index__precio-descuento">
                         <p class="index__precio">$<%= toThousand(product.price) %> </p>
-                        <p class="index__descuento"><%= product.discount %>% OFF</p>
+                        <p class="index__descuento"><%= product.discount > 0 ? product.discount : null %> <%= product.discount > 0 ? '% OFF' : null %></p>
                         </div>
                         <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
                             <h5 class="index__descripcion"><%= product.title %></h5> 
@@ -67,7 +67,7 @@
                     <div class="index__box-descripcion">
                         <div class="index__precio-descuento">
                         <p class="index__precio">$<%= toThousand(product.price) %> </p>
-                        <p class="index__descuento"><%= product.discount %>% OFF</p>
+                        <p class="index__descuento"><%= product.discount > 0 ? product.discount : null %> <%= product.discount > 0 ? '% OFF' : null %></p>
                         </div>
                         <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
                             <h5 class="index__descripcion"><%= product.title %></h5> 
@@ -92,7 +92,7 @@
                     <div class="index__box-descripcion">
                         <div class="index__precio-descuento">
                         <p class="index__precio">$<%= toThousand(product.price) %> </p>
-                        <p class="index__descuento"><%= product.discount %>% OFF</p>
+                        <p class="index__descuento"><%= product.discount > 0 ? product.discount : null %> <%= product.discount > 0 ? '% OFF' : null %></p>
                         </div>
                         <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
                             <h5 class="index__descripcion"><%= product.title %></h5> 

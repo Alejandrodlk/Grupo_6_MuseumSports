@@ -2,18 +2,15 @@ const {check,body} = require('express-validator')
 const users = require('../data/users.json')
 
 
-
-
-
 module.exports = [
 
     check('name')
         .isLength({min : 2}).withMessage('Mínimo dos caracteres').bail()
-        .withMessage('solo letras'),
+        .isAlpha().withMessage('solo letras'),
 
     check('lastName')
         .isLength({min : 2}).withMessage('Mínimo dos caracteres').bail()
-        .withMessage('solo letras'),
+        .isAlpha().withMessage('solo letras'),
 
     body('email')
         .notEmpty().withMessage('Debes proporcionar un email').bail()
