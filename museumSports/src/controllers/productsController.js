@@ -3,6 +3,8 @@ const path = require('path');
 
 const db = require('../database/models')
 
+const {validationResult} = require('express-validator')
+
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const readJSON = () => {
@@ -79,32 +81,40 @@ module.exports = {
     },
 
     store : (req,res) => {
-        const {title,description,price,discount,categoryId,athleteId} = req.body
+        const errors = validationResult(req)
+
+        const {title,description,price,discount,categoryId,athleteId,images} = req.body
         
-        db.Product.create({
-            title ,
-            description : description,
-            price : +price,
-            discount : +discount,
-            categoryId : +categoryId,
-            athleteId : +athleteId
-        })
-        .then(product => {
-            if(req.files.length > 0){  // Verifico que llegue alguna imagen
-                let images = req.files.map(({filename},i) => {  ////desestructuro req.files su propiedad filename
-                    let image = {  // Cuando mapeamos images creamos un objeto image
-                        name : filename,  // Las 3 columnas hacen referencia a los campos configurados en el modelo "Image"
-                        productId : product.id,  
-                        primary : i === 0 ? 1 : 0 // 'i'  lugar que ocupa cada elemento en el array
-                    }
-                    return image  //RETORNAMOS EL OBJETO EN CADA VUELTA DEL MAP
-                })
-                db.Image.bulkCreate(images,{validate :true})  //validate???
-                    .then( (result) => console.log(result))		
-            }
-            return res.redirect('/products/all')
-        })
-        .catch(error => console.log(error))
+        if (errors.isEmpty()) {
+
+            db.Product.create({
+                title : title.trim(),
+                description : description.trim(),
+                price : +price,
+                discount : +discount,
+                categoryId : +categoryId,
+                athleteId : +athleteId
+            })
+            .then(product => {
+                if(req.files.length > 0){  // Verifico que llegue alguna imagen
+                    let images = req.files.map(({filename},i) => {  ////desestructuro req.files su propiedad filename
+                        let image = {  // Cuando mapeamos images creamos un objeto image
+                            name : filename,  // Las 3 columnas hacen referencia a los campos configurados en el modelo "Image"
+                            productId : product.id,  
+                            primary : i === 0 ? 1 : 0 // 'i'  lugar que ocupa cada elemento en el array
+                        }
+                        return image  //RETORNAMOS EL OBJETO EN CADA VUELTA DEL MAP
+                    })
+                    db.Image.bulkCreate(images,{validate :true})  //validate???
+                        .then( (result) => console.log(result))		
+                }
+
+                return res.redirect('/products/all')
+            })
+            .catch(error => console.log(error))
+        }else{
+            return res.redirect('/products/create')
+        }
 
        /* let products = readJSON()
        const {id,name,description,price,discount,image,sport,category} = req.body  
