@@ -1,9 +1,9 @@
 console.log('register.js success');
 
+const $ = (element) => document.getElementById (element);
 const regExLetter = /^[A-Z]+$/i;
 const regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
-
 
 
 
@@ -26,6 +26,10 @@ const verifyEmail = async (email) => {
         console.error
     }
 }
+
+
+
+
 
 
 $('name').addEventListener('blur', function(){
@@ -52,7 +56,7 @@ $('name').addEventListener('blur', function(){
 });
 
 
-$('lastname').addEventListener('blur', function(){
+$('lastName').addEventListener('blur', function(){
 
     switch (true) {
         case !this.value.trim():
@@ -103,17 +107,17 @@ $('password').addEventListener('blur', async function(){
 
     switch (true) {
         case !this.value.trim():
-            $('errorPass').innerHTML = "Debes ingresar una contraseña";
+            $('errorPassword').innerHTML = "Debes ingresar una contraseña";
             this.classList.add('is-invalid')
             break;
         case !regExPass.test(this.value.trim()):
-            $('errorPass').innerHTML = "La contraseña debe tener entre 6 y 12 caracteres, un número, una mayúscula y un caracter especial";
+            $('errorPassword').innerHTML = "La contraseña debe tener entre 6 y 12 caracteres, un número, una mayúscula y un caracter especial";
             this.classList.add('is-invalid')
             break
         default:
             this.classList.remove('is-invalid')
             this.classList.add('is-valid')
-            $('errorPass').innerHTML = null;
+            $('errorPassword').innerHTML = null;
             break;
     }
 })
@@ -123,17 +127,17 @@ $('password2').addEventListener('blur', async function(){
 
     switch (true) {
         case !this.value.trim():
-            $('errorPass2').innerHTML = "Debes corroborar tu contraseña";
+            $('errorPassword2').innerHTML = "Debes corroborar tu contraseña";
             this.classList.add('is-invalid')
             break;
-        case this.value.trim() !== $('pass').value.trim():
-            $('errorPass2').innerHTML = "Las contraseñas no coinciden";
+        case this.value.trim() !== $('password').value.trim():
+            $('errorPassword2').innerHTML = "Las contraseñas no coinciden";
             this.classList.add('is-invalid')
             break
         default:
             this.classList.remove('is-invalid')
             this.classList.add('is-valid')
-            $('errorPass2').innerHTML = null;
+            $('errorPassword2').innerHTML = null;
             break;
     }
 });
@@ -147,7 +151,7 @@ $('terms').addEventListener('click', function() {
 
 
 
-$('form-register').addEventListener('submit', function (e) {
+$('bases').addEventListener('submit', function (e) {
     e.preventDefault();
     let error = false;
     let elements = this.elements;
