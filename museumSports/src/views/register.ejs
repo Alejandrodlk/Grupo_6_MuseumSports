@@ -10,13 +10,15 @@
     <main class="register">
         <section class="container-register">
             <h2 class="title">Únete hoy</h2>
+
             <p class="slogan-register">Empieza tu camino </p>
             <div class="register-accounts">
                 <button href="#" class="btn-log-facebook btn">Registrate con Facebook</button>
                 <button href="#" class="btn-log-google btn">Registrate con Google</button>
             </div>
-            <form id="form-register" class="container-form" action="" method="post" enctype="multipart/form-data">
-                <div class="container-date">
+
+            <form class="container-form" action="" method="post" enctype="multipart/form-data">
+                <div class="input-container">
 
 
 
@@ -44,7 +46,7 @@
                        
                       <div>
                         <label for="email" class="form-label" ></label>
-                        <input  type="text" class="input-style" placeholder="Ingresa tu Email"
+                        <input  type="email" class="input-style" placeholder="Ingresa tu Email"
                         class="form-input form-control <%= locals.errors && errors.email ? 'is-invalid' : null %> " 
                         value="<%= locals.old && old.email ? old.email : null %>"
                         id="email"  name="email" title="El email debe tener más de dos caracteres"/>
@@ -57,7 +59,7 @@
 
                       <div>
                         <label for="password" class="form-label" ></label>
-                        <input  type="text" class="input-style" placeholder="Ingresa una contraseña"
+                        <input  type="password" class="input-style" placeholder="Ingresa una contraseña"
                         class="form-input form-control <%= locals.errors && errors.password ? 'is-invalid' : null %> " 
                         value="<%= locals.old && old.password ? old.password : null %>"
                         id="password"  name="password" title="La contraseña debe tener más de dos caracteres"/>
@@ -66,7 +68,7 @@
 
                       <div>
                         <label for="password2" class="form-label" ></label>
-                        <input  type="text" class="input-style" placeholder="Ingresa una contraseña"
+                        <input  type="password" class="input-style" placeholder="Ingresa una contraseña"
                         class="form-input form-control <%= locals.errors && errors.password2 ? 'is-invalid' : null %> " 
                         value="<%= locals.old && old.password2 ? old.password2 : null %>"
                         id="password2"  name="password2" title="La contraseña debe tener más de dos caracteres"/>
