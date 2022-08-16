@@ -143,23 +143,18 @@ $('password2').addEventListener('blur', async function(){
 });
 
 
-$('terms').addEventListener('click', function() {
-    this.classList.remove('is-invalid');
-    $('errorTerms').innerHTML = null
 
-})
-
-
-
-$('bases').addEventListener('submit', function (e) {
+$('bases').addEventListener('submit', function(e) {
     e.preventDefault();
-    let error = false;
+    
     let elements = this.elements;
+    let error = false;
 
     for (let i = 0; i < elements.length - 2; i++) {
         if(!elements[i].value){
             elements[i].classList.add('is-invalid');
-            $('msgError').innerHTML = "Todos los campos son obligatorios";
+            error = true;
+            $('msgError').innerHTML = "Los campos señalados son obligatorios";
             error = true
         }
     }

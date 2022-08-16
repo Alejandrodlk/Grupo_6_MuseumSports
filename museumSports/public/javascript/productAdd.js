@@ -91,6 +91,31 @@ $('price').addEventListener('blur', function(){
             $('errorPrecio').innerHTML = null;
             break;
     }
-});
+})
 
 
+$('container-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    let elements = e.target.elements;
+    let error = false;
+
+    for (let i = 0; i < elements.length - 2; i++) {
+        if(!elements[i].value.trim()){
+            elements[i].classList.add('is-invalid');
+            error = true;
+            $('error-password').innerHTML = "Los campos señalados son obligatorios";
+            error = true
+        }
+    }
+
+    for (let i = 0; i < elements.length - 2; i++) {
+        if(elements[i].classList.contains('is-invalid')){
+            error = true
+        }
+    }
+
+    !error && e.target.submit()
+
+
+})

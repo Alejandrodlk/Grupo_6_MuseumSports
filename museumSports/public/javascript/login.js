@@ -58,7 +58,8 @@ $('container-form').addEventListener('submit', (e) => {
         if(!elements[i].value.trim()){
             elements[i].classList.add('is-invalid');
             error = true;
-            $('error-pass').innerHTML = "Los campos señalados son obligatorios"
+            $('error-password').innerHTML = "Los campos señalados son obligatorios";
+            error = true
         }
     }
 
