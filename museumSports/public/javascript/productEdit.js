@@ -6,7 +6,6 @@ const regExLetter = /^[A-Z]+$/i;
 
 
 
-
 $('title').addEventListener('blur', function(){
 
     switch (true) {
