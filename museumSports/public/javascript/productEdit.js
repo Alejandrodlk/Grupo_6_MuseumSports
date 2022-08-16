@@ -1,4 +1,4 @@
-console.log('productAdd.js success');
+console.log('productEdit.js success');
 
 const $ = (element) => document.getElementById (element);
 const regExLetter = /^[A-Z]+$/i;
