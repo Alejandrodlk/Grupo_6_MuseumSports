@@ -3,6 +3,7 @@ footer.footer-container {
     color: #FFFFFF;
     padding: 10px;
     width: 100%;
+    position: relative;
 }
 
 footer.footer-container h3 {
