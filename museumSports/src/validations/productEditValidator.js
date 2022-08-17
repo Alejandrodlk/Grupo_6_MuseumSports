@@ -17,9 +17,9 @@ module.exports = [
         .isLength({min : 1 , max : 2}).withMessage('Entre 1 y 2 numeros'),
 
     check('categoryId')
-        .notEmpty().withMessage('Debes proporcionar una categoria').bail(),
+        .notEmpty().withMessage('Debes proporcionar un precio').bail(),
 
     check('athleteId')
-        .notEmpty().withMessage('Debes proporcionar un athleta').bail(),
+        .notEmpty().withMessage('Debes proporcionar un precio').bail(),
 
 ]

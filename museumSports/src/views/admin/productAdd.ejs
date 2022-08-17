@@ -58,7 +58,7 @@
                     </div>
                     <div class="select_check">
                         <select name="categoryId">
-                            <option value="" hidden selected>Selecciona uno..</option>
+                            <option value="<%= locals.old && old.categoryId? old.categoryId : null %>" hidden selected>Selecciona uno..</option>
                             <% categories.forEach(category => { %>
                                 <option value="<%= category.id %>"><%= category.name %></option>
                             <% }) %>
