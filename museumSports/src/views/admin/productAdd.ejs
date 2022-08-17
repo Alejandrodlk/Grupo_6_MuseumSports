@@ -9,8 +9,6 @@
                     <h3>Agregar producto</h3>
                     <div class="user_data">
 
-                        
-                     
 
                         <div>
                             <label for="title" value="" placeholder="Nombre del producto"class="form-label" ></label>
@@ -22,7 +20,6 @@
                           </div>
 
 
-
                           <div>
                             <label for="description" value="" placeholder="Nombre del producto"class="form-label" ></label>
                             <input  type="text" class="input-style" placeholder="Descripción del producto"
@@ -31,9 +28,6 @@
                             id="description"  name="description" title="El nombre debe tener más de 30 caracteres"/>
                             <small id="errorDescripción" style="color:red;" class="text-danger"><%= locals.errors && errors.description ? errors.description.msg : null %> </small>
                           </div>
-
-
-
 
                           
                           <div>
@@ -55,9 +49,6 @@
                             id="discount"  name="discount" title="El descuento debe ser mayor a 0%"/>
                             <small id="errorDescuento" style="color:red;" class="text-danger"><%= locals.errors && errors.discount ? errors.discount.msg : null %> </small>
                           </div>
-
-
-
 
                         
                     </div>

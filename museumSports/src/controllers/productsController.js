@@ -113,7 +113,10 @@ module.exports = {
             })
             .catch(error => console.log(error))
         }else{
+
             return res.redirect('/products/create')
+
+
         }
 
        /* let products = readJSON()

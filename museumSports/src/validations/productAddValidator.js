@@ -3,7 +3,8 @@ const {check,body,files} = require('express-validator')
 module.exports = [
 
     check('title')
-        .isLength({min : 2}).withMessage('Mínimo dos caracteres').bail(),
+        .notEmpty().bail()
+        .isLength({min : 2}).withMessage('Mínimo dos caracteres'),
 
     check('description')
         .notEmpty().withMessage('Debes proporcionar una descripcion').bail(),
