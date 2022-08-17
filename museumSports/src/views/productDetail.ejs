@@ -13,23 +13,16 @@
                 <div class="product_item">
                     <section class="image_container">
                         <div class="main_image">
-                            <% product.images.forEach(image => { %>
-                                <img class="index__image" height="65%" src="/images/products/<%= image.name %>" alt="">
-                          <% }) %>
+                                <img id="imgPrimary" class="index__image" style="object-fit:cover; width: 100%; " src="/images/products/<%= product.images[0]?.name %>" alt="">
                         </div>
                         <div class="secondary_image_container">
-                            <div class="secondary_image">
-                                <img src="/images/futbol-img1.jpg" alt="">
-                            </div>
-                            <div class="secondary_image">
-                                <img src="/images/futbol-img1-3.jpg" alt="">
-                            </div>
-                            <div class="secondary_image">
-                                <img src="/images/futbol-img1.jpg" alt="">
-                            </div>
-                            <div class="secondary_image">
-                                <img src="/images/futbol-img1-3.jpg" alt="">
-                            </div>
+<% product.images.forEach(image => { %>
+    <div class="secondary_image">
+        <img onclick="document.getElementById('imgPrimary').src = this.src" style="height: 150px; object-fit:cover" src="/images/products/<%= image.name %>" alt="">
+    </div>
+<% }) %>
+                           
+                           
                         </div>
                     </section>
                     <section class="product_description_select">
@@ -98,62 +91,24 @@
             <h2>Productos relacionados</h2>
             <div class="products_related">
                 <div class="item_container_related">
-                    <article class="related_article">
-                        <a class="" href="#">
-                            <img src="/images/futbol-img1.jpg" alt="">
-                            <h4 class="product_price">Precio</h4>
-                            <p class="in_installments">Cuotas</p>
-                            <p class="product_name">Nombre del producto</p>
-                            <a class="button_article">Ver producto</a>
-                        </a>
-                    </article>
-                    <article class="related_article">
-                        <a class="" href="#">
-                            <img src="/images/futbol-img1.jpg" alt="">
-                            <h4 class="product_price">Precio</h4>
-                            <p class="in_installments">Cuotas</p>
-                            <p class="product_name">Nombre del producto</p>
-                            <a class="button_article">Ver producto</a>
-                        </a>
-                    </article>
-                    <article class="related_article">
-                        <a class="" href="#">
-                            <img src="/images/futbol-img1.jpg" alt="">
-                            <h4 class="product_price">Precio</h4>
-                            <p class="in_installments">Cuotas</p>
-                            <p class="product_name">Nombre del producto</p>
-                            <a class="button_article">Ver producto</a>
-                        </a>
-                    </article>
-                </div>
-                <div class="item_container_related">
-                    <article class="related_article">
-                        <a class="" href="#">
-                            <img src="/images/futbol-img1.jpg" alt="">
-                            <h4 class="product_price">Precio</h4>
-                            <p class="in_installments">Cuotas</p>
-                            <p class="product_name">Nombre del producto</p>
-                            <a class="button_article">Ver producto</a>
-                        </a>
-                    </article>
-                    <article class="related_article">
-                        <a class="" href="#">
-                            <img src="/images/futbol-img1.jpg" alt="">
-                            <h4 class="product_price">Precio</h4>
-                            <p class="in_installments">Cuotas</p>
-                            <p class="product_name">Nombre del producto</p>
-                            <a class="button_article">Ver producto</a>
-                        </a>
-                    </article>
-                    <article class="related_article">
-                        <a class="" href="#">
-                            <img src="/images/futbol-img1.jpg" alt="">
-                            <h4 class="product_price">Precio</h4>
-                            <p class="in_installments">Cuotas</p>
-                            <p class="product_name">Nombre del producto</p>
-                            <a class="button_article">Ver producto</a>
-                        </a>
-                    </article>
+                    <% products.forEach(product => { %>
+                        <article class="related_article" style="display: flex; flex-direction:column; flex-wrap: wrap; justify-content:space-between;" >
+                           
+                                <img style="object-fit: cover; height:65% " src="/images/products/<%= product.images[0].name %> " alt="">
+                                <h4 class="product_price"><%= product.price %> </h4>
+                                <% if (product.discount > 0) { %>
+                                    <p class="in_installments"><%= product.discount %>% OFF</p>
+                                <% }else{%>
+                                    <p class="in_installments">ÚLTIMO DISPONIBLE!!</p>
+
+                                <% } %>
+                                <p class="product_name"><%= product.title %> </p>
+
+                                <a class="button_article">Ver producto</a>
+                        </article>
+                    <% }) %>
+                   
+                 
                 </div>
             </div>
         </section>

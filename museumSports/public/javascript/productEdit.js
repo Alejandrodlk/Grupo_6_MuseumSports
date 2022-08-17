@@ -1,6 +1,5 @@
 console.log('productEdit.js success');
 
-const $ = (element) => document.getElementById (element);
 const regExLetter = /^[A-Z]+$/i;
 
 
@@ -99,7 +98,7 @@ $('container-form').addEventListener('submit', (e) => {
     let elements = e.target.elements;
     let error = false;
 
-    for (let i = 0; i < elements.length - 2; i++) {
+    for (let i = 0; i < elements.length - 3; i++) {
         if(!elements[i].value.trim()){
             elements[i].classList.add('is-invalid');
             error = true;

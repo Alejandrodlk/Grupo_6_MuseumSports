@@ -46,11 +46,21 @@ module.exports = {
             include : ['images']
         })
             .then(product => {
-                return res.render('productDetail' ,{
-                    product,
-                    priceDiscount : toThousand((product.price - (product.price * product.discount) / 100) / 6),
-                    toThousand
+                db.Product.findAll({
+                    where : {
+                        categoryId : product.categoryId
+                    },
+                    include : ['images'],
+                    limit : 6
+                }).then(products => {
+                    return res.render('productDetail' ,{
+                        product,
+                        priceDiscount : toThousand((product.price - (product.price * product.discount) / 100) / 6),
+                        toThousand,
+                        products
+                    })
                 })
+               
             })
         /* let products = readJSON()
 		let product = products.find(product => product.id === +req.params.id)
@@ -184,23 +194,42 @@ module.exports = {
         )
 
             .then(() => {
-                if (req.file) {
-                    db.Image.update(
-                        {
-                            name : req.file.filename
-                        },
-                        {
-                            where : {
-                                productId : req.params.id,  //productId hace referencia a la table images al id que esta llegando de products
-                                primary : 1
-                            }
+                if(req.files.length > 0){  // Verifico que llegue alguna imagen
+
+                    db.Image.findAll({
+                        where : {
+                            productId : req.params.id
                         }
-                    )
-                    .then(() => {
-                        console.log('MODIFICACION EXITOSA!!');
+                    }).then(images => {
+                        //elimino los archivos
+                        images.forEach(image => {
+                            if(fs.existsSync('./public/images/products/' + image.name)){
+                                fs.unlinkSync('./public/images/products/' + image.name)
+                            }
+                        });
+
+                        db.Image.destroy({ //elimino las imagenes de la DB
+                            where : {
+                                productId : req.params.id
+                            }
+                        }).then( () => {
+    
+                            let images = req.files.map(({filename},i) => {  ////desestructuro req.files su propiedad filename
+                            let image = {  // Cuando mapeamos images creamos un objeto image
+                                name : filename,  // Las 3 columnas hacen referencia a los campos configurados en el modelo "Image"
+                                productId : req.params.id,  
+                                primary : i === 0 ? 1 : 0 // 'i'  lugar que ocupa cada elemento en el array
+                            }
+                            return image  //RETORNAMOS EL OBJETO EN CADA VUELTA DEL MAP
+                        })
+                        db.Image.bulkCreate(images,{validate :true})  //validate???
+                            .then( (result) => console.log(result))		
+                            return res.redirect('/products/all') // OJO Redirecciono en el then() peincipal. APARTE: reiniciar servidor
+                        })
                     })
+                }else{
+                    return res.redirect('/products/all') // OJO Redirecciono en el then() peincipal. APARTE: reiniciar servidor
                 }
-                return res.redirect('/products/all') // OJO Redirecciono en el then() peincipal. APARTE: reiniciar servidor
             })
             .catch(error => console.log(error))
 

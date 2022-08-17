@@ -1,7 +1,6 @@
 console.log('login.js success!');
 
 
-const $ = (element) => document.getElementById (element);
 const regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 
 
@@ -16,10 +15,6 @@ $('email').addEventListener('blur', async function() {
             $('error-email').innerHTML = "El email tiene un formato incorrecto";
             this.classList.add('is-invalid')
             break 
-            case await verifyEmail(this.value.trim()) :
-            $('errorEmail').innerHTML = "¡El email ya se encuentra registrado!";
-            this.classList.add('is-invalid')
-            break
         default:
             this.classList.remove('is-invalid');
             this.classList.add('is-valid')

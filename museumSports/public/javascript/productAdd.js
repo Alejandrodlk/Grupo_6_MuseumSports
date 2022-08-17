@@ -1,6 +1,5 @@
 console.log('productAdd.js success');
 
-const $ = (element) => document.getElementById (element);
 const regExLetter = /^[A-Z]+$/i;
 
 
@@ -104,8 +103,7 @@ $('container-form').addEventListener('submit', (e) => {
         if(!elements[i].value.trim()){
             elements[i].classList.add('is-invalid');
             error = true;
-            $('error-password').innerHTML = "Los campos señalados son obligatorios";
-            error = true
+            $('error-empty').innerHTML = "Los campos señalados son obligatorios";
         }
     }
 
