@@ -28,9 +28,9 @@
                     <div class="index__box-descripcion">
                         <div class="index__precio-descuento">
                         <p class="index__precio">$<%= toThousand(product.price) %> </p>
-                        <p class="index__descuento"><%= product.discount %>% OFF</p>
+                        <p class="index__descuento"><%= product.discount > 0 ? product.discount : null %> <%= product.discount > 0 ? '% OFF' : null %></p>
                         </div>
-                        <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                        <p class="index__envio">Envío gratis <i class="fas fa-bolt"></i></p>
                             <h5 class="index__descripcion"><%= product.title %></h5> 
                     </div>
                     </a>
@@ -54,7 +54,7 @@
             </div>
         </section>
 
-        <h4>En oferta<i class="fa-solid fa-fire-flame-curved"></i></h4>
+        <h4>En oferta <i class="fa-solid fa-fire-flame-curved"></i></h4>
 
         <section >
             <div class="index__box-section">
@@ -67,9 +67,9 @@
                     <div class="index__box-descripcion">
                         <div class="index__precio-descuento">
                         <p class="index__precio">$<%= toThousand(product.price) %> </p>
-                        <p class="index__descuento"><%= product.discount %>% OFF</p>
+                        <p class="index__descuento"><%= product.discount > 0 ? product.discount : null %> <%= product.discount > 0 ? '% OFF' : null %></p>
                         </div>
-                        <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                        <p class="index__envio">Envío gratis <i class="fas fa-bolt"></i></p>
                             <h5 class="index__descripcion"><%= product.title %></h5> 
                     </div>
                     </a>
@@ -79,7 +79,7 @@
         </section>
 
 
-        <h4>Ultimos agregados <i class="fa-solid fa-fire-flame-curved"></i></h4>
+        <h4>Últimos agregados <i class="fa-solid fa-fire-flame-curved"></i></h4>
         
         <section >
             <div class="index__box-section">
@@ -92,9 +92,9 @@
                     <div class="index__box-descripcion">
                         <div class="index__precio-descuento">
                         <p class="index__precio">$<%= toThousand(product.price) %> </p>
-                        <p class="index__descuento"><%= product.discount %>% OFF</p>
+                        <p class="index__descuento"><%= product.discount > 0 ? product.discount : null %> <%= product.discount > 0 ? '% OFF' : null %></p>
                         </div>
-                        <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                        <p class="index__envio">Envío gratis <i class="fas fa-bolt"></i></p>
                             <h5 class="index__descripcion"><%= product.title %></h5> 
                     </div>
                     </a>
@@ -120,7 +120,7 @@
                                 <p class="index__precio-favorito">$10000</p>
                                 <p class="index__descuento">10% OFF</p>
                             </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                            <p class="index__envio">Envío gratis <i class="fas fa-bolt"></i></p>
                             <h5 class="index__descripcion">Copa Mundial </h5>
                         </div>
                     </article>
@@ -136,7 +136,7 @@
                                 <p class="index__precio-favorito">$10000</p>
                                 <p class="index__descuento">10% OFF</p>
                             </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                            <p class="index__envio">Envío gratis <i class="fas fa-bolt"></i></p>
                             <h5 class="index__descripcion">Copa Mundial </h5>
                         </div>
                     </article>
@@ -154,7 +154,7 @@
                                 <p class="index__precio-favorito">$10000</p>
                                 <p class="index__descuento">10% OFF</p>
                             </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                            <p class="index__envio">Envío gratis <i class="fas fa-bolt"></i></p>
                             <h5 class="index__descripcion">Copa Mundial </h5>
                         </div>
                     </article>
@@ -170,7 +170,7 @@
                                 <p class="index__precio-favorito">$10000</p>
                                 <p class="index__descuento">10% OFF</p>
                             </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                            <p class="index__envio">Envío gratis <i class="fas fa-bolt"></i></p>
                             <h5 class="index__descripcion">Copa Mundial </h5>
                         </div>
                     </article>
@@ -182,7 +182,7 @@
 
         <section class="newsteller">
             <form action="" method="POST">
-                <h3 class="home__envolope"><i class="fas fa-envelope-open-text"></i> Recibi ofertas y novedades</h3>   
+                <h3 class="home__envolope"> <i class="fas fa-envelope-open-text"> </i>Recibí ofertas y novedades </h3>   
                 <div class="home__input-boton"> 
                     <input class="home__input" type="email" name="email" placeholder="Email...">
                     <button type="submit" class="home__boton">Enviar</button>      

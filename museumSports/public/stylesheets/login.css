@@ -147,6 +147,16 @@ main.login section .container-form p.link_pass-recover {
 }
 
 
+.is-valid {
+    color:blue;
+}
+
+.is-invalid { 
+    color:red;
+    border: 2px solid red;
+}
+
+
 /* -------------Media Queries----------------*/
 
 

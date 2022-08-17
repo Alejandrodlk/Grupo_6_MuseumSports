@@ -1,14 +1,15 @@
 const {check,body} = require('express-validator')
 const users = require('../data/users.json')
 
+
 module.exports = [
 
     check('name')
-        .isLength({min : 3}).withMessage('Minimo 2 caracteres').bail()
+        .isLength({min : 2}).withMessage('Mínimo dos caracteres').bail()
         .isAlpha().withMessage('solo letras'),
 
     check('lastName')
-        .isLength({min : 3}).withMessage('Minimo 2 caracteres').bail()
+        .isLength({min : 2}).withMessage('Mínimo dos caracteres').bail()
         .isAlpha().withMessage('solo letras'),
 
     body('email')
@@ -25,7 +26,7 @@ module.exports = [
         }).withMessage('El email ya se encuentra registrado!'),
         
     check('password')
-        .isLength({ min: 6, max: 12 }).withMessage('La contraseña debe tener un minimo de 6 y un maximo de 12').bail(),
+        .isLength({ min: 6, max: 12 }).withMessage('La contraseña debe tener entre 6 y 12 caracteres').bail(),
 
     body('password2')
         .custom((value , {req}) => {
@@ -34,12 +35,20 @@ module.exports = [
             }else{
                 return true
             }
-        }).withMessage('La contraseña no coinside'),
+        }).withMessage('La contraseña no coincide'),
+
+
+
 
     check('bases')
-        .isString('on').withMessage('Debes aceptar bases y condiciones')
+        .isString('on').withMessage('Debes aceptar las bases y condiciones')
 
 ]
 
     
-        
+
+
+
+
+
+

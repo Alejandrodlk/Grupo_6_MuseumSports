@@ -39,6 +39,8 @@
 
                             <p><h4 class="main_product_price">$<%= toThousand(product.price - (product.price * product.discount) / 100) %></h4></p>
 
+                        <% }else{ %>
+                            <h4 class="main_product_price">$<%= product.price %></h4>  
                         <% } %>
                         <p class="in_installments"> en 6x $<%= priceDiscount %> Sin interes </p>
                        <!--  <div class="color_container">
@@ -59,8 +61,8 @@
                         <div class="payment_container">
                             <p>Medios de pago</p>
                             <div>
-                                <span class="payment_methods">Credito</span>
-                                <span class="payment_methods">Debito</span>
+                                <span class="payment_methods">Crédito</span>
+                                <span class="payment_methods">Débito</span>
                                 <span class="payment_methods">Efectivo</span>
                             </div>
                         </div>
@@ -81,7 +83,7 @@
                 <div>
                     <section class="product_technical_details">
                         <div class="specific_detail">
-                            <a href="">Descripcion del producto</a>
+                            <a href="">Descripción del producto</a>
                             <p> <%= product.description %></p>
                         </div>
                         <!-- <div>

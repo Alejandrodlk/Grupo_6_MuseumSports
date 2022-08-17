@@ -55,6 +55,16 @@ main.register .container-register .input-log {
     padding: 10px;
 }
 
+.input-style {
+    height: 50px;
+    width: 100%;
+   margin-right: 200px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+
+
 main.register .container-register .input-log:focus {
     outline: none;
 }
@@ -98,6 +108,18 @@ main.register .container-register .container-form .log-in {
     color: #34D69B;
     font-weight: 700;
 }
+.is-valid {
+    color:blue;
+}
+
+.is-invalid { 
+    color:red;
+    border: 2px solid red;
+}
+
+
+
+
  
 /*   -----------Media Queries----------    */
 
@@ -155,6 +177,8 @@ main.register .container-register .container-form .log-in {
         display: block;
         margin: 0 auto;
     }
+
+
     
     main.register .container-register .btn-log:hover {
         background: linear-gradient(225deg, #cc245c, #ccf000);
