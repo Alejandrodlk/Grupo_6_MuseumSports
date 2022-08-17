@@ -123,7 +123,23 @@ module.exports = {
             })
             .catch(error => console.log(error))
         }else{
-            return res.redirect('/products/create')
+
+        let cat = db.Category.findAll()
+
+        let ath = db.Athlete.findAll({
+            order : [['lastName' , 'ASC']]
+        })
+
+        Promise.all([cat,ath])
+            .then(([categories,athletes]) => {
+                return res.render("./admin/productAdd", {
+                    categories,
+                    athletes,
+                    old : req.body,
+                    errors : errors.mapped()
+                })
+            })
+            .catch(error => console.log(error))
         }
 
        /* let products = readJSON()
@@ -175,6 +191,8 @@ module.exports = {
 
     update: (req, res) => {
 
+        const errors = validationResult(req)
+
         const {title,description,price,discount,categoryId,athleteId} = req.body
 
         db.Product.update(
@@ -194,42 +212,23 @@ module.exports = {
         )
 
             .then(() => {
-                if(req.files.length > 0){  // Verifico que llegue alguna imagen
-
-                    db.Image.findAll({
-                        where : {
-                            productId : req.params.id
-                        }
-                    }).then(images => {
-                        //elimino los archivos
-                        images.forEach(image => {
-                            if(fs.existsSync('./public/images/products/' + image.name)){
-                                fs.unlinkSync('./public/images/products/' + image.name)
-                            }
-                        });
-
-                        db.Image.destroy({ //elimino las imagenes de la DB
+                if (req.file) {
+                    db.Image.update(
+                        {
+                            name : req.file.filename
+                        },
+                        {
                             where : {
-                                productId : req.params.id
+                                productId : req.params.id,  //productId hace referencia a la table images al id que esta llegando de products
+                                primary : 1
                             }
-                        }).then( () => {
-    
-                            let images = req.files.map(({filename},i) => {  ////desestructuro req.files su propiedad filename
-                            let image = {  // Cuando mapeamos images creamos un objeto image
-                                name : filename,  // Las 3 columnas hacen referencia a los campos configurados en el modelo "Image"
-                                productId : req.params.id,  
-                                primary : i === 0 ? 1 : 0 // 'i'  lugar que ocupa cada elemento en el array
-                            }
-                            return image  //RETORNAMOS EL OBJETO EN CADA VUELTA DEL MAP
-                        })
-                        db.Image.bulkCreate(images,{validate :true})  //validate???
-                            .then( (result) => console.log(result))		
-                            return res.redirect('/products/all') // OJO Redirecciono en el then() peincipal. APARTE: reiniciar servidor
-                        })
+                        }
+                    )
+                    .then(() => {
+                        console.log('MODIFICACION EXITOSA!!');
                     })
-                }else{
-                    return res.redirect('/products/all') // OJO Redirecciono en el then() peincipal. APARTE: reiniciar servidor
                 }
+                return res.redirect('/products/all') // OJO Redirecciono en el then() peincipal. APARTE: reiniciar servidor
             })
             .catch(error => console.log(error))
 

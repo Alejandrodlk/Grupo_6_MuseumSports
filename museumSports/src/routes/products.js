@@ -6,6 +6,7 @@ const productsAddCheck = require('../middlewares/productsAddCheck');
 const productsEditCheck = require('../middlewares/productsEditCheck');
 
 const productAddValidator = require('../validations/productAddValidator')
+const productEditValidator = require('../validations/productEditValidator')
 
 const {create , store, edit , update , remove , cart , detail , all ,} = require("../controllers/productsController")
 
@@ -20,7 +21,7 @@ router.get("/create" , productsAddCheck, create)
 router.post("/create", uploadImageProducts.array("images") , productAddValidator, store)
 
 router.get("/edit/:id" , productsEditCheck, edit)
-router.put("/update/:id", uploadImageProducts.array("images") , update )
+router.put("/update/:id", uploadImageProducts.single("images") , update )
 
 router.delete("/remove/:id" , remove)
 

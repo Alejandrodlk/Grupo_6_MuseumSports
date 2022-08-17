@@ -9,8 +9,6 @@
                     <h3>Agregar producto</h3>
                     <div class="user_data">
 
-                        
-                     
 
                         <div>
                             <label for="title" value="" placeholder="Nombre del producto"class="form-label" ></label>
@@ -20,7 +18,6 @@
                             id="title"  name="title" title="El nombre debe tener más de 15 caracteres"/>
                             <small id="errorNombre" style="color:red;" class="text-danger"><%= locals.errors && errors.title ? errors.title.msg : null %> </small>
                           </div>
-
 
 
                           <div>
@@ -56,45 +53,40 @@
                             <small id="errorDescuento" style="color:red;" class="text-danger"><%= locals.errors && errors.discount ? errors.discount.msg : null %> </small>
                           </div>
 
-                          <div class="box_tittle">
-                            <h4 class="tittle_categories">Categoria</h4>
-                            </div>
-                          <div >
-                            <select name="categoryId" class="input-style">
-                                <option value="" hidden selected>Selecciona uno..</option>
-                                <% categories.forEach(category => { %>
-                                    <option value="<%= category.id %>"><%= category.name %></option>
-                                <% }) %>
-                            </select>
-                        </div>
 
-                        <div class="box_tittle">
-                            <h4 class="tittle_categories">Deportista</h4>
-                        </div>
-    
-                        <div>
-                            <select name="athleteId" class="input-style" style="margin-right:220px">
-                                <option value="" hidden selected>Selecciona uno..</option>
-                                <% athletes.forEach(athlete => { %>
-                                    <option value="<%= athlete.id %>"><%= athlete.lastName %></option>
-                                <% }) %>
-                            </select>
-                        </div>
-                        <div class="box_tittle">
-                            <h4 class="tittle_categories">Agregar imágenes</h4>
-                        </div>
-                        <div>
-                            <input type="file" id="image" name="images" accept="image/*" multiple>
-                        </div>
+
+
+                        
                     </div>
                     <!-- <a class="box_img" href="#">Subir imagen<input class="get_img" type="file"></a> -->
-                    
-                  
+                    <div class="box_tittle">
+                        <h4 class="tittle_categories">Categoria</h4>
+                    </div>
+                    <div class="select_check">
+                        <select name="categoryId">
+                            <option value="" hidden selected>Selecciona uno..</option>
+                            <% categories.forEach(category => { %>
+                                <option value="<%= category.id %>"><%= category.name %></option>
+                            <% }) %>
+                        </select>
+                    </div>
 
-                    
+                    <div class="box_tittle">
+                        <h4 class="tittle_categories">Deportista</h4>
+                    </div>
 
-                   
-                    <p style="color:red;"id="error-empty"></p>
+                    <div class="select_check">
+                        <select name="athleteId">
+                            <option value="" hidden selected>Selecciona uno..</option>
+                            <% athletes.forEach(athlete => { %>
+                                <option value="<%= athlete.id %>"><%= athlete.lastName %></option>
+                            <% }) %>
+                        </select>
+                    </div>
+
+                    <label for="image" class="box_img">Agregar imagen:</label>
+					<input type="file" id="image" name="images" class="get_img" accept="image/*" >
+                    
                     <div class="buttons">
                         <input class="button_get" type="submit" value="Crear Producto">
                         <input class="button_get" type="reset" value="Reset">
