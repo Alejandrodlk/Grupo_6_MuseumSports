@@ -206,16 +206,17 @@ main .conatainer_related_products .related_article .in_installments {
         font-size: 20px;
     }
 
-    main .conatainer_related_products .products_related {
+/*     main .conatainer_related_products .products_related {
         display: flex; 
         gap: 15px;
+        flex-wrap: wrap;
     }
 
     main .conatainer_related_products .item_container_related {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-    }
+    } */
 
 }
 
@@ -342,13 +343,16 @@ main .conatainer_related_products .related_article .in_installments {
     
     main .conatainer_related_products .item_container_related {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         gap: 0 20px;
         margin-bottom: 0px;
+        justify-content: space-around;
     }
 
     main .conatainer_related_products .related_article {
         margin: 0;
+       width: 30%;
     }
 
     main .conatainer_related_products .related_article:hover {

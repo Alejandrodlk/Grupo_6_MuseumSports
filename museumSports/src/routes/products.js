@@ -21,7 +21,7 @@ router.get("/create" , productsAddCheck, create)
 router.post("/create", uploadImageProducts.array("images") , productAddValidator, store)
 
 router.get("/edit/:id" , productsEditCheck, edit)
-router.put("/update/:id", uploadImageProducts.single("images") ,productEditValidator, update )
+router.put("/update/:id", uploadImageProducts.single("images") , update )
 
 router.delete("/remove/:id" , remove)
 

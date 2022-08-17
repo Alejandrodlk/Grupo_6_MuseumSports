@@ -29,6 +29,9 @@
                             <small id="errorDescripción" style="color:red;" class="text-danger"><%= locals.errors && errors.description ? errors.description.msg : null %> </small>
                           </div>
 
+
+
+
                           
                           <div>
                             <label for="price" value="" placeholder="Nombre del producto"class="form-label" ></label>
@@ -50,6 +53,9 @@
                             <small id="errorDescuento" style="color:red;" class="text-danger"><%= locals.errors && errors.discount ? errors.discount.msg : null %> </small>
                           </div>
 
+
+
+
                         
                     </div>
                     <!-- <a class="box_img" href="#">Subir imagen<input class="get_img" type="file"></a> -->
@@ -58,7 +64,7 @@
                     </div>
                     <div class="select_check">
                         <select name="categoryId">
-                            <option value="<%= locals.old && old.categoryId? old.categoryId : null %>" hidden selected>Selecciona uno..</option>
+                            <option value="" hidden selected>Selecciona uno..</option>
                             <% categories.forEach(category => { %>
                                 <option value="<%= category.id %>"><%= category.name %></option>
                             <% }) %>
@@ -82,7 +88,7 @@
 					<input type="file" id="image" name="images" class="get_img" accept="image/*" >
                     
                     <div class="buttons">
-                        <a class="box_button" href="/"><input class="button_get" type="submit" value="Crear Producto"></a>
+                        <input class="button_get" type="submit" value="Crear Producto">
                         <input class="button_get" type="reset" value="Reset">
                     </div>
                 </form>

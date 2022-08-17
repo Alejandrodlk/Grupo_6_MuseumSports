@@ -46,11 +46,21 @@ module.exports = {
             include : ['images']
         })
             .then(product => {
-                return res.render('productDetail' ,{
-                    product,
-                    priceDiscount : toThousand((product.price - (product.price * product.discount) / 100) / 6),
-                    toThousand
+                db.Product.findAll({
+                    where : {
+                        categoryId : product.categoryId
+                    },
+                    include : ['images'],
+                    limit : 6
+                }).then(products => {
+                    return res.render('productDetail' ,{
+                        product,
+                        priceDiscount : toThousand((product.price - (product.price * product.discount) / 100) / 6),
+                        toThousand,
+                        products
+                    })
                 })
+               
             })
         /* let products = readJSON()
 		let product = products.find(product => product.id === +req.params.id)
@@ -185,47 +195,43 @@ module.exports = {
 
         const {title,description,price,discount,categoryId,athleteId} = req.body
 
-        if (errors.isEmpty()) {
-
-            db.Product.update(
-                {
-                    title ,
-                    description : description,
-                    price : +price,
-                    discount : +discount,
-                    categoryId : +categoryId,
-                    athleteId : +athleteId
-                },
-                {
-                    where : {
-                        id : req.params.id
-                    }
+        db.Product.update(
+            {
+                title ,
+                description : description,
+                price : +price,
+                discount : +discount,
+                categoryId : +categoryId,
+                athleteId : +athleteId
+            },
+            {
+                where : {
+                    id : req.params.id
                 }
-            )
+            }
+        )
 
-                .then(() => {
-                    if (req.file) {
-                        db.Image.update(
-                            {
-                                name : req.file.filename
-                            },
-                            {
-                                where : {
-                                    productId : req.params.id,  //productId hace referencia a la table images al id que esta llegando de products
-                                    primary : 1
-                                }
+            .then(() => {
+                if (req.file) {
+                    db.Image.update(
+                        {
+                            name : req.file.filename
+                        },
+                        {
+                            where : {
+                                productId : req.params.id,  //productId hace referencia a la table images al id que esta llegando de products
+                                primary : 1
                             }
-                        )
-                        .then(() => {
-                            console.log('MODIFICACION EXITOSA!!');
-                        })
-                    }
-                    return res.redirect('/products/all') // OJO Redirecciono en el then() peincipal. APARTE: reiniciar servidor
-                })
-                .catch(error => console.log(error))
-        }else{
-            return res.send(errors)
-        }
+                        }
+                    )
+                    .then(() => {
+                        console.log('MODIFICACION EXITOSA!!');
+                    })
+                }
+                return res.redirect('/products/all') // OJO Redirecciono en el then() peincipal. APARTE: reiniciar servidor
+            })
+            .catch(error => console.log(error))
+
 
 		/* let products = readJSON()
 		const {name,price,discount,description,category,sport} = req.body

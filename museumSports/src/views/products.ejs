@@ -13,12 +13,11 @@
         <section >
             <div class="index__box-sectiones">
                 <% products.forEach(product => { %>  
-                <article class="index__box-article">
+                <article class="index__box-article" >
                     <a href="/products/detail/<%= product.id %>">
-                        <% product.images.forEach(image => { %>
-                            <img class="index__image" height="65%" src="/images/products/<%= image.name %>" alt="">
-                      <% }) %>                            
-                    <div class="index__box-descripcion">
+                            <img class="index__image" height="65%" style="object-fit:cover;" src="/images/products/<%= product.images[0]?.name %>" alt="">
+
+                    <div class="index__box-descripcion" style="height:35%">
                         <div class="index__precio-descuento">
                         <p class="index__precio">$<%= toThousand(product.price) %> </p>
                         <p class="index__descuento"><%= product.discount > 0 ? product.discount : null %> <%= product.discount > 0 ? '% OFF' : null %></p>
