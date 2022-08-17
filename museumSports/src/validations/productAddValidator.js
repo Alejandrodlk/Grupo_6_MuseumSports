@@ -3,7 +3,7 @@ const {check,body} = require('express-validator')
 module.exports = [
 
     check('title')
-        .notEmpty().bail()
+        .notEmpty().withMessage('Debes proporcionar un titulo').bail()
         .isLength({min : 2}).withMessage('Mínimo dos caracteres'),
 
     check('description')
