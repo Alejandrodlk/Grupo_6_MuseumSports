@@ -94,7 +94,8 @@ module.exports = {
         const errors = validationResult(req)
 
         const {title,description,price,discount,categoryId,athleteId,images} = req.body
-        
+        return res.send(req.body)
+
         if (errors.isEmpty()) {
 
             db.Product.create({
