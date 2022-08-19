@@ -111,10 +111,17 @@ header nav div.nav_search {
     width: 70%;
     background-color: white;
     justify-content: space-between;
+    display: block;
+}
+
+header nav div.nav_search .form_search {
+    display: flex;
 }
 
 header nav div.nav_search input {
     border: none;
+    display: block;
+    width: 100%;
 }
 
 header nav div.nav_search input:focus {

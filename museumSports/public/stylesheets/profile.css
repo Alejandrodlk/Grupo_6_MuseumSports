@@ -6,7 +6,7 @@ main.view_profile {
     overflow: hidden;
     height: 80vh;
     width: 100%;
-    background-color: rgba(0, 0, 0,0.2);
+    background-color: #00000033;
     /* position: absolute; */
     display: none;
 }
@@ -51,7 +51,7 @@ main.view_profile {
     background-color: #fff;
     /* clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); */
     /* opacity: 0; */
-    
+    /* display: none; */
 }
 
 .view_profile .setting_profile .overall_sub-setting {
@@ -164,7 +164,7 @@ main.view_profile {
 }
 
 .view_profile .setting_profile .overall_sub-setting {
-   /*  display: none; */
+    /* display: none; */
     /* clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); */
     /* position: absolute; */
     padding: 10px;
