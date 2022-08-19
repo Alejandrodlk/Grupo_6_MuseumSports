@@ -117,7 +117,10 @@ main.register .container-register .container-form .log-in {
     border: 2px solid red;
 }
 
-
+.text-danger{ 
+    color:red;
+   font-size: 13.3px;
+}
 
 
  

@@ -3,6 +3,43 @@
 
     <%- include("./partials/head", { title : "Detalle de producto" }) %>
 
+
+<script type="text/javascript">
+    function ConfirmDelete()
+    {
+        var respuesta = confirm("Estás seguro que deseas eliminar el artículo?");
+    if (respuesta == true)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    }
+    
+    
+</script>
+
+
+<script type="text/javascript">
+    function ConfirmCart()
+    {
+        var respuesta = confirm("Estás seguro que deseas enviar al carrito el artículo?");
+    if (respuesta == true)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    }
+    
+    
+</script>
+
+
 <body>
     
     <%- include("./partials/header") %> 
@@ -61,10 +98,11 @@
                         </div> -->
                         <div class="button_container">
                             <% if (locals.userLogin) { %>
-                             <a class="button" href="">Agregar al carrito</a>       
+                             <a class="button" href="" onclick="return ConfirmCart()">Agregar al carrito</a>       
                              <a class="button" href="/products/edit/<%= product.id %>">Editar producto</a>
                             <form action="/products/remove/<%= product.id %>?_method=DELETE" method="POST" >
-                                <button class="button" type="submit">Eliminar Producto</button>
+                                <button class="button" type="submit" onclick="return ConfirmDelete()">Eliminar Producto </button>
+                                
                             </form>
                             <% }else{ %>
                                 <a class="button" href="/users/login">Comprar ahora</a>
@@ -121,6 +159,7 @@
 
     <script src="/javascript/burguer.js"></script>
     <script src="/javascript/deploy-footer.js"></script>
+    
 </body>
 
 </html>

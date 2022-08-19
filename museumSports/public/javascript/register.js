@@ -139,6 +139,29 @@ $('password2').addEventListener('blur', async function(){
             $('errorPassword2').innerHTML = null;
             break;
     }
+
+
+    if(!$('terms').checked){
+        $('terms').classList.add('is-invalid')
+        $('errorTerms').innerHTML = "Debes aceptar las bases y condiciones"
+        error = true
+    }
+
+    if(!error){
+        $('msgError').innerHTML = null;
+        this.submit()
+    }
+
+
+
+
+
+
+
+
+
+
+
 });
 
 
@@ -165,14 +188,17 @@ $('bases').addEventListener('submit', function(e) {
         }
     }
 
-    if(!$('terms').checked){
-        $('terms').classList.add('is-invalid')
-        $('errorTerms').innerHTML = "Debes aceptar las bases y condiciones"
-        error = true
-    }
+    
 
-    if(!error){
-        $('msgError').innerHTML = null;
-        this.submit()
-    }
+
+
+
+
+
+
+
+
+
+
+
 })

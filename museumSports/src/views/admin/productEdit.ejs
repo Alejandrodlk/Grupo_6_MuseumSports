@@ -1,5 +1,22 @@
 <%- include("../partials/head", { title : "Editar Producto" }) %>
 
+
+<script type="text/javascript">
+    function ConfirmChange()
+    {
+        var respuesta = confirm("Estás seguro que deseas cambiar el artículo?");
+    if (respuesta == true)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    }
+    
+    
+</script>
     <body>
 
         <%- include("../partials/header") %>
@@ -99,7 +116,7 @@
                                 </div>
         
                     <div class="buttons">
-                        <button type="submit" class="box_button button_get" >Guardar producto</button>
+                        <button type="submit" class="box_button button_get" onclick="return ConfirmChange()" >Guardar producto</button>
                         <input class="button_get" type="reset" value="Reset">
                     </div>
                 </form>
