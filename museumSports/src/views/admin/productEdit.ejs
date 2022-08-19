@@ -11,7 +11,7 @@
 
 
                         <div>
-                            <label for="title" value="" placeholder="Nombre del producto"class="form-label" ></label>
+                            <label for="title" value="" placeholder="Nombre del producto"class="form-label" >Nombre</label>
                             <input  type="text" class="input-style" placeholder="Nombre del producto"
                             class="form-input form-control <%= locals.errors && errors.title ? 'is-invalid' : null %> " 
                             value="<%= product.title %>"
@@ -22,7 +22,7 @@
 
 
                           <div>
-                            <label for="description" value="" placeholder="Nombre del producto"class="form-label" ></label>
+                            <label for="description" value="" placeholder="Nombre del producto"class="form-label" >Descripción</label>
                             <input  type="text" class="input-style" placeholder="Descripción del producto"
                             class="form-input form-control <%= locals.errors && errors.description ? 'is-invalid' : null %> " 
                             value="<%= product.description %>"
@@ -35,7 +35,7 @@
 
                           
                           <div>
-                            <label for="price" value="" placeholder="Nombre del producto"class="form-label" ></label>
+                            <label for="price" value="" placeholder="Nombre del producto"class="form-label" >Precio</label>
                             <input  type="number" class="input-style" placeholder="Precio del producto"
                             class="form-input form-control <%= locals.errors && errors.price ? 'is-invalid' : null %> " 
                             value="<%= product.price %>"
@@ -46,7 +46,7 @@
 
 
                           <div>
-                            <label for="discount" value="" placeholder="Descuento del producto"class="form-label" ></label>
+                            <label for="discount" value="" placeholder="Descuento del producto"class="form-label" >Descuento</label>
                             <input  type="number" class="input-style" placeholder="Descuento del producto"
                             class="form-input form-control <%= locals.errors && errors.discount ? 'is-invalid' : null %> " 
                             value="<%= product.discount %>"

@@ -17,15 +17,7 @@
       "avatar": "foto.jpg",
       "rol": "user"
    },
-   {
-      "id": 3,
-      "name": "Alejandro",
-      "lastname": "iniguez",
-      "email": "alejandro@iniguez.com",
-      "password": "$2a$10$P4qHmveeWD45WrnDOxKjZ.B10SVMjIe9SP2IqOZCHTjiekUBg0N3i",
-      "avatar": "foto.jpg",
-      "rol": "user"
-   },
+   
    {
       "id": 4,
       "name": "Emiliano",

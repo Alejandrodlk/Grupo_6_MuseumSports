@@ -2,7 +2,7 @@ console.log('register.js success');
 
 const regExLetter = /^[A-Z]+$/i;
 const regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
-const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,16}$/;
 
 
 
@@ -110,7 +110,7 @@ $('password').addEventListener('blur', async function(){
             this.classList.add('is-invalid')
             break;
         case !regExPass.test(this.value.trim()):
-            $('errorPassword').innerHTML = "La contraseña debe tener entre 6 y 12 caracteres, un número, una mayúscula y un caracter especial";
+            $('errorPassword').innerHTML = "La contraseña debe tener entre 6 y 16 caracteres, un número, una mayúscula y un caracter especial";
             this.classList.add('is-invalid')
             break
         default:

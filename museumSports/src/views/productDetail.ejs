@@ -92,20 +92,23 @@
             <div class="products_related">
                 <div class="item_container_related">
                     <% products.forEach(product => { %>
-                        <article class="related_article" style="display: flex; flex-direction:column; flex-wrap: wrap; justify-content:space-between;" >
+                        <a href="/products/detail/<%= product.id %>">
+                            <article class="related_article" style="display: flex; flex-direction:column; flex-wrap: wrap; justify-content:space-between;" >
                            
                                 <img style="object-fit: cover; height:65% " src="/images/products/<%= product.images[0].name %> " alt="">
-                                <h4 class="product_price"><%= product.price %> </h4>
+                                <h4 class="product_price">$<%= toThousand(product.price) %> </h4>
                                 <% if (product.discount > 0) { %>
                                     <p class="in_installments"><%= product.discount %>% OFF</p>
                                 <% }else{%>
-                                    <p class="in_installments">ÚLTIMO DISPONIBLE!!</p>
+                                    <p class="in_installments">ENVIO GRATIS</p>
 
                                 <% } %>
                                 <p class="product_name"><%= product.title %> </p>
 
                                 <a class="button_article">Ver producto</a>
-                        </article>
+                            </article>
+                        </a>
+                        
                     <% }) %>
                    
                  

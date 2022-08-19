@@ -11,7 +11,7 @@
 
 
                         <div>
-                            <label for="title" value="" placeholder="Nombre del producto"class="form-label" ></label>
+                            <label for="title" value="" placeholder="Nombre del producto"class="form-label" >Titulo</label>
                             <input  type="text" class="input-style" placeholder="Nombre del producto"
                             class="form-input form-control <%= locals.errors && errors.title ? 'is-invalid' : null %> " 
                             value="<%= locals.old && old.title? old.title : null %>"
@@ -21,7 +21,7 @@
 
 
                           <div>
-                            <label for="description" value="" placeholder="Nombre del producto"class="form-label" ></label>
+                            <label for="description" value="" placeholder="Nombre del producto"class="form-label" >Descripción</label>
                             <input  type="text" class="input-style" placeholder="Descripción del producto"
                             class="form-input form-control <%= locals.errors && errors.description ? 'is-invalid' : null %> " 
                             value="<%= locals.old && old.description? old.description : null %>"
@@ -31,10 +31,8 @@
 
 
 
-
-                          
                           <div>
-                            <label for="price" value="" placeholder="Nombre del producto"class="form-label" ></label>
+                            <label for="price" value="" placeholder="Nombre del producto"class="form-label" >Precio</label>
                             <input  type="number" class="input-style" placeholder="Precio del producto"
                             class="form-input form-control <%= locals.errors && errors.price ? 'is-invalid' : null %> " 
                             value="<%= locals.old && old.price? old.price : null %>"
@@ -45,7 +43,7 @@
 
 
                           <div>
-                            <label for="discount" value="" placeholder="Descuento del producto"class="form-label" ></label>
+                            <label for="discount" value="" placeholder="Descuento del producto"class="form-label" >Descuento</label>
                             <input  type="number" class="input-style" placeholder="Descuento del producto"
                             class="form-input form-control <%= locals.errors && errors.discount ? 'is-invalid' : null %> " 
                             value="<%= locals.old && old.discount? old.discount : null %>"
@@ -54,35 +52,67 @@
                           </div>
 
 
-
-
                         
                     </div>
                     <!-- <a class="box_img" href="#">Subir imagen<input class="get_img" type="file"></a> -->
                     <div class="box_tittle">
                         <h4 class="tittle_categories">Categoria</h4>
                     </div>
-                    <div class="select_check">
-                        <select name="categoryId">
-                            <option value="<%= locals.old && old.categoryId? old.categoryId : null %>" hidden selected><%= locals.old && old.categoryId? old.categoryId : 'Selecciona uno..' %></option>
-                            <% categories.forEach(category => { %>
-                                <option value="<%= category.id %>"><%= category.name %></option>
-                            <% }) %>
-                        </select>
-                    </div>
+
+                    <% if (locals.old && old.categoryId) { %>
+                        
+                        <div class="select_check">
+                            <select name="categoryId">
+                                <% categories.forEach(category => { %>
+                                    <option value="<%= category.id %>" <%= +old.categoryId === category.id ? "selected" : null %>><%= category.name %></option>
+                                <% }) %>
+                            </select>
+                        </div>
+                        
+                    <% }else{ %>
+
+                        <div class="select_check">
+                            <select name="categoryId">
+                                <option value="" hidden selected>Selecciona uno..</option>
+                                <% categories.forEach(category => { %>
+                                    <option value="<%= category.id %>"><%= category.name %></option>
+                                <% }) %>
+                            </select>
+                        </div>
+
+                        <small id="errorDescuento" style="color:red;" class="text-danger"><%= locals.errors && errors.categoryId ? errors.categoryId.msg : null %> </small>
+
+                    <% } %>
+
 
                     <div class="box_tittle">
                         <h4 class="tittle_categories">Deportista</h4>
                     </div>
 
-                    <div class="select_check">
-                        <select name="athleteId">
-                            <option value="" hidden selected>Selecciona uno..</option>
-                            <% athletes.forEach(athlete => { %>
-                                <option value="<%= athlete.id %>"><%= athlete.lastName %></option>
-                            <% }) %>
-                        </select>
-                    </div>
+                    <% if (locals.old && old.athleteId) { %>
+                        
+                        <div class="select_check">
+                            <select name="athleteId">
+                                <% athletes.forEach(athlete => { %>
+                                    <option value="<%= athlete.id %>" <%= +old.athleteId === athlete.id ? "selected" : null %>><%= athlete.lastName %></option>
+                                <% }) %>
+                            </select>
+                        </div>
+
+                    <% }else{ %>
+
+                        <div class="select_check">
+                            <select name="athleteId">
+                                <option value="" hidden selected>Selecciona uno..</option>
+                                <% athletes.forEach(athlete => { %>
+                                    <option value="<%= athlete.id %>"><%= athlete.lastName %></option>
+                                <% }) %>
+                            </select>
+                        </div>
+                        
+                        <small id="errorDescuento" style="color:red;" class="text-danger"><%= locals.errors && errors.athleteId ? errors.athleteId.msg : null %> </small>
+
+                    <% } %>
 
                     <label for="image" class="box_img">Agregar imagen:</label>
 					<input type="file" id="image" name="images" class="get_img" accept="image/*" >
@@ -98,7 +128,7 @@
 
                 <script src="/javascript/burguer.js"></script>
                 <script src="/javascript/deploy-footer.js"></script>
-               <!--  <script src="/javascript/productAdd.js"></script> -->
+                <!-- <script src="/javascript/productAdd.js"></script> -->
     </body>
 
     </html>

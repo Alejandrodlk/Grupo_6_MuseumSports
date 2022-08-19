@@ -94,8 +94,8 @@ module.exports = {
         const errors = validationResult(req)
 
         const {title,description,price,discount,categoryId,athleteId,images} = req.body
-        return res.send(req.body)
-
+        //return res.send(req.body)
+        //return res.send(errors.mapped())
         if (errors.isEmpty()) {
 
             db.Product.create({
@@ -196,6 +196,10 @@ module.exports = {
 
         const {title,description,price,discount,categoryId,athleteId} = req.body
 
+        //return res.send(errors)
+
+        if (errors.isEmpty()) {
+
         db.Product.update(
             {
                 title ,
@@ -240,6 +244,30 @@ module.exports = {
             })
             .catch(error => console.log(error))
 
+            }else{
+
+                let prod = db.Product.findByPk(req.params.id , {
+                    include : ['images']
+                })
+    
+                let cat = db.Category.findAll()
+    
+                let ath = db.Athlete.findAll({
+                    order : [['lastName' , 'ASC']]
+                })
+        
+                Promise.all([prod,cat,ath])
+                    .then(([product,categories,athletes]) => {
+                        return res.render("./admin/productEdit", {
+                            product,
+                            categories,
+                            athletes,
+                            errors : errors.mapped()
+                        })
+                    })
+                    .catch(error => console.log(error))
+    
+            }
 
 		/* let products = readJSON()
 		const {name,price,discount,description,category,sport} = req.body

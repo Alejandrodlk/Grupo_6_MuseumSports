@@ -41,9 +41,7 @@
                                     <% }) %>
                                         <% }else{ %>
                                             <% categories.forEach(category=> { %>
-                                                <option value="<%= category.name %>" <%=category.name===user.preference
-                                                    ? 'selected' : null %>><%= category.name %>
-                                                </option>
+                                                <option value="<%= category.name %>" <%=category.name===user.preference ? 'selected' : null %>><%= category.name %></option>
                                                 <% }) %>
                                                     <% } %>
 
@@ -76,7 +74,7 @@
                     </div>
                     <section class="overall_sub-setting">
                         <h3>Ajustes Generales</h3>
-                        <p>Administra la cuenta que has compartido con Epic Games e incluye tu nombre, dirección de
+                        <p>Administra la cuenta que has compartido con Museum Sports e incluye tu nombre, dirección de
                             contacto
                             y más.</p>
                         <h3>Información de la cuenta</h3>
