@@ -102,7 +102,7 @@ module.exports = {
                 title : title.trim(),
                 description : description.trim(),
                 price : +price,
-                discount : +discount,
+                                              discount : +discount,
                 categoryId : +categoryId,
                 athleteId : +athleteId
             })
