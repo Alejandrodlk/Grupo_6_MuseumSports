@@ -372,6 +372,8 @@ section .titles_box {
 section .titles_box .title_items {
     text-transform: uppercase;
     font-size: 20px;
+    margin-bottom: 20px;
+    
 }
 
 section .titles_box .button_items_all {

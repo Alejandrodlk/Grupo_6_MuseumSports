@@ -333,12 +333,14 @@ main .conatainer_related_products .related_article .in_installments {
     main .conatainer_related_products h2 {
         margin-bottom: 50px;
         font-size: 30px;
+        
     }
     
     main .conatainer_related_products .products_related {
         display: flex; 
         gap: 20px;
         flex-direction: column;
+        
     }
     
     main .conatainer_related_products .item_container_related {
@@ -351,8 +353,12 @@ main .conatainer_related_products .related_article .in_installments {
     }
 
     main .conatainer_related_products .related_article {
-        margin: 0;
-       width: 30%;
+        margin-top: 10px;
+       width: 22%;
+       box-shadow: 0 0 10px rgb(100, 100, 100);
+       padding: 10px;
+       max-width: 350px;
+       margin: 15px auto 0px;
     }
 
     main .conatainer_related_products .related_article:hover {
@@ -432,17 +438,22 @@ main .conatainer_related_products .related_article .in_installments {
     }
 
     main .conatainer_related_products {
-        margin-top: 80px;
+
+        margin-top: 70px;
+        width: 100%;
     }
 
     main .conatainer_related_products .products_related {
-        flex-direction: row;
+        margin-top: 80px;
+      
+        
     }
     
     main .conatainer_related_products h2 {
-        margin-bottom: 80px;
+        margin-bottom: -40px;
         font-size: 40px;
         text-align: center;
+        
     }
     
     main .conatainer_related_products .related_article .button_article {
