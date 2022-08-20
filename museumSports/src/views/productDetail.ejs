@@ -39,6 +39,23 @@
     
 </script>
 
+<script type="text/javascript">
+    function ConfirmBuy()
+    {
+        var respuesta = confirm("Estás seguro que deseas comprar el artículo?");
+    if (respuesta == true)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    }
+    
+    
+</script>
+
 
 <body>
     
@@ -105,7 +122,7 @@
                                 
                             </form>
                             <% }else{ %>
-                                <a class="button" href="/users/login">Comprar ahora</a>
+                                <a class="button" href="/users/login" onclick="return ConfirmBuy()" >Comprar ahora</a>
                             <% } %>
                             
                         </div>
@@ -138,7 +155,7 @@
                                 <% if (product.discount > 0) { %>
                                     <p class="in_installments"><%= product.discount %>% OFF</p>
                                 <% }else{%>
-                                    <p class="in_installments">ENVIO GRATIS</p>
+                                    <p class="in_installments">ENVÍO GRATIS</p>
 
                                 <% } %>
                                 <p class="product_name"><%= product.title %> </p>

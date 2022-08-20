@@ -24,7 +24,7 @@ main section .secondary_image_container .secondary_image {
 }
 
 main section .product_description_select .prodcut_title {
-    position: absolute;
+    
     top: 20px;
     font-size: 16px;
 }
