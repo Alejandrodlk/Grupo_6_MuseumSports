@@ -1,3 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container {
+    width: 100%;
+    height: 350vh;
+    background: #b4ddee;
+    transition: background 300ms;
+}
+
+.switch {
+    width: 95px;
+    height: 30px;
+    background: white;
+    border-radius: 30px;
+    cursor: pointer;
+    border-color: green;
+    position: relative;
+    
+}
+
+.switch__toggle {
+    width: 35px;
+    border-radius: 40%;
+    position: relative;
+    top: 3px;
+    right: -14px;
+    transition: left 300ms;
+    animation: rotate 3s infinite alternate-reverse;
+}
+
+.switch__toggle img {
+    width: 80%;
+    vertical-align: middle;
+    
+}
+
+.container.dark {
+    background: #1a4d63;
+}
+
+.container.dark .switch__toggle {
+    left: 10px;
+    top: 10px;
+    
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(45deg);
+    }
+}
+
 .main.product_detail_main {
     padding: 15px;
     position: relative;

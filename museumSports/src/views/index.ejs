@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 
+    <%- include("./partials/head", { title : "home" }) %>
+
+    <link rel="stylesheet" href="/stylesheets/app.css" />
 
 
-<%- include("./partials/head", { title : "home" }) %>
-
+    
+    
     <body>
+        
 
         <%- include("./partials/header") %>
 
+        <div class="name" class="container" id="container">
             <!-- <main class="index-box">
         
             <div class="main__box-carrousel">
@@ -190,6 +195,8 @@
             </form>       
         </section>     
     </main> -->
+
+
 
             <main class="index_box">
                 <div class="banner">
@@ -448,6 +455,7 @@
                 <script src="/javascript/burguer.js"></script>
                 <script src="/javascript/bannerIndex.js"></script>
                 <script src="/javascript/deploy-footer.js"></script>
+                <script src="/javascript/index.js"></script>
     </body>
 
 </html>

@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 
-
+    <link rel="stylesheet" href="/stylesheets/results.css" />
 
 <%- include("./partials/head", { title : "Resultado Busqueda" }) %>
 
 <body>
     
     <%- include("./partials/header") %> 
+
+    <div class="container" id="container">
 
     <main class="productsAll">
         <h2>Resultados de la búsqueda: <%= keyword %></h2>
@@ -45,6 +47,7 @@
 
     <script src="/javascript/burguer.js"></script>
     <script src="/javascript/deploy-footer.js"></script>
+    <script src="/javascript/index.js"></script>
 </body>
 
 </html>

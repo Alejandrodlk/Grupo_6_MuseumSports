@@ -6,6 +6,7 @@ const { check,body } = require('express-validator')
 
 module.exports = [
 
+
     check('email')
         .notEmpty().withMessage('Debes ingresar un email').bail()
         .isEmail().withMessage('Debe ser un email valido'),

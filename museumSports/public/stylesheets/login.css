@@ -1,5 +1,5 @@
 main.login {
-    margin: 30px 0;
+    margin: 0px 0;
 }
 
 main.login section.container-login {
@@ -9,7 +9,8 @@ main.login section.container-login {
     justify-content: center;
     align-items: center;
     max-width: 350px;
-    margin: 0 auto;
+    
+    margin-top: 35px;
 }
 main.login section.container-login .title {
     margin-bottom: 30px;

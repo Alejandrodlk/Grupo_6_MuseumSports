@@ -1,3 +1,10 @@
+.container {
+    width: 100%;
+    height: 300vh;
+    background: #b4ddee;
+    transition: background 300ms;
+}
+
 .productsAll {
     display: flex;
     flex-wrap: wrap;

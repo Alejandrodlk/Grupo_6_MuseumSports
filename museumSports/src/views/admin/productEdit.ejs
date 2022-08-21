@@ -1,4 +1,10 @@
+
+<link rel="stylesheet" href="/stylesheets/productEdit.css" />
+
 <%- include("../partials/head", { title : "Editar Producto" }) %>
+
+
+
 
 
 <script type="text/javascript">
@@ -17,9 +23,20 @@
     
     
 </script>
+
+
+
+
     <body>
 
+        
+
         <%- include("../partials/header") %>
+
+
+        <div class="container" id="container">
+
+            <br>
 
             <main class="productAdd">
                 <form class="register_form" id="container-form" action="/products/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
@@ -127,6 +144,7 @@
                 <script src="/javascript/burguer.js"></script>
                 <script src="/javascript/deploy-footer.js"></script>
                 <script src="/javascript/productEdit.js"></script>
+                <script src="/javascript/index.js"></script>
     </body>
 
     </html>

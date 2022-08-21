@@ -1,13 +1,45 @@
+
+
+
+
+
+<script type="text/javascript">
+    function ConfirmExit()
+    {
+        var respuesta = confirm("Estás seguro que deseas salir de la sesión?");
+    if (respuesta == true)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    }
+    
+    
+</script>
+
+
+
 <header class="header-container">
+    
+
     <div class="cont-logo-bars">
+
+        
+        
         <a href="/">
             <div class="logo-container">
+                
                 <div>
+                    
                     <p class="logo">M</p>
                 </div>
                 <div>
                     <p class="logo-text">MUSEUM</p>
-                    <p class="logo-text">SPORTS</p>
+                    <p class="logo-text">SPORTS </p>
+
                 </div>
             </div>
         </a>
@@ -16,10 +48,17 @@
                 <% if (locals.userLogin) { %>
                     <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
                     <li><a href="/users/profile"><i class="fas fa-user"></i></a></li>
-                    <a href="/users/logout">Salir</a>
+
+                    
+
+                    <a href="/users/logout"onclick="return ConfirmExit()" >Salir</a>
                 <% }else{ %>
                     <a href="/users/login"><i class="fa-solid fa-user"></i></a>
                 <% } %>
+
+
+
+                
                 
             </div>
             <div id="main-bars">
@@ -31,14 +70,34 @@
     <nav class="nav-bars-container">
 
         <div class="nav_search">
+            
             <form class="form_search" action="/search" method="GET">
+                
                 <input type="text" name="keyword" placeholder="Buscar">
+                
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                
             </form>
+
+            
         </div>
         
+        <div class="switch" id="switch">
+                    
+                    
+            <div class="switch__toggle" id="switchToggle">
+                
+                <img id="switchToggleImage" src="/images/img/sun.png" />
+                
+            </div>
+            
+        </div>
+        
+        </div>
         <ul class="nav-main-bars">
+            
             <li><a class="item" href="/">Inicio</a></li>
+            
             <li><a class="item" href="#">Categorias</a>
                 <ul class="sub-main">
                     <li><a href="/categories/detail/1">Fútbol internacional</a></li>
@@ -47,13 +106,20 @@
                     <li><a href="/categories/detail/4">Tenis</a></li>
                     <li><a href="/categories/detail/5">Boxeo</a></li>
                 </ul>
+            
             </li>
+             
             <% if (locals.userLogin) { %>
+
+
                 <li><a class="item" href="/products/create">Agregar producto</a></li>
                 <li><a class="item" href="/products/all">Todos los productos</a></li> 
             <% }else{ %>
                 <li><a class="item" href="#about_us">Acerca de</a></li>                  
             <% } %>
+            
         </ul>
+        
     </nav>
 </header>
+
