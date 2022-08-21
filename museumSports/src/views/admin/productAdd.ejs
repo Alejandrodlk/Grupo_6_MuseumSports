@@ -3,6 +3,42 @@
     <body>
         
         <%- include("../partials/header") %>
+
+
+        
+<script type="text/javascript">
+    function ConfirmCreated()
+    {
+        var respuesta = confirm("Estás seguro que deseas crear el artículo?");
+    if (respuesta == true)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    }
+    
+    
+</script>
+
+<script type="text/javascript">
+    function ConfirmReset()
+    {
+        var respuesta = confirm("Estás seguro que deseas resetear la información?");
+    if (respuesta == true)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    }
+    
+    
+</script>
         
         <div class="container" id="container">
 <br>
@@ -121,8 +157,8 @@
 					<input type="file" id="image" name="images" class="get_img" accept="image/*" >
                     
                     <div class="buttons">
-                        <input class="button_get" type="submit" value="Crear Producto">
-                        <input class="button_get" type="reset" value="Reset">
+                        <input class="button_get" type="submit" value="Crear Producto" onclick="return ConfirmCreated()" >
+                        <input class="button_get" type="reset" value="Reset"onclick="return ConfirmReset()">
                     </div>
                 </form>
             </main>

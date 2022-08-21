@@ -24,6 +24,23 @@
     
 </script>
 
+<script type="text/javascript">
+    function ConfirmReset()
+    {
+        var respuesta = confirm("Estás seguro que deseas resetear los cambios?");
+    if (respuesta == true)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    }
+    
+    
+</script>
+
 
 
 
@@ -134,7 +151,7 @@
         
                     <div class="buttons">
                         <button type="submit" class="box_button button_get" onclick="return ConfirmChange()" >Guardar producto</button>
-                        <input class="button_get" type="reset" value="Reset">
+                        <input class="button_get" type="reset" value="Reset"onclick="return ConfirmReset()" >
                     </div>
                 </form>
             </main>
