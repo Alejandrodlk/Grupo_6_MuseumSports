@@ -61,6 +61,7 @@ module.exports = {
             include : ['images']
         })
             .then(results => {
+               // return res.send(results)
                 return res.render('results' , {
                     results,
                     keyword,

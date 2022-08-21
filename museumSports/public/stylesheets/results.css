@@ -65,3 +65,19 @@
     width: 15%;
     height: 700px;
 }
+
+section .titles_box-results {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+    gap: 15px;
+    color: black;
+}
+
+section .titles_box-results2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+    gap: 15px;
+    color: orangered;
+}

@@ -9,7 +9,7 @@
     
     <%- include("./partials/header") %> 
 
-    <div class="container" id="container">
+ <!--    <div class="container" id="container">
 
     <main class="productsAll">
         <h2>Resultados de la búsqueda: <%= keyword %></h2>
@@ -38,8 +38,49 @@
                 <h2  style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
             </div>
         <% } %>
-                 
-    </main>
+          
+    </main> -->
+
+    <section class="items_box">
+
+        <div class="titles_box-results">
+            <h2>Resultados de la búsqueda para: <%= keyword %></h2>
+        </div>
+        <% if (results.length > 0 && keyword.length > 0) { %>
+        <div class="articles_box">
+            <% results.forEach(product => { %>
+             
+                <a class="product_box" href="/products/detail/<%= product.id %>">
+                    <div class="product_img">
+                            <img style="object-fit:cover; height: 350px;" src="/images/products/<%= product.images && product.images[0].name ? product.images[0].name : null %>" alt="">
+                    </div>
+                    <article class="description_box"> 
+                        <div class="prices">
+                            <% if (product.discount !== 0) { %>                                         
+                                <span><%= product.discount > 0 ? `-${product.discount}%` : null %></span>
+                                <p class="final_price">$ <%= toThousand(product.price - (product.price * product.discount) / 100) %></p>
+                                <p class="previous_price"><%= toThousand(product.price) %></p>                                       
+                            <% }else{ %>
+                            <p class="final_price"><%= toThousand(product.price) %></p>                                       
+                            <% } %>
+                        </div>
+                        <h4><%= product.title %></h4>
+                    </article>
+                </a>
+
+            <% }) %> 
+            <% }else{ %>
+                <div class="titles_box-results2">
+                    <h2>No se encontraron resultados</h2>
+                </div>
+            <% } %>
+
+
+        </div>
+    </section>
+
+
+
 
     <!--          ------------FOOTER------------       -->
     
