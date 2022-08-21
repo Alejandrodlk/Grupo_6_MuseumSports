@@ -32,7 +32,7 @@ $('description').addEventListener('blur', function(){
             $('errorDescripción').innerHTML = "Debes ingresar una descripción del producto";
             this.classList.add('is-invalid')
             break;
-        case this.value.trim().length < 2 || this.value.trim().length > 255 :
+        case this.value.trim().length < 30 || this.value.trim().length > 255 :
             $('errorDescripción').innerHTML = "La descripción debe tener como mínimo 30 caracteres";
             this.classList.add('is-invalid')
             break

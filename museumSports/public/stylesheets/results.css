@@ -52,3 +52,16 @@
         transform: rotate(45deg);
     }
 }
+
+
+.index__image {
+    height: 19%;
+    width: 100px;
+    
+    
+}
+
+.index__box-article{
+    width: 15%;
+    height: 700px;
+}
