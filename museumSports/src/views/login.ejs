@@ -3,81 +3,75 @@
 
 <%- include("./partials/head", { title : "Login" }) %>
 
-<link rel="stylesheet" href="/stylesheets/app.css" />
+    <link rel="stylesheet" href="/stylesheets/app.css" />
 
     <body>
 
         <%- include("./partials/header") %>
 
             <!----    ------------------------------main--------------------------------- -->
-            
-           
+
+
             <div class="container" id="container">
 
-    <br>
-    
-            <main class="login">
-                <section class="container-login">
-                    <h2 class="title">Iniciar sesion</h2>
+                <br>
 
-                    <button class="btn-log-facebook btn">Inicia sesion con Facebook</button>
-                    <button href="#" class="btn-log-google btn">Inicia sesion con Google</button>
-                    <div class="lineal">
-                        <hr class="line-one line">
-                        <p class="separator">0</p>
-                        <hr class="line-two line">
-                    </div>
-                    <form class="container-form" id= "container-form" action="" method="post">
-                        <div class="input-container">
+                <main class="login">
+                    <section class="container-login">
+                        <h2 class="title">Iniciar sesion</h2>
 
-
-                            <div>
-                                <label for="email" class="form-label" ></label>
-                                <input  type="email" class="input-style" placeholder="Ingresa tu Email"
-                                class="form-input form-control <%= locals.errors && errors.email ? 'is-invalid' : null %> " 
-                                value="<%= locals.old && old.email ? old.email : null %>"
-                                id="email"  name="email" title="El email debe tener más de dos caracteres"/>
-                                <small id="error-email" style="color:red;" class="text-danger"><%= locals.errors && errors.email ? errors.email.msg : null %> </small>
-                              </div>
-
-<div>
-                        <label for="password" class="form-label" ></label>
-                        <input  type="password" class="input-style" placeholder="Ingresa una contraseña"
-                        class="form-input form-control <%= locals.errors && errors.password ? 'is-invalid' : null %> " 
-                        value="<%= locals.old && old.password ? old.password : null %>"
-                        id="password"  name="password" title="La contraseña debe tener más de dos caracteres"/>
-                        <small id="error-password" style="color:red;" class="text-danger"><%= locals.errors && errors.password? errors.password.msg : null %> </small>
-                      </div>
-                            
-                    </div>
-
-
-                        
-                        <div class="check-remember">
-                            <label for="recordar">Recordar <input type="checkbox" name="remember" id="checkbox"></label>
+                        <button class="btn-log-facebook btn">Inicia sesion con Facebook</button>
+                        <button href="#" class="btn-log-google btn">Inicia sesion con Google</button>
+                        <div class="lineal">
+                            <hr class="line-one line">
+                            <p class="separator">0</p>
+                            <hr class="line-two line">
                         </div>
-                        <button type="submit" class="btn btn-log">Ingresar</button>
-                        <p class="link_pass-recover"><a href="#">¿Olvidaste tu contraseña?</a></p>
-                        <p>¿Aun no tienes cuenta en Museum Sports</p>
-                        <a class="btn-register btn" href="/users/register">Registrate</a>
-                        <p class="link_pass-recover"><a href="/users/login">Ingresar como administrador</a></p>
-                    </form>
-                </section>
+                        <form class="container-form" id="container-form" action="" method="post">
+                            <div class="input-container">
+                                <label for="email" class="form-label"></label>
+                                <input type="email" class="input-log" placeholder="Ingresa tu Email"
+                                    class="form-input form-control <%= locals.errors && errors.email ? 'is-invalid' : null %> "
+                                    value="<%= locals.old && old.email ? old.email : null %>" id="email" name="email"
+                                    title="El email debe tener más de dos caracteres" />
+                                <small id="error-email" style="color:red;" class="text-danger">
+                                    <%= locals.errors && errors.email ? errors.email.msg : null %>
+                                </small>
+                                <label for="password" class="form-label"></label>
+                                <input type="password" class="input-log" placeholder="Ingresa una contraseña"
+                                    class="form-input form-control <%= locals.errors && errors.password ? 'is-invalid' : null %> "
+                                    value="<%= locals.old && old.password ? old.password : null %>" id="password"
+                                    name="password" title="La contraseña debe tener más de dos caracteres" />
+                                <small id="error-password" style="color:red;" class="text-danger">
+                                    <%= locals.errors && errors.password? errors.password.msg : null %>
+                                </small>
+                            </div>
+                            <div class="check-remember">
+                                <label for="recordar">Recordar <input type="checkbox" name="remember"
+                                        id="checkbox"></label>
+                            </div>
+                            <button type="submit" class="btn btn-log">Ingresar</button>
+                            <p class="link_pass-recover"><a href="#">¿Olvidaste tu contraseña?</a></p>
+                            <p>¿Aun no tienes cuenta en Museum Sports</p>
+                            <a class="btn-register btn" href="/users/register">Registrate</a>
+                            <p class="link_pass-recover"><a href="/users/login">Ingresar como administrador</a></p>
+                        </form>
+                    </section>
 
-                
-            </main>
 
-                  
+                </main>
 
 
-            <!--          ------------FOOTER------------       -->
 
-            <%- include("./partials/footer") %>
 
-                <script src="/javascript/burguer.js"></script>
-                <script src="/javascript/deploy-footer.js"></script>
-                <script src="/javascript/login.js"></script>
-                <script src="/javascript/index.js"></script>
+                <!--          ------------FOOTER------------       -->
+
+                <%- include("./partials/footer") %>
+
+                    <script src="/javascript/burguer.js"></script>
+                    <script src="/javascript/deploy-footer.js"></script>
+                    <script src="/javascript/login.js"></script>
+                    <script src="/javascript/index.js"></script>
 
     </body>
 
