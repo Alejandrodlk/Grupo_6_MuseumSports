@@ -109,12 +109,13 @@
             
             </li>
              
-            <% if (locals.userLogin) { %>
+            <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
 
-
+                <li><a class="item" href="/products/all">Todos los productos</a></li>
                 <li><a class="item" href="/products/create">Agregar producto</a></li>
-                <li><a class="item" href="/products/all">Todos los productos</a></li> 
+                <li><a class="item" href="#about_us">Acerca de</a></li>                  
             <% }else{ %>
+                <li><a class="item" href="/products/all">Todos los productos</a></li> 
                 <li><a class="item" href="#about_us">Acerca de</a></li>                  
             <% } %>
             

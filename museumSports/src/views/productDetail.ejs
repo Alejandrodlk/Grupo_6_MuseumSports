@@ -123,14 +123,14 @@
                             </div>
                         </div> -->
                         <div class="button_container">
-                            <% if (locals.userLogin) { %>
-                             <a class="button" href="" onclick="return ConfirmCart()">Agregar al carrito</a>       
+                            <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
                              <a class="button" href="/products/edit/<%= product.id %>">Editar producto</a>
                             <form action="/products/remove/<%= product.id %>?_method=DELETE" method="POST" >
                                 <button class="button" type="submit" onclick="return ConfirmDelete()">Eliminar Producto </button>
                                 
                             </form>
                             <% }else{ %>
+                                <a class="button" href="" onclick="return ConfirmCart()">Agregar al carrito</a>       
                                 <a class="button" href="/users/login" onclick="return ConfirmBuy()" >Comprar ahora</a>
                             <% } %>
                             
