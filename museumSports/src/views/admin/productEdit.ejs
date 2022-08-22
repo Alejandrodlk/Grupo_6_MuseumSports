@@ -53,7 +53,7 @@
 
         <div class="container" id="container">
 
-            <br>
+            
 
             <main class="productAdd">
                 <form class="register_form" id="container-form" action="/products/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
@@ -61,49 +61,49 @@
                     <div class="user_data">
 
 
-                        <div>
+                        
                             <label for="title" value="" placeholder="Nombre del producto"class="form-label" >Nombre</label>
-                            <input  type="text" class="input-style" placeholder="Nombre del producto"
+                            <input  type="text" class="get_log" placeholder="Nombre del producto"
                             class="form-input form-control <%= locals.errors && errors.title ? 'is-invalid' : null %> " 
                             value="<%= product.title %>"
                             id="title"  name="title" title="El nombre debe tener más de 15 caracteres"/>
                             <small id="errorNombre" style="color:red;" class="text-danger"><%= locals.errors && errors.title ? errors.title.msg : null %> </small>
-                          </div>
+                          
 
 
 
-                          <div>
+                          
                             <label for="description" value="" placeholder="Nombre del producto"class="form-label" >Descripción</label>
-                            <input  type="text" class="input-style" placeholder="Descripción del producto"
+                            <input  type="text" class="get_log" placeholder="Descripción del producto"
                             class="form-input form-control <%= locals.errors && errors.description ? 'is-invalid' : null %> " 
                             value="<%= product.description %>"
                             id="description"  name="description" title="El nombre debe tener más de 30 caracteres"/>
                             <small id="errorDescripción" style="color:red;" class="text-danger"><%= locals.errors && errors.description ? errors.description.msg : null %> </small>
-                          </div>
+                          
 
 
 
 
                           
-                          <div>
+                         
                             <label for="price" value="" placeholder="Nombre del producto"class="form-label" >Precio</label>
-                            <input  type="number" class="input-style" placeholder="Precio del producto"
+                            <input  type="number" class="get_log" placeholder="Precio del producto"
                             class="form-input form-control <%= locals.errors && errors.price ? 'is-invalid' : null %> " 
                             value="<%= product.price %>"
                             id="price"  name="price" title="El precio debe ser mayor a $0"/>
                             <small id="errorPrecio" style="color:red;" class="text-danger"><%= locals.errors && errors.price ? errors.price.msg : null %> </small>
-                          </div>
+                          
 
 
 
-                          <div>
+                          
                             <label for="discount" value="" placeholder="Descuento del producto"class="form-label" >Descuento</label>
-                            <input  type="number" class="input-style" placeholder="Descuento del producto"
+                            <input  type="number" class="get_log" placeholder="Descuento del producto"
                             class="form-input form-control <%= locals.errors && errors.discount ? 'is-invalid' : null %> " 
                             value="<%= product.discount %>"
                             id="discount"  name="discount" title="El descuento debe ser mayor a 0%"/>
                             <small id="errorDescuento" style="color:red;" class="text-danger"><%= locals.errors && errors.discount ? errors.discount.msg : null %> </small>
-                          </div>
+                          
 
 
                       
@@ -112,7 +112,7 @@
                         <h4 class="tittle_categories">Categoria</h4>
                     </div>
                     <div>
-                        <select name="categoryId" class="input-style">
+                        <select name="categoryId" class="get_log">
                             <option value="" hidden selected>Selecciona uno..</option>
                             <% categories.forEach(category => { %>
 								<option value="<%= category.id %>" <%= product.categoryId === category.id ? 'selected' : null %>><%= category.name %> </option>
@@ -125,7 +125,7 @@
                     </div>
 
                     <div>
-                        <select name="athleteId" class="input-style" style="margin-right: 220px;">
+                        <select name="athleteId" class="get_log" >
                             <option value="" hidden selected>Selecciona uno..</option>
                             <% athletes.forEach(athlete => { %>
 								<option value="<%= athlete.id %>" <%= product.athleteId  === athlete.id ? 'selected' : null %>><%= athlete.lastName %> </option>
