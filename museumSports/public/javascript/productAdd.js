@@ -13,8 +13,8 @@ $('title').addEventListener('blur', function(){
             $('errorNombre').innerHTML = "Debes ingresar el nombre del producto";
             this.classList.add('is-invalid')
             break;
-        case this.value.trim().length < 15 || this.value.trim().length > 255 :
-            $('errorNombre').innerHTML = "El nombre del producto debe tener como mínimo 15 caracteres";
+        case this.value.trim().length < 5 || this.value.trim().length > 255 :
+            $('errorNombre').innerHTML = "El nombre del producto debe tener como mínimo 5 caracteres";
             this.classList.add('is-invalid')
             break
         default:
@@ -33,8 +33,8 @@ $('description').addEventListener('blur', function(){
             $('errorDescripción').innerHTML = "Debes ingresar una descripción del producto";
             this.classList.add('is-invalid')
             break;
-        case this.value.trim().length < 2 || this.value.trim().length > 255 :
-            $('errorDescripción').innerHTML = "La descripción debe tener como mínimo 30 caracteres";
+        case this.value.trim().length < 10 || this.value.trim().length > 255 :
+            $('errorDescripción').innerHTML = "La descripción debe tener como mínimo 10 caracteres";
             this.classList.add('is-invalid')
             break
         default:

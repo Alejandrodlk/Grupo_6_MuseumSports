@@ -18,7 +18,7 @@
           </div>
 
           <form class="container-form" id="bases" action="" method="post" enctype="multipart/form-data">
-            <div class="input-container">
+            <div class=".container-date">
 
 
 
@@ -26,7 +26,7 @@
 
               <div>
                 <label for="name" class="form-label"></label>
-                <input type="text" class="input-style" placeholder="Ingresa tu Nombre"
+                <input type="text" class="input-log" placeholder="Ingresa tu Nombre"
                   class="form-input form-control <%= locals.errors && errors.name ? 'is-invalid' : null %> "
                   value="<%= locals.old && old.name ? old.name : null %>" id="name" name="name"
                   title="El nombre debe tener más de dos caracteres" />
@@ -38,7 +38,7 @@
 
               <div>
                 <label for="lastName" class="form-label"></label>
-                <input type="text" class="input-style" placeholder="Ingresa tu Apellido"
+                <input type="text" class="input-log" placeholder="Ingresa tu Apellido"
                   class="form-input form-control <%= locals.errors && errors.lastName ? 'is-invalid' : null %> "
                   value="<%= locals.old && old.lastName ? old.lastName : null %>" id="lastName" name="lastName"
                   title="El apellido debe tener más de dos caracteres" />
@@ -50,7 +50,7 @@
 
               <div>
                 <label for="email" class="form-label"></label>
-                <input type="email" class="input-style" placeholder="Ingresa tu Email"
+                <input type="email" class="input-log" placeholder="Ingresa tu Email"
                   class="form-input form-control <%= locals.errors && errors.email ? 'is-invalid' : null %> "
                   value="<%= locals.old && old.email ? old.email : null %>" id="email" name="email"
                   title="El email debe tener más de dos caracteres" />
@@ -65,7 +65,7 @@
 
               <div>
                 <label for="password" class="form-label"></label>
-                <input type="password" class="input-style" placeholder="Ingresa una contraseña"
+                <input type="password" class="input-log" placeholder="Ingresa una contraseña"
                   class="form-input form-control <%= locals.errors && errors.password ? 'is-invalid' : null %> "
                   value="<%= locals.old && old.password ? old.password : null %>" id="password" name="password"
                   title="La contraseña debe tener más de dos caracteres" />
@@ -76,7 +76,7 @@
 
               <div>
                 <label for="password2" class="form-label"></label>
-                <input type="password" class="input-style" placeholder="Ingresa una contraseña"
+                <input type="password" class="input-log" placeholder="Ingresa una contraseña"
                   class="form-input form-control <%= locals.errors && errors.password2 ? 'is-invalid' : null %> "
                   value="<%= locals.old && old.password2 ? old.password2 : null %>" id="password2" name="password2"
                   title="La contraseña debe tener más de dos caracteres" />

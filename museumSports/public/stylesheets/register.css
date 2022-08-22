@@ -55,14 +55,13 @@ main.register .container-register .input-log {
     padding: 10px;
 }
 
-.input-style {
+/* .input-style {
     height: 50px;
-    width: 80%;
-   margin-right: 200px;
+    width: 100%;
     margin-bottom: 10px;
     padding: 10px;
 }
-
+ */
 
 
 main.register .container-register .input-log:focus {
@@ -158,11 +157,10 @@ main.register .container-register .container-form .log-in {
         gap: 10px 10px;
         flex-wrap: wrap;
         justify-content: center;
-
     }
 
     main.register .container-register .input-log {
-        width: 47%;
+        /* width: 47%; */
     }
     
     main.register .container-register .container-form .conditions {

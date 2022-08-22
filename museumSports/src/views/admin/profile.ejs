@@ -4,44 +4,9 @@
 
     <body>
 
+       
+
         <%- include("../partials/header") %>
-
-
-
-        <script type="text/javascript">
-            function ConfirmCambios()
-            {
-                var respuesta = confirm("Estás seguro que deseas guardar los cambios?");
-            if (respuesta == true)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-            }
-            
-            
-        </script>
-
-<script type="text/javascript">
-    function ConfirmDescartar()
-    {
-        var respuesta = confirm("Estás seguro que deseas descartar los cambios?");
-    if (respuesta == true)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-    }
-    
-    
-</script>
-
 
         <div class="container" id="container">
 
@@ -122,96 +87,26 @@
                             contacto
                             y más.</p>
                         <h3>Información de la cuenta</h3>
-
-                        
-
-
-
-
-                        
-                        <form  action="/users/update?_method=PUT" method="POST" id= "container-profile" enctype="multipart/form-data"></form>
+                        <form action="/users/update?_method=PUT" method="POST" enctype="multipart/form-data">
                             <div class="box-avatar">
                                 <div class="preview">
-                                    <img src="/images/users/<%= user.avatar %>" class="foto" alt="imagen de perfil">
+                                    <img src="/images/users/<%= user.avatar %>" alt="imagen de perfil">
                                 </div>
                                 <label class="change-file" for="avatar">SUBIR IMAGEN
                                     <input type="file" name="avatar" id="avatar" style="display: none;">
                                 </label>
                             </div>
-                            
                             <div>
-
-
-                                <div>
-                                    <label for="name" value="" placeholder="Nombre"class="form-label" ></label>
-                                    <input  type="text" class="input-style" placeholder="Nombre"
-
-                                    class="form-input form-control <%= locals.errors && errors.name ? 'is-invalid' : null %> " 
-                                    value="<%= locals.old && old.name? old.name : null %>"
-                                    
-                                    id="name"  name="name" title="El nombre debe tener más de 3 caracteres"/>
-                                    <small id="errorNombre" style="color:red;" class="text-danger"><%= locals.errors && errors.name ? errors.name.msg : null %> </small>
-                                  </div>
-                                               
-                                              
-                                  <div>
-                                    <label for="surname" value="" placeholder="Apellido"class="form-label" ></label>
-                                    <input  type="text" class="input-style" placeholder="Apellido"
-
-                                    class="form-input form-control <%= locals.errors && errors.surname ? 'is-invalid' : null %> " 
-                                    value="<%= locals.old && old.surname? old.surname : null %>"
-                                    
-                                    id="surname"  name="surname" title="El nombre debe tener más de 2 caracteres"/>
-                                    <small id="errorApellido" style="color:red;" class="text-danger"><%= locals.errors && errors.surname ? errors.surname.msg : null %> </small>
-                                  </div>
-
-
-
-                               
+                                <input class="data" type="text" name="name" id="name" value="<%= user.name %>" placeholder="Nombres">
+                                <input class="data" type="text" name="lastName" id="lastName" value="<%= user.lastName %>" placeholder="Apellidos">
                                 <!-- <input class="data" type="email" name="email" id="email" value="<%= user.email %>" placeholder="Email"> -->
                                 <!-- <input class="data" type="number" placeholder="Telefono"> -->
-                            
+                            </div>
                             <div>
                                 <h3>Pais/Región</h3>
-
-                                <div>
-                                    <label for="country" value="" placeholder="País/Región"></label>
-                                    <input  type="text" class="input-style" placeholder="País/Región"
-
-                                    class="form-input form-control <%= locals.errors && errors.country ? 'is-invalid' : null %> " 
-                                    value="<%= locals.old && old.country? old.country : null %>"
-                                    
-                                    id="country"  name="country" title="El nombre debe tener más de 2 caracteres"/>
-                                    <small id="errorPais" style="color:red;" class="text-danger"><%= locals.errors && errors.country ? errors.country.msg : null %> </small>
-                                  </div>
-
-
-                                  <div>
-                                    <label for="local" value="" placeholder="Localidad"class="form-label" ></label>
-                                    <input  type="text" class="input-style" placeholder="Localidad"
-
-                                    class="form-input form-control <%= locals.errors && errors.local ? 'is-invalid' : null %> " 
-                                    value="<%= locals.old && old.local? old.local : null %>"
-                                    
-                                    id="local"  name="local" title="El nombre debe tener más de 2 caracteres"/>
-                                    <small id="errorLocalidad" style="color:red;" class="text-danger"><%= locals.errors && errors.local ? errors.local.msg : null %> </small>
-                                  </div>
-
-
-                                  <div>
-                                    <label for="direction" value="" placeholder="Dirección"class="form-label" ></label>
-                                    <input  type="text" class="input-style" placeholder="Dirección"
-
-                                    class="form-input form-control <%= locals.errors && errors.direction ? 'is-invalid' : null %> " 
-                                    value="<%= locals.old && old.direction? old.direction : null %>"
-                                    
-                                    id="direction"  name="direction" title="El nombre debe tener más de 2 caracteres"/>
-                                    <small id="errorDireccion" style="color:red;" class="text-danger"><%= locals.errors && errors.direction ? errors.direction.msg : null %> </small>
-                                  </div>
-
-
-                                
-                    
+                                <input class="data" type="text" name="country" id="country" value="<%= user.country %>" placeholder="Pais/Region">
+                                <input class="data" type="text" name="city" id="city" value="<%= user.city %>" placeholder="Localidad">
+                                <input class="data" type="text" name="direcction" id="direcction" value="<%= user.direcction %>" placeholder="Direccion">
                                 <!-- <input class="data" type="number" placeholder="Codigo postal"> -->
                             </div>
                             <div>
@@ -233,12 +128,12 @@
                                                         </option>
                                                         <% }) %>
                                                             <% } %>
-        
+       
                                 </select>
                             </div>
                             <div >
-                                <input class="data submit" type="submit" value="GUARDAR CAMBIOS"onclick="return ConfirmCambios()" >
-                                <input class="data reset" type="reset" value="DESCARTAR CAMBIOS" onclick="return ConfirmDescartar()" >
+                                <input class="data reset" type="reset" value="DESCARTAR CAMBIOS">
+                                <input class="data submit" type="submit" value="GUARDAR CAMBIOS">
                             </div>
                         </form>
                     </section>
@@ -320,8 +215,6 @@
                 <script src="/javascript/burguer.js"></script>
                 <script src="/javascript/deploy-footer.js"></script>
                 <script src="/javascript/index.js"></script>
-                <script src="/javascript/profile.js"></script>
-                
     </body>
 
     </html>
