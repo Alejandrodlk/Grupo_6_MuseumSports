@@ -102,7 +102,7 @@ module.exports = {
                 title : title.trim(),
                 description : description.trim(),
                 price : +price,
-                                              discount : +discount,
+                discount : +discount,
                 categoryId : +categoryId,
                 athleteId : +athleteId
             })
@@ -119,8 +119,8 @@ module.exports = {
                     db.Image.bulkCreate(images,{validate :true})  //validate???
                         .then( (result) => console.log(result))		
                 }
-
-                return res.redirect('/products/all')
+                return res.redirect('/products/detail/' + product.id)
+                //return res.redirect('/products/all')
             })
             .catch(error => console.log(error))
         }else{
