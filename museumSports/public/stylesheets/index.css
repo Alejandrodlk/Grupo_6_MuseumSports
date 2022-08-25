@@ -295,6 +295,7 @@ background: linear-gradient(90deg, rgba(55,177,63,0.8911939775910365) 0%, rgba(5
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    background-color: #00a6506c;
 }
 
 /* Position the "next button" to the right */
