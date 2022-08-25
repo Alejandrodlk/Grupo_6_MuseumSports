@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="/stylesheets/productEdit.css" />
 
 <%- include("../partials/head", { title : "Editar Producto" }) %>
@@ -7,161 +6,153 @@
 
 
 
-<script type="text/javascript">
-    function ConfirmChange()
-    {
-        var respuesta = confirm("Estás seguro que deseas cambiar el artículo?");
-    if (respuesta == true)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-    }
-    
-    
-</script>
+    <script type="text/javascript">
+        function ConfirmChange() {
+            var respuesta = confirm("Estás seguro que deseas cambiar el artículo?");
+            if (respuesta == true) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
 
-<script type="text/javascript">
-    function ConfirmReset()
-    {
-        var respuesta = confirm("Estás seguro que deseas resetear los cambios?");
-    if (respuesta == true)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-    }
-    
-    
-</script>
+
+    </script>
+
+    <script type="text/javascript">
+        function ConfirmReset() {
+            var respuesta = confirm("Estás seguro que deseas resetear los cambios?");
+            if (respuesta == true) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+
+    </script>
 
 
 
 
     <body>
 
-        
+
 
         <%- include("../partials/header") %>
 
 
-        <div class="container" id="container">
-
-            
-
-            <main class="productAdd">
-                <form class="register_form" id="container-form" action="/products/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-                    <h3>Editar producto</h3>
-                    <div class="user_data">
-
-
-                        
-                            <label for="title" value="" placeholder="Nombre del producto"class="form-label" >Nombre</label>
-                            <input  type="text" class="get_log" placeholder="Nombre del producto"
-                            class="form-input form-control <%= locals.errors && errors.title ? 'is-invalid' : null %> " 
-                            value="<%= product.title %>"
-                            id="title"  name="title" title="El nombre debe tener más de 15 caracteres"/>
-                            <small id="errorNombre" style="color:red;" class="text-danger"><%= locals.errors && errors.title ? errors.title.msg : null %> </small>
-                          
+            <div class="container" id="container">
 
 
 
-                          
-                            <label for="description" value="" placeholder="Nombre del producto"class="form-label" >Descripción</label>
-                            <input  type="text" class="get_log" placeholder="Descripción del producto"
-                            class="form-input form-control <%= locals.errors && errors.description ? 'is-invalid' : null %> " 
-                            value="<%= product.description %>"
-                            id="description"  name="description" title="El nombre debe tener más de 30 caracteres"/>
-                            <small id="errorDescripción" style="color:red;" class="text-danger"><%= locals.errors && errors.description ? errors.description.msg : null %> </small>
-                          
+                <main class="productAdd">
+                    <form class="register_form" id="container-form"
+                        action="/products/update/<%= product.id %>?_method=PUT" method="POST"
+                        enctype="multipart/form-data">
+                        <h3>Editar producto</h3>
+                        <div class="user_data">
 
+                            <label for="title" value="" placeholder="Nombre del producto"
+                                class="form-label">Nombre</label>
+                            <input type="text" class="get_log" placeholder="Nombre del producto"
+                                class="form-input form-control <%= locals.errors && errors.title ? 'is-invalid' : null %> "
+                                value="<%= product.title %>" id="title" name="title"
+                                title="El nombre debe tener más de 15 caracteres" />
+                            <small id="errorNombre" style="color:red;" class="text-danger">
+                                <%= locals.errors && errors.title ? errors.title.msg : null %>
+                            </small>
 
+                            <label for="description" value="" placeholder="Nombre del producto"
+                                class="form-label">Descripción</label>
+                            <input type="text" class="get_log" placeholder="Descripción del producto"
+                                class="form-input form-control <%= locals.errors && errors.description ? 'is-invalid' : null %> "
+                                value="<%= product.description %>" id="description" name="description"
+                                title="El nombre debe tener más de 30 caracteres" />
+                            <small id="errorDescripción" style="color:red;" class="text-danger">
+                                <%= locals.errors && errors.description ? errors.description.msg : null %>
+                            </small>
 
+                            <label for="price" value="" placeholder="Nombre del producto"
+                                class="form-label">Precio</label>
+                            <input type="number" class="get_log" placeholder="Precio del producto"
+                                class="form-input form-control <%= locals.errors && errors.price ? 'is-invalid' : null %> "
+                                value="<%= product.price %>" id="price" name="price"
+                                title="El precio debe ser mayor a $0" />
+                            <small id="errorPrecio" style="color:red;" class="text-danger">
+                                <%= locals.errors && errors.price ? errors.price.msg : null %>
+                            </small>
 
-                          
-                         
-                            <label for="price" value="" placeholder="Nombre del producto"class="form-label" >Precio</label>
-                            <input  type="number" class="get_log" placeholder="Precio del producto"
-                            class="form-input form-control <%= locals.errors && errors.price ? 'is-invalid' : null %> " 
-                            value="<%= product.price %>"
-                            id="price"  name="price" title="El precio debe ser mayor a $0"/>
-                            <small id="errorPrecio" style="color:red;" class="text-danger"><%= locals.errors && errors.price ? errors.price.msg : null %> </small>
-                          
+                            <label for="discount" value="" placeholder="Descuento del producto"
+                                class="form-label">Descuento</label>
+                            <input type="number" class="get_log" placeholder="Descuento del producto"
+                                class="form-input form-control <%= locals.errors && errors.discount ? 'is-invalid' : null %> "
+                                value="<%= product.discount %>" id="discount" name="discount"
+                                title="El descuento debe ser mayor a 0%" />
+                            <small id="errorDescuento" style="color:red;" class="text-danger">
+                                <%= locals.errors && errors.discount ? errors.discount.msg : null %>
+                            </small>
 
+                            <div class="box_tittle">
+                                <h4 class="tittle_categories">Categoria</h4>
+                            </div>
+                            <div>
+                                <select name="categoryId" class="get_log">
+                                    <option value="" hidden selected>Selecciona uno..</option>
+                                    <% categories.forEach(category=> { %>
+                                        <option value="<%= category.id %>" <%=product.categoryId===category.id
+                                            ? 'selected' : null %>><%= category.name %>
+                                        </option>
+                                        <% }) %>
+                                </select>
+                            </div>
 
+                            <div class="box_tittle">
+                                <h4 class="tittle_categories">Deportista</h4>
+                            </div>
 
-                          
-                            <label for="discount" value="" placeholder="Descuento del producto"class="form-label" >Descuento</label>
-                            <input  type="number" class="get_log" placeholder="Descuento del producto"
-                            class="form-input form-control <%= locals.errors && errors.discount ? 'is-invalid' : null %> " 
-                            value="<%= product.discount %>"
-                            id="discount"  name="discount" title="El descuento debe ser mayor a 0%"/>
-                            <small id="errorDescuento" style="color:red;" class="text-danger"><%= locals.errors && errors.discount ? errors.discount.msg : null %> </small>
-                          
+                            <div>
+                                <select name="athleteId" class="get_log">
+                                    <option value="" hidden selected>Selecciona uno..</option>
+                                    <% athletes.forEach(athlete=> { %>
+                                        <option value="<%= athlete.id %>" <%=product.athleteId===athlete.id ? 'selected'
+                                            : null %>><%= athlete.lastName %>
+                                        </option>
+                                        <% }) %>
+                                </select>
+                            </div>
 
+                            <!-- Recorre todas las imagenes, en este caso mo tengo inconveniente porque solo tengo una imagen. Y CON MUCHAS IMAGENES??? -->
 
-                      
-                    
-                    <div class="box_tittle">
-                        <h4 class="tittle_categories">Categoria</h4>
-                    </div>
-                    <div>
-                        <select name="categoryId" class="get_log">
-                            <option value="" hidden selected>Selecciona uno..</option>
-                            <% categories.forEach(category => { %>
-								<option value="<%= category.id %>" <%= product.categoryId === category.id ? 'selected' : null %>><%= category.name %> </option>
-							<% }) %>
-                        </select>
-                    </div>
+                            <div class="box_tittle">
+                                <h4 class="tittle_categories">Reemplazar imágenes</h4>
+                            </div>
+                            <input class="get_img" name="images" type="file" accept="image/*" multiple>
 
-                    <div class="box_tittle">
-                        <h4 class="tittle_categories">Deportista</h4>
-                    </div>
+                            <div style="display: flex; gap: 10px;">
+                                <% product.images.forEach(image=> { %>
 
-                    <div>
-                        <select name="athleteId" class="get_log" >
-                            <option value="" hidden selected>Selecciona uno..</option>
-                            <% athletes.forEach(athlete => { %>
-								<option value="<%= athlete.id %>" <%= product.athleteId  === athlete.id ? 'selected' : null %>><%= athlete.lastName %> </option>
-							<% }) %>
-                        </select>
-                    </div>
-                    
+                                    <img width="100px" height="100px" src="/images/products/<%= image.name %>"
+                                        alt="img">
+                                    <% }) %>
+                            </div>
 
-                    <!-- Recorre todas las imagenes, en este caso mo tengo inconveniente porque solo tengo una imagen. Y CON MUCHAS IMAGENES??? -->
-                   
+                            <div class="buttons">
+                                <button type="submit" class="box_button button_get"
+                                    onclick="return ConfirmChange()">Guardar producto</button>
+                                <input class="button_get" type="reset" value="Reset" onclick="return ConfirmReset()">
+                            </div>
+                    </form>
+                </main>
 
-                        <div class="box_tittle">
-                            <h4 class="tittle_categories">Reemplazar imágenes</h4>
-                        </div>
-                        <input class="get_img" name="images" type="file" accept="image/*" multiple>
+                <%- include("../partials/footer") %>
 
-                        <div style="display: flex; gap: 10px;">
-                            <% product.images.forEach(image => { %>
-                               
-                                    <img width="100px" height="100px" src="/images/products/<%= image.name %>" alt="img">
-                            <% }) %>
-                                </div>
-        
-                    <div class="buttons">
-                        <button type="submit" class="box_button button_get" onclick="return ConfirmChange()" >Guardar producto</button>
-                        <input class="button_get" type="reset" value="Reset"onclick="return ConfirmReset()" >
-                    </div>
-                </form>
-            </main>
-
-            <%- include("../partials/footer") %>
-
-                <script src="/javascript/burguer.js"></script>
-                <script src="/javascript/deploy-footer.js"></script>
-                <script src="/javascript/productEdit.js"></script>
-                <script src="/javascript/index.js"></script>
+                    <script src="/javascript/burguer.js"></script>
+                    <script src="/javascript/deploy-footer.js"></script>
+                    <script src="/javascript/productEdit.js"></script>
+                    <script src="/javascript/index.js"></script>
     </body>
 
     </html>

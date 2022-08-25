@@ -158,10 +158,6 @@ main.register .container-register .container-form .log-in {
         flex-wrap: wrap;
         justify-content: center;
     }
-
-    main.register .container-register .input-log {
-        /* width: 47%; */
-    }
     
     main.register .container-register .container-form .conditions {
         font-size: 14px;

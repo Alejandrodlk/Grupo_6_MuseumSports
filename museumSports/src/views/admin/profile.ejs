@@ -16,62 +16,13 @@
                 <!-- <h1>PERFIL DE USUARIO: <%= user.name %>
                 </h1> -->
 
-                <!-- <form action="/users/update?_method=PUT" method="POST" enctype="multipart/form-data">
-                    <div style="display: flex; flex-direction:column; width: 30%; align-items: center;">
-                        <label for="name">Nombre</label>
-                        <input type="text" name="name" id="name" value="<%= user.name %>">
-                        <br>
-                        <label for="lastName">Apellido:</label>
-                        <input type="text" name="lastName" id="lastName" value="<%= user.lastName %>">
-                        <br>
-                        <label for="password">Nueva Contraseña:</label>
-                        <input type="password" name="password" id="password">
-                        <br>
-                        <label for="country">Pais:</label>
-                        <input type="text" name="country" id="country" value="<%= user.country %>">
-                        <br>
-                        <label for="city">Ciudad:</label>
-                        <input type="text" name="city" id="city" value="<%= user.city %>">
-                        <br>
-                        <label for="direcction">Direccion:</label>
-                        <input type="text" name="direcction" id="direcction" value="<%= user.direcction %>">
-                        <br>
-                        <select name="preference" id="preference">
-
-                            Agregar tabla 'preferences'?? un susuario tiene muchas preferencias y una preferencia le
-                            pertenece a un usuario
-                            <% if (!user.preference) { %>
-                                <option value="">Selecciona una categoria de preferencia..</option>
-                                <% categories.forEach(category=> { %>
-                                    <option value="<%= category.name %>">
-                                        <%= category.name %>
-                                    </option>
-                                    <% }) %>
-                                        <% }else{ %>
-                                            <% categories.forEach(category=> { %>
-                                                <option value="<%= category.name %>" <%=category.name===user.preference ? 'selected' : null %>><%= category.name %></option>
-                                                <% }) %>
-                                                    <% } %>
-
-                        </select>
-                        <br>
-                        <img src="/images/users/<%= user.avatar %>" width="50%px" height="150px" alt="Avatar">
-                        <label for="avatar">Subir imagen de perfil:</label>
-                        <input type="file" name="avatar" id="avatar" accept="image/*">
-
-                        <button type="submit"
-                            style="background-color: blue; color: white; height: 50px; width: 150px; border-radius: 5px; font-size: 20px; ">Guardar
-                            cambios</button>
-                    </div>
-                </form> -->
-
                 <div class="aside_profile">
 
                     <ul>
-                        <li><a class="setting_option" href=""><span></span><i class="fa-solid fa-user"></i>General</a></li>
-                        <li><a class="setting_option" href=""><span></span><i class="fa-solid fa-bell"></i>Comunicaciones</a></li>
-                        <li><a class="setting_option" href=""><span></span><i class="fa-solid fa-clock-rotate-left"></i>Transacciones</a></li>
-                        <li><a class="setting_option" href=""><span></span><i class="fa-solid fa-key"></i>Contraseña y Seguridad</a></li>
+                        <li><a class="setting_option general" href=""><span></span><i class="fa-solid fa-user"></i>General</a></li>
+                        <li><a class="setting_option news" href=""><span></span><i class="fa-solid fa-bell"></i>Comunicaciones</a></li>
+                        <li><a class="setting_option record" href=""><span></span><i class="fa-solid fa-clock-rotate-left"></i>Transacciones</a></li>
+                        <li><a class="setting_option security" href=""><span></span><i class="fa-solid fa-key"></i>Contraseña y Seguridad</a></li>
                     </ul>
                     <div class="help_setting">
                         <a href="">¿Necesitas ayuda?</a>
@@ -79,8 +30,8 @@
                 </div>
                 <div class="setting_profile">
                     <div>
-                        <a class="box_go-back" href=""><i class="fa-solid fa-chevron-left"></i><span>Ajustes de la cuenta</span></a>
-                    </div>
+<!--                         <a class="box_go-back" href=""><i class="fa-solid fa-chevron-left"></i><span>Ajustes de la cuenta</span></a>
+ -->                    </div>
                     <section class="overall_sub-setting">
                         <h3>Ajustes Generales</h3>
                         <p>Administra la cuenta que has compartido con Museum Sports e incluye tu nombre, dirección de
@@ -212,6 +163,7 @@
 
             <%- include("../partials/footer") %>
 
+                
                 <script src="/javascript/burguer.js"></script>
                 <script src="/javascript/deploy-footer.js"></script>
                 <script src="/javascript/index.js"></script>
